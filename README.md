@@ -22,3 +22,4 @@ What we will watch:
 - https://verum.capital/careers/
 - https://paxos.com/careers/
 - https://careers.aplo.io/
+- https://join.com/companies/sygnum
