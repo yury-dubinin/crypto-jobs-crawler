@@ -16,3 +16,9 @@ What we will watch:
 - https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://jobs.lever.co/chainlink/
+- https://boards.greenhouse.io/genesisglobaltradinginc
+- https://bullish.wd3.myworkdayjobs.com/Bullish
+- https://www.bitmex.com/careers#location=Remote%20-%20Europe&&department=any
+- https://verum.capital/careers/
+- https://paxos.com/careers/
+- https://careers.aplo.io/
