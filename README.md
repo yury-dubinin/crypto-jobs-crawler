@@ -23,3 +23,4 @@ What we will watch:
 - https://paxos.com/careers/
 - https://careers.aplo.io/
 - https://join.com/companies/sygnum
+- https://jobs.lever.co/swissborg
