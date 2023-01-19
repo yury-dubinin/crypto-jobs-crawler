@@ -27,4 +27,10 @@ What we will watch:
 - https://coinmarketcap.com/jobs/
 - https://jobs.coinmarketcap.com/
 - https://bitfinex.recruitee.com/
--https://boards.greenhouse.io/amun
+- https://boards.greenhouse.io/amun
+- https://www.abra.com/careers/
+- https://dappradar.com/careers
+- https://changenow.io/jobs
+- https://boards.greenhouse.io/exodus54
+- https://jobs.bitvavo.com/en/jobs/
+- https://boards.eu.greenhouse.io/bitpanda
