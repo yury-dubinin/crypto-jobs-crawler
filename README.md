@@ -24,3 +24,5 @@ What we will watch:
 - https://careers.aplo.io/
 - https://join.com/companies/sygnum
 - https://jobs.lever.co/swissborg
+- https://coinmarketcap.com/jobs/
+- https://jobs.coinmarketcap.com/
