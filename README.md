@@ -34,3 +34,4 @@ What we will watch:
 - https://boards.greenhouse.io/exodus54
 - https://jobs.bitvavo.com/en/jobs/
 - https://boards.eu.greenhouse.io/bitpanda
+- https://www.chainalysis.com/careers/job-openings/
