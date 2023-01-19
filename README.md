@@ -26,3 +26,4 @@ What we will watch:
 - https://jobs.lever.co/swissborg
 - https://coinmarketcap.com/jobs/
 - https://jobs.coinmarketcap.com/
+- https://bitfinex.recruitee.com/
