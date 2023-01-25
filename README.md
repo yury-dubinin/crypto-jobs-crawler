@@ -35,3 +35,6 @@ What we will watch:
 - https://jobs.bitvavo.com/en/jobs/
 - https://boards.eu.greenhouse.io/bitpanda
 - https://www.chainalysis.com/careers/job-openings/
+- https://nethermind.io/company/
+- https://boards.greenhouse.io/quiknodeinc
+- https://web3labs.jobs.personio.com/
