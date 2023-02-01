@@ -38,3 +38,5 @@ What we will watch:
 - https://nethermind.io/company/
 - https://boards.greenhouse.io/quiknodeinc
 - https://web3labs.jobs.personio.com/
+- https://jobs.eu.lever.co/aave/
+- https://boards.greenhouse.io/uniswaplabs
