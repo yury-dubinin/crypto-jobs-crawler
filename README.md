@@ -46,3 +46,4 @@ wip:
 - https://www.chainalysis.com/careers/job-openings/
 - https://nethermind.io/company
 - https://web3labs.jobs.personio.com
+- https://jobs.status.im/
