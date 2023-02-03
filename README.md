@@ -65,7 +65,10 @@ wip:
 
 # UI staff
 For now just converts data to html files and dumps them to resources folder. So, simply run cd ./resources && python3 -m http.server 8000
-You sould see something like this:
+You sould see something like this on top level:
+
 <img width="308" alt="image" src="https://user-images.githubusercontent.com/62520712/216639741-b947fa0a-3fc9-4457-8b12-8ea01ab7892f.png">
+And something like this on company level:
+
 <img width="689" alt="image" src="https://user-images.githubusercontent.com/62520712/216641018-020365bc-d0e3-451f-a131-48ce64d5369d.png">
 
