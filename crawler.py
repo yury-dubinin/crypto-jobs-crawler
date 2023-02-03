@@ -65,8 +65,7 @@ def writeJobs(company_name, data):
 
 def convertJobs(company_name, data):
     html = json2html.convert(json = data)
-    with open(f'resources/{company_name}.html', 'w') as f:
-        print('Writing html...')
+    with open(f'README.md', 'a') as f:
         f.write(html)
 
 for page in greenhouse_web_pages:
