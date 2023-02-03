@@ -33,6 +33,7 @@ greenhouse:
 - https://boards.greenhouse.io/quiknodeinc
 - https://boards.greenhouse.io/uniswaplabs
 - https://boards.greenhouse.io/alchemy
+- https://boards.greenhouse.io/chainalysis
 
 wip:
 - https://community.dune.com/wizard-jobs
@@ -58,7 +59,6 @@ wip:
 - https://dappradar.com/careers
 - https://changenow.io/jobs
 - https://jobs.bitvavo.com/en/jobs/
-- https://www.chainalysis.com/careers/job-openings/
 - https://nethermind.io/company
 - https://web3labs.jobs.personio.com
 - https://jobs.status.im/
