@@ -1,3 +1,5 @@
+# scraped html files
+resources/*.html
 # Compiled class file
 *.class
 

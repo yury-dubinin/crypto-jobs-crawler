@@ -1,5 +1,18 @@
 # crypto-jobs-crawler
-The idea is to build a dashboard with crypto jobs plus some index number to track industry health.
+The idea is to build a dashboard with crypto jobs plus some index number to track industry health. Plus you can search for a job as well :)
+
+# roadmap
+- automate scraping positions from most popular HR platforms
+- enable simple way of displaying these positions in browser
+- enable storage of data as it needed for index calculations
+- build better UI with simple search feature
+- ...
+
+# how to use?
+Given that you have Python 3.5+ and pip instaleed just run pip install -r requirements.txt
+Crawler uses just 2 none standard libs:
+- selenium 
+- json2html
 
 # What we will watch by HR platform
 lever:
@@ -24,6 +37,7 @@ greenhouse:
 wip:
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
+- https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
 - https://metrika.recruitee.com/
@@ -48,3 +62,6 @@ wip:
 - https://nethermind.io/company
 - https://web3labs.jobs.personio.com
 - https://jobs.status.im/
+
+# UI staff
+For now just dump the data into the html files and simply cd ./resources && python3 -m http.server 8000
