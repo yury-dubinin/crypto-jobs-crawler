@@ -19,6 +19,7 @@ greenhouse:
 - https://boards.eu.greenhouse.io/bitpanda
 - https://boards.greenhouse.io/quiknodeinc
 - https://boards.greenhouse.io/uniswaplabs
+- https://boards.greenhouse.io/alchemy
 
 wip:
 - https://community.dune.com/wizard-jobs
