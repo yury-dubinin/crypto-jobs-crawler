@@ -1,5 +1,5 @@
-# scraped html files
-resources/*.html
+# scraped json files
+resources/*.json
 # Compiled class file
 *.class
 

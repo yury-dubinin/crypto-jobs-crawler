@@ -28,8 +28,9 @@ bitpanda = "https://boards.eu.greenhouse.io/bitpanda"
 quiknodeinc = "https://boards.greenhouse.io/quiknodeinc"
 uniswaplabs = "https://boards.greenhouse.io/uniswaplabs"
 alchemy = "https://boards.greenhouse.io/alchemy"
+chainalysis = "https://boards.greenhouse.io/chainalysis"
 
-greenhouse_web_pages = [bitgo, genesisglobaltradinginc, amun, exodus54, bitpanda, quiknodeinc, uniswaplabs, alchemy]
+greenhouse_web_pages = [bitgo, genesisglobaltradinginc, amun, exodus54, bitpanda, quiknodeinc, uniswaplabs, alchemy, chainalysis]
 
 def getJobsFromLever(web_page):
     print(f'Scrap page: {web_page}')
