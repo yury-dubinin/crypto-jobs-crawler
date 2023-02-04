@@ -1,7 +1,6 @@
 import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from json2html import *
 from pathlib import Path
 
 # create folder to 
@@ -40,9 +39,10 @@ def getJobsFromLever(web_page):
     print(f'Elements with name: {len(titleElems)} vs Links: {len(linkElements)}')
     titles = list(map(lambda title: title.text, titleElems))
     links = list(map(lambda link: link.get_attribute('href'), linkElements))
+    wrappedLinks = list(map(lambda link: f"<a href='{link}'>Apply</a>", links))
     print(f'Records with Name: {len(titles)} vs Links: {len(links)}')
-    res = dict(zip(titles, links))
-    print(res)
+    res = dict(zip(titles, wrappedLinks))
+    #print(res)
     return res
 
 def getJobsFromGreenhouse(web_page):
@@ -53,9 +53,10 @@ def getJobsFromGreenhouse(web_page):
     print(f'Elements with name: {len(titleElems)} vs Links: {len(linkElements)}')
     titles = list(map(lambda title: title.text, titleElems))
     links = list(map(lambda link: link.get_attribute('href'), linkElements))
+    wrappedLinks = list(map(lambda link: f"<a href='{link}'>Apply</a>", links))
     print(f'Records with Name: {len(titles)} vs Links: {len(links)}')
-    res = dict(zip(titles, links))
-    print(res)
+    res = dict(zip(titles, wrappedLinks))
+    #print(res)
     return res
 
 # not used but idea is to use json files as sourse for UI/BI 
@@ -63,10 +64,17 @@ def writeJobs(company_name, data):
     with open(f"resources/{company_name}.json", "w") as file:
         json.dump(data, file, indent=4)
 
+def dict_to_html_table_with_header(header, dictionary):
+    html_table = '<table border="1">'
+    html_table += "<tr><th>" + header + "</th></tr>"
+    for key, value in dictionary.items():
+        html_table += "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
+    html_table += "</table>"
+    return html_table
+
 def convertJobs(company_name, data):
-    html = json2html.convert(json = data)
+    html = dict_to_html_table_with_header(company_name, data)
     with open(f'index.html', 'a') as f:
-        f.write(f"<hr>{company_name.upper()}</hr>")
         f.write(html)
 
 for page in greenhouse_web_pages:
