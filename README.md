@@ -34,6 +34,7 @@ greenhouse:
 - https://boards.greenhouse.io/uniswaplabs
 - https://boards.greenhouse.io/alchemy
 - https://boards.greenhouse.io/chainalysis
+- https://boards.eu.greenhouse.io/nethermind
 
 wip:
 - https://community.dune.com/wizard-jobs
@@ -56,12 +57,11 @@ wip:
 - https://jobs.coinmarketcap.com/
 - https://bitfinex.recruitee.com/
 - https://www.abra.com/careers/
-- https://dappradar.com/careers
+- https://dappradar.bamboohr.com/careers
 - https://changenow.io/jobs
 - https://jobs.bitvavo.com/en/jobs/
-- https://nethermind.io/company
 - https://web3labs.jobs.personio.com
 - https://jobs.status.im/
 
 # UI staff
-Let's try GitHub pages...
+Let's try GitHub pages here: https://yury-dubinin.github.io/crypto-jobs-crawler/
