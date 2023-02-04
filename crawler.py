@@ -5,6 +5,9 @@ from pathlib import Path
 
 # create folder to 
 Path("./resources").mkdir(parents=True, exist_ok=True)
+# remove index.html to re-create from new data set
+index_file = Path("./index.html")
+index_file.unlink(missing_ok=True)
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
@@ -66,7 +69,8 @@ def writeJobs(company_name, data):
 
 def dict_to_html_table_with_header(header, dictionary):
     html_table = '<table border="1">'
-    html_table += "<tr><th>" + header + "</th></tr>"
+    jobs_total = f"Number of Jobs: {len(dictionary)}"
+    html_table += "<tr><th>" + header + "</th><th>"+ jobs_total + "</th></tr>"
     for key, value in dictionary.items():
         html_table += "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
     html_table += "</table>"
@@ -74,7 +78,7 @@ def dict_to_html_table_with_header(header, dictionary):
 
 def convertJobs(company_name, data):
     html = dict_to_html_table_with_header(company_name, data)
-    with open(f'index.html', 'a') as f:
+    with open('index.html', 'a') as f:
         f.write(html)
 
 for page in greenhouse_web_pages:
