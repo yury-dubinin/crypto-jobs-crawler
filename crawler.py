@@ -19,8 +19,9 @@ opensea = "https://jobs.lever.co/OpenSea"
 storyprotocol = "https://jobs.lever.co/storyprotocol"
 ethereumfoundation = "https://jobs.lever.co/ethereumfoundation"
 aave = "https://jobs.eu.lever.co/aave"
+crypto = "https://jobs.lever.co/crypto"
 
-lever_web_pages = [chainlink, kraken, swissborg, opensea, storyprotocol, ethereumfoundation, aave]
+lever_web_pages = [chainlink, kraken, swissborg, opensea, storyprotocol, ethereumfoundation, aave, crypto]
 
 bitgo = "https://boards.greenhouse.io/bitgo"
 genesisglobaltradinginc = "https://boards.greenhouse.io/genesisglobaltradinginc"
