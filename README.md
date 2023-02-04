@@ -12,7 +12,6 @@ The idea is to build a dashboard with crypto jobs plus some index number to trac
 Given that you have Python 3.5+ and pip instaleed just run pip install -r requirements.txt
 Crawler uses just 2 none standard libs:
 - selenium 
-- json2html
 
 # What we will watch by HR platform
 lever:
@@ -37,6 +36,8 @@ greenhouse:
 - https://boards.eu.greenhouse.io/nethermind
 
 wip:
+- https://www.binance.com/en/careers/job-openings
+- https://coinmarketcap.com/jobs
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
@@ -53,7 +54,6 @@ wip:
 - https://paxos.com/careers/
 - https://careers.aplo.io/
 - https://join.com/companies/sygnum
-- https://coinmarketcap.com/jobs/
 - https://jobs.coinmarketcap.com/
 - https://bitfinex.recruitee.com/
 - https://www.abra.com/careers/
