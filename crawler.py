@@ -70,8 +70,8 @@ def writeJobs(company_name, data):
 
 def dict_to_html_table_with_header(header, dictionary):
     html_table = '<table border="1">'
-    jobs_total = f"Number of Jobs: {len(dictionary)}"
-    html_table += "<tr><th>" + header + "</th><th>"+ jobs_total + "</th></tr>"
+    jobs_total = f"Total Jobs: {len(dictionary)}"
+    html_table += "<tr><th>" + header.upper() + "</th><th>"+ jobs_total + "</th></tr>"
     for key, value in dictionary.items():
         html_table += "<tr><td>" + key + "</td><td>" + value + "</td></tr>"
     html_table += "</table>"
