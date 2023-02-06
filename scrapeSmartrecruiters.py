@@ -1,9 +1,9 @@
 from selenium.webdriver.common.by import By
 
 def cleanLocation(location):
-    if "remote" in location.lower():
-        return "REMOTE"
-    return location.lower()
+    if 'remote' in location.lower() or 'global' in location.lower():
+        return {"REMOTE"}
+    return set(([x.strip() for x in location.split(',')]))
 
 def getJobs(driver, web_page):
     print(f'Scrap page: {web_page}')
