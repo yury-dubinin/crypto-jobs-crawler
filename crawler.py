@@ -2,7 +2,8 @@ from selenium import webdriver
 from pathlib import Path
 import scrapeLever
 import scrapeGreenhouse
-
+from datetime import datetime
+import json
 
 # remove index.html to re-create from new data set
 index_file = Path("./index.html")
@@ -12,29 +13,29 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
-chainlink = "https://jobs.lever.co/chainlink"
-kraken = "https://jobs.lever.co/kraken"
-swissborg = "https://jobs.lever.co/swissborg"
-opensea = "https://jobs.lever.co/OpenSea"
-storyprotocol = "https://jobs.lever.co/storyprotocol"
-ethereumfoundation = "https://jobs.lever.co/ethereumfoundation"
-aave = "https://jobs.eu.lever.co/aave"
-crypto = "https://jobs.lever.co/crypto"
+lever_web_pages = [
+    "https://jobs.lever.co/chainlink", 
+    "https://jobs.lever.co/kraken", 
+    "https://jobs.lever.co/swissborg", 
+    "https://jobs.lever.co/OpenSea", 
+    "https://jobs.lever.co/storyprotocol", 
+    "https://jobs.lever.co/ethereumfoundation", 
+    "https://jobs.eu.lever.co/aave", 
+    "https://jobs.lever.co/crypto"
+    ]
 
-lever_web_pages = [chainlink, kraken, swissborg, opensea, storyprotocol, ethereumfoundation, aave, crypto]
-
-bitgo = "https://boards.greenhouse.io/bitgo"
-genesisglobaltradinginc = "https://boards.greenhouse.io/genesisglobaltradinginc"
-amun = "https://boards.greenhouse.io/amun"
-exodus54 =  "https://boards.greenhouse.io/exodus54"
-bitpanda = "https://boards.eu.greenhouse.io/bitpanda"
-quiknodeinc = "https://boards.greenhouse.io/quiknodeinc"
-uniswaplabs = "https://boards.greenhouse.io/uniswaplabs"
-alchemy = "https://boards.greenhouse.io/alchemy"
-chainalysis = "https://boards.greenhouse.io/chainalysis"
-nethermind = "https://boards.eu.greenhouse.io/nethermind"
-
-greenhouse_web_pages = [bitgo, genesisglobaltradinginc, amun, exodus54, bitpanda, quiknodeinc, uniswaplabs, alchemy, chainalysis, nethermind]
+greenhouse_web_pages = [
+    "https://boards.greenhouse.io/bitgo", 
+    "https://boards.greenhouse.io/genesisglobaltradinginc", 
+    "https://boards.greenhouse.io/amun", 
+    "https://boards.greenhouse.io/exodus54", 
+    "https://boards.eu.greenhouse.io/bitpanda", 
+    "https://boards.greenhouse.io/quiknodeinc", 
+    "https://boards.greenhouse.io/uniswaplabs", 
+    "https://boards.greenhouse.io/alchemy", 
+    "https://boards.greenhouse.io/chainalysis", 
+    "https://boards.eu.greenhouse.io/nethermind"
+    ]
 
 def setColor(title):
     testTags = ["qa", "test", "sdet"]
@@ -49,20 +50,44 @@ def dict_to_html_table_with_header(header, dictionary:tuple):
     html_table += "<tr><th>" + header.upper() + "</th><th>"+ jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = setColor(elem[0])
-        wrappedLink = f"<a href='{elem[1]}'>Apply</a>"
+        wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
         html_table += "<tr"+color_code+"><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
     html_table += "</table>"
     return html_table
 
-def convertJobs(company_name, data):
+# count open positions
+total_number_of_jobs:int = 0
+current_jobs = {}
+def printAndCollectNumbers(company:str, total:int):
+    now = datetime.date(datetime.now())
+    print(f'Company {company} has {total} open positions on {now}')
+    global total_number_of_jobs
+    total_number_of_jobs = total_number_of_jobs + total
+    global current_jobs
+    current_jobs[company]= total
+
+def writeNumbers():
+    now = datetime.date(datetime.now())
+    global total_number_of_jobs
+    print(f'In Total {total_number_of_jobs} of open positions on {now}')
+    global current_jobs
+    current_jobs["Total Jobs"]= total_number_of_jobs
+    with open(f"current.json", "w") as file:
+        json.dump(current_jobs, file, indent=4)
+
+def addJobsToIndex(company_page, data):
+    company_name = company_page.split('/')[3]
+    printAndCollectNumbers(company_name, len(data))
     html = dict_to_html_table_with_header(company_name, data)
     with open('index.html', 'a') as f:
         f.write(html)
 
 for page in greenhouse_web_pages:
-    convertJobs(page.split('/')[3], scrapeGreenhouse.getJobs(driver, page))
+    addJobsToIndex(page, scrapeGreenhouse.getJobs(driver, page))
 
 for page in lever_web_pages:
-    convertJobs(page.split('/')[3], scrapeLever.getJobs(driver, page))
+    addJobsToIndex(page, scrapeLever.getJobs(driver, page))
 
 driver.close()
+
+writeNumbers()
