@@ -1,17 +1,17 @@
-import json
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from pathlib import Path
+import scrapeLever
+import scrapeGreenhouse
 
-# create folder to 
-Path("./resources").mkdir(parents=True, exist_ok=True)
+
 # remove index.html to re-create from new data set
 index_file = Path("./index.html")
 index_file.unlink(missing_ok=True)
-
+# set up headless webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
+
 chainlink = "https://jobs.lever.co/chainlink"
 kraken = "https://jobs.lever.co/kraken"
 swissborg = "https://jobs.lever.co/swissborg"
@@ -36,45 +36,21 @@ nethermind = "https://boards.eu.greenhouse.io/nethermind"
 
 greenhouse_web_pages = [bitgo, genesisglobaltradinginc, amun, exodus54, bitpanda, quiknodeinc, uniswaplabs, alchemy, chainalysis, nethermind]
 
-def getJobsFromLever(web_page):
-    print(f'Scrap page: {web_page}')
-    driver.get(web_page)
-    titleElems = driver.find_elements(By.CSS_SELECTOR, 'a [data-qa="posting-name"]')
-    linkElements = driver.find_elements(By.XPATH, '//*[@data-qa="posting-name"]/..')
-    print(f'Elements with name: {len(titleElems)} vs Links: {len(linkElements)}')
-    titles = list(map(lambda title: title.text, titleElems))
-    links = list(map(lambda link: link.get_attribute('href'), linkElements))
-    wrappedLinks = list(map(lambda link: f"<a href='{link}'>Apply</a>", links))
-    print(f'Records with Name: {len(titles)} vs Links: {len(links)}')
-    res = dict(zip(titles, wrappedLinks))
-    #print(res)
-    return res
+def setColor(title):
+    testTags = ["qa", "test", "sdet"]
+    if any(ext in title.lower() for ext in testTags):
+        return ' bgcolor="green" '
+    else:
+        return ""
 
-def getJobsFromGreenhouse(web_page):
-    print(f'Scrap page: {web_page}')
-    driver.get(web_page)
-    titleElems = driver.find_elements(By.CSS_SELECTOR, 'div [class="opening"] a')
-    linkElements = driver.find_elements(By.XPATH, '//div[@class="opening"]/a')
-    print(f'Elements with name: {len(titleElems)} vs Links: {len(linkElements)}')
-    titles = list(map(lambda title: title.text, titleElems))
-    links = list(map(lambda link: link.get_attribute('href'), linkElements))
-    wrappedLinks = list(map(lambda link: f"<a href='{link}'>Apply</a>", links))
-    print(f'Records with Name: {len(titles)} vs Links: {len(links)}')
-    res = dict(zip(titles, wrappedLinks))
-    #print(res)
-    return res
-
-# not used but idea is to use json files as sourse for UI/BI 
-def writeJobs(company_name, data):
-    with open(f"resources/{company_name}.json", "w") as file:
-        json.dump(data, file, indent=4)
-
-def dict_to_html_table_with_header(header, dictionary):
+def dict_to_html_table_with_header(header, dictionary:tuple):
     html_table = '<table width="72%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
     html_table += "<tr><th>" + header.upper() + "</th><th>"+ jobs_total + "</th></tr>"
-    for key, value in dictionary.items():
-        html_table += "<tr><td>" + key + "</td><td width='20%' >" + value + "</td></tr>"
+    for elem in dictionary:
+        color_code = setColor(elem[0])
+        wrappedLink = f"<a href='{elem[1]}'>Apply</a>"
+        html_table += "<tr"+color_code+"><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
     html_table += "</table>"
     return html_table
 
@@ -84,9 +60,9 @@ def convertJobs(company_name, data):
         f.write(html)
 
 for page in greenhouse_web_pages:
-    convertJobs(page.split('/')[3], getJobsFromGreenhouse(page))
+    convertJobs(page.split('/')[3], scrapeGreenhouse.getJobs(driver, page))
 
 for page in lever_web_pages:
-    convertJobs(page.split('/')[3], getJobsFromLever(page))
+    convertJobs(page.split('/')[3], scrapeLever.getJobs(driver, page))
 
 driver.close()

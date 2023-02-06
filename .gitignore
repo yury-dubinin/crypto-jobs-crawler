@@ -1,5 +1,7 @@
-# scraped json files
+# scraped json files or cache
 resources/*.json
+__pycache__
+
 # Compiled class file
 *.class
 
@@ -23,3 +25,6 @@ resources/*.json
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# test files
+test.py
