@@ -34,10 +34,14 @@ greenhouse:
 - https://boards.greenhouse.io/alchemy
 - https://boards.greenhouse.io/chainalysis
 - https://boards.eu.greenhouse.io/nethermind
+- https://boards.greenhouse.io/magiceden
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
 - https://careers.smartrecruiters.com/B6/trustwallet
+
+recruitee:
+- https://bitfinex.recruitee.com
 
 wip:
 - https://www.binance.com/en/careers/job-openings
@@ -58,7 +62,6 @@ wip:
 - https://careers.aplo.io/
 - https://join.com/companies/sygnum
 - https://jobs.coinmarketcap.com/
-- https://bitfinex.recruitee.com/
 - https://www.abra.com/careers/
 - https://dappradar.bamboohr.com/careers
 - https://changenow.io/jobs
