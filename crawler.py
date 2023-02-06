@@ -2,6 +2,7 @@ from selenium import webdriver
 from pathlib import Path
 import scrapeLever
 import scrapeGreenhouse
+import scrapeSmartrecruiters
 from datetime import datetime
 import json
 
@@ -35,6 +36,11 @@ greenhouse_web_pages = [
     "https://boards.greenhouse.io/alchemy", 
     "https://boards.greenhouse.io/chainalysis", 
     "https://boards.eu.greenhouse.io/nethermind"
+    ]
+
+smartrecruiters_web_pages = [
+    "https://careers.smartrecruiters.com/B6/coinmarketcap",
+    "https://careers.smartrecruiters.com/B6/trustwallet"
     ]
 
 def setColor(title):
@@ -76,7 +82,7 @@ def writeNumbers():
         json.dump(current_jobs, file, indent=4)
 
 def addJobsToIndex(company_page, data):
-    company_name = company_page.split('/')[3]
+    company_name = company_page.split('/')[-1]
     printAndCollectNumbers(company_name, len(data))
     html = dict_to_html_table_with_header(company_name, data)
     with open('index.html', 'a') as f:
@@ -87,6 +93,9 @@ for page in greenhouse_web_pages:
 
 for page in lever_web_pages:
     addJobsToIndex(page, scrapeLever.getJobs(driver, page))
+
+for page in smartrecruiters_web_pages:
+    addJobsToIndex(page, scrapeSmartrecruiters.getJobs(driver, page))
 
 driver.close()
 

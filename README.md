@@ -35,9 +35,12 @@ greenhouse:
 - https://boards.greenhouse.io/chainalysis
 - https://boards.eu.greenhouse.io/nethermind
 
+smartrecruiters:
+- https://careers.smartrecruiters.com/B6/coinmarketcap
+- https://careers.smartrecruiters.com/B6/trustwallet
+
 wip:
 - https://www.binance.com/en/careers/job-openings
-- https://coinmarketcap.com/jobs
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
