@@ -45,8 +45,11 @@ smartrecruiters_web_pages = [
 
 def setColor(title):
     testTags = ["qa", "test", "sdet"]
+    devTags = ['software engineer', 'stack engineer']
     if any(ext in title.lower() for ext in testTags):
-        return ' bgcolor="green" '
+        return ' bgcolor="lightgreen" '
+    elif any(ext in title.lower() for ext in devTags):
+        return ' bgcolor="lightblue" '
     else:
         return ""
 
