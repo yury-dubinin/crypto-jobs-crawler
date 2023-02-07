@@ -10,8 +10,13 @@ The idea is to build a dashboard with crypto jobs plus some index number to trac
 
 # how to use?
 Given that you have Python 3.5+ and pip instaleed just run pip install -r requirements.txt
-Crawler uses just 2 none standard libs:
+Crawler uses just 1 none standard libs:
 - selenium 
+Next just run `crawler.py`
+
+# UI staff
+Let's try GitHub pages here: https://yury-dubinin.github.io/crypto-jobs-crawler/
+Locally just run `python3 -m http.server 8000` and open `localhost:8000` in your browser.
 
 # What we will watch by HR platform
 lever:
@@ -49,6 +54,7 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://jobs.lever.co/Coinshift
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
@@ -72,6 +78,3 @@ wip:
 - https://web3labs.jobs.personio.com
 - https://jobs.status.im
 - https://www.gemini.com/careers
-
-# UI staff
-Let's try GitHub pages here: https://yury-dubinin.github.io/crypto-jobs-crawler/
