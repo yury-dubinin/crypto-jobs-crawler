@@ -20,6 +20,7 @@ Locally just run `python3 -m http.server 8000` and open `localhost:8000` in your
 
 # What we will watch by HR platform
 lever:
+- https://jobs.lever.co/Coinshift
 - https://jobs.lever.co/OpenSea
 - https://jobs.lever.co/storyprotocol
 - https://jobs.lever.co/ethereumfoundation
@@ -54,7 +55,6 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
-- https://jobs.lever.co/Coinshift
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles

@@ -17,6 +17,7 @@ options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
 lever_web_pages = [
+    "https://jobs.lever.co/Coinshift",
     "https://jobs.lever.co/chainlink", 
     "https://jobs.lever.co/kraken", 
     "https://jobs.lever.co/swissborg", 

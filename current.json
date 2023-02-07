@@ -12,6 +12,7 @@
     "chainalysis": 32,
     "nethermind": 7,
     "magiceden": 7,
+    "Coinshift": 4,
     "chainlink": 33,
     "kraken": 16,
     "swissborg": 5,
@@ -23,6 +24,6 @@
     "coinmarketcap": 32,
     "trustwallet": 17,
     "bitfinex": 9,
-    "binance": 554,
-    "Total Jobs": 919
+    "binance": 555,
+    "Total Jobs": 924
 }
