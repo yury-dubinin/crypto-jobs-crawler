@@ -7,7 +7,7 @@
     "bitpanda": 36,
     "quiknodeinc": 8,
     "uniswaplabs": 9,
-    "alchemy": 52,
+    "alchemy": 49,
     "chainalysis": 32,
     "nethermind": 7,
     "magiceden": 7,
@@ -15,12 +15,13 @@
     "kraken": 16,
     "swissborg": 5,
     "OpenSea": 17,
-    "storyprotocol": 7,
+    "storyprotocol": 8,
     "ethereumfoundation": 7,
     "aave": 1,
-    "crypto": 9,
+    "crypto": 10,
     "coinmarketcap": 32,
     "trustwallet": 17,
     "bitfinex": 9,
-    "Total Jobs": 353
+    "binance": 556,
+    "Total Jobs": 908
 }

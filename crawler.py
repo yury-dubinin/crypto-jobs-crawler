@@ -4,6 +4,7 @@ import scrapeLever
 import scrapeGreenhouse
 import scrapeSmartrecruiters
 import scrapeRecruitee
+import scrapeBinance
 from datetime import datetime
 import json
 
@@ -109,7 +110,8 @@ for page in smartrecruiters_web_pages:
 
 for page in recruitee_web_pages:
     addJobsToIndex(page, scrapeRecruitee.getJobs(driver, page))
-
+# Custom jobs
+addJobsToIndex('binance', scrapeBinance.getJobs(driver))
 driver.close()
 
 writeNumbers()
