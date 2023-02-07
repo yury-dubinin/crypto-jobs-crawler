@@ -30,6 +30,8 @@ lever:
 - https://jobs.lever.co/kraken
 - https://jobs.lever.co/Polygon
 - https://jobs.lever.co/tokenmetrics
+- https://jobs.lever.co/offchainlabs
+- https://jobs.lever.co/subspacelabs
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
@@ -45,6 +47,7 @@ greenhouse:
 - https://boards.eu.greenhouse.io/nethermind
 - https://boards.greenhouse.io/magiceden
 - https://boards.greenhouse.io/bitmex
+- https://boards.greenhouse.io/blockdaemon
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -58,9 +61,6 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
-- https://jobs.lever.co/offchainlabs
-- https://jobs.lever.co/subspacelabs
-- https://boards.greenhouse.io/blockdaemon
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles

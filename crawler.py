@@ -27,7 +27,9 @@ lever_web_pages = [
     "https://jobs.eu.lever.co/aave", 
     "https://jobs.lever.co/crypto",
     "https://jobs.lever.co/Polygon",
-    "https://jobs.lever.co/tokenmetrics"
+    "https://jobs.lever.co/tokenmetrics",
+    "https://jobs.lever.co/offchainlabs",
+    "https://jobs.lever.co/subspacelabs"
 ]
 
 greenhouse_web_pages = [
@@ -43,7 +45,8 @@ greenhouse_web_pages = [
     "https://boards.greenhouse.io/alchemy", 
     "https://boards.greenhouse.io/chainalysis", 
     "https://boards.eu.greenhouse.io/nethermind",
-    "https://boards.greenhouse.io/magiceden"
+    "https://boards.greenhouse.io/magiceden",
+    "https://boards.greenhouse.io/blockdaemon"
 ]
 
 smartrecruiters_web_pages = [
