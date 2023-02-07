@@ -58,6 +58,8 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://jobs.lever.co/offchainlabs
+- https://jobs.lever.co/subspacelabs
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
@@ -81,3 +83,16 @@ wip:
 - https://web3labs.jobs.personio.com
 - https://jobs.status.im
 - https://www.gemini.com/careers
+- https://boards.greenhouse.io/optimism
+- https://boards.greenhouse.io/oplabs
+- https://chainstack.bamboohr.com/jobs
+- https://nexo.breezy.hr
+- https://boards.greenhouse.io/poaptheproofofattendanceprotocol
+- https://careers.stacks.org
+- https://www.coinbase.com/careers/positions
+- https://consensys.net/open-roles
+- https://apply.workable.com/smart-token-labs
+- https://boards.greenhouse.io/moonwalk
+- https://apply.workable.com/bitstamp/#jobs
+- https://www.kucoin.com/careers/job-opening
+- https://apply.workable.com/cryptofinance
