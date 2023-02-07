@@ -24,6 +24,7 @@ lever:
 - https://jobs.lever.co/kraken
 
 greenhouse:
+- https://boards.greenhouse.io/moonpay
 - https://boards.greenhouse.io/bitgo
 - https://boards.greenhouse.io/genesisglobaltradinginc
 - https://boards.greenhouse.io/amun
@@ -53,23 +54,24 @@ wip:
 - https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
-- https://metrika.recruitee.com/
-- https://blockdaemon.com/about/careers/
+- https://metrika.recruitee.com
+- https://blockdaemon.com/about/careers
 - https://www.circle.com/en/careers
 - https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://bullish.wd3.myworkdayjobs.com/Bullish
-- https://verum.capital/careers/
-- https://paxos.com/careers/
-- https://careers.aplo.io/
+- https://verum.capital/careers
+- https://paxos.com/careers
+- https://careers.aplo.io
 - https://join.com/companies/sygnum
-- https://jobs.coinmarketcap.com/
-- https://www.abra.com/careers/
+- https://jobs.coinmarketcap.com
+- https://www.abra.com/careers
 - https://dappradar.bamboohr.com/careers
 - https://changenow.io/jobs
-- https://jobs.bitvavo.com/en/jobs/
+- https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
-- https://jobs.status.im/
+- https://jobs.status.im
+- https://www.gemini.com/careers
 
 # UI staff
 Let's try GitHub pages here: https://yury-dubinin.github.io/crypto-jobs-crawler/

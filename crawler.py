@@ -28,6 +28,7 @@ lever_web_pages = [
 ]
 
 greenhouse_web_pages = [
+    "https://boards.greenhouse.io/moonpay",
     "https://boards.greenhouse.io/bitmex",
     "https://boards.greenhouse.io/bitgo", 
     "https://boards.greenhouse.io/genesisglobaltradinginc", 
