@@ -21,10 +21,11 @@
     "ethereumfoundation": 7,
     "aave": 1,
     "crypto": 11,
+    "Polygon": 12,
     "coinmarketcap": 32,
     "trustwallet": 17,
-    "Swissquote": 14,
+    "Swissquote": 15,
     "bitfinex": 9,
-    "binance": 556,
-    "Total Jobs": 939
+    "binance": 558,
+    "Total Jobs": 954
 }

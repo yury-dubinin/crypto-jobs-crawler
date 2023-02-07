@@ -5,7 +5,7 @@ import scrapeLever
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
-jobs = scrapeLever.getJobs(driver, "https://jobs.lever.co/Coinshift")
+jobs = scrapeLever.getJobs(driver, "https://jobs.lever.co/Polygon")
 for job in jobs:
     print(job)
 

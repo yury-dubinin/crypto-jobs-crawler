@@ -25,7 +25,8 @@ lever_web_pages = [
     "https://jobs.lever.co/storyprotocol", 
     "https://jobs.lever.co/ethereumfoundation", 
     "https://jobs.eu.lever.co/aave", 
-    "https://jobs.lever.co/crypto"
+    "https://jobs.lever.co/crypto",
+    "https://jobs.lever.co/Polygon"
 ]
 
 greenhouse_web_pages = [
