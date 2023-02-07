@@ -60,13 +60,13 @@ custom:
 wip:
 - https://jobs.lever.co/offchainlabs
 - https://jobs.lever.co/subspacelabs
+- https://boards.greenhouse.io/blockdaemon
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
 - https://metrika.recruitee.com
-- https://blockdaemon.com/about/careers
 - https://www.circle.com/en/careers
 - https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
