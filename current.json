@@ -22,10 +22,11 @@
     "aave": 1,
     "crypto": 11,
     "Polygon": 12,
+    "tokenmetrics": 94,
     "coinmarketcap": 32,
     "trustwallet": 17,
     "Swissquote": 15,
     "bitfinex": 9,
-    "binance": 558,
-    "Total Jobs": 954
+    "binance": 561,
+    "Total Jobs": 1051
 }

@@ -29,6 +29,7 @@ lever:
 - https://jobs.eu.lever.co/aave
 - https://jobs.lever.co/kraken
 - https://jobs.lever.co/Polygon
+- https://jobs.lever.co/tokenmetrics
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
@@ -57,7 +58,6 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
-- https://jobs.lever.co/tokenmetrics
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
