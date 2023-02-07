@@ -46,7 +46,8 @@ greenhouse_web_pages = [
 
 smartrecruiters_web_pages = [
     "https://careers.smartrecruiters.com/B6/coinmarketcap",
-    "https://careers.smartrecruiters.com/B6/trustwallet"
+    "https://careers.smartrecruiters.com/B6/trustwallet",
+    "https://careers.smartrecruiters.com/Swissquote"
 ]
 
 recruitee_web_pages = [

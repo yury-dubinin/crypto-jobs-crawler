@@ -14,16 +14,17 @@
     "magiceden": 7,
     "Coinshift": 4,
     "chainlink": 33,
-    "kraken": 16,
+    "kraken": 15,
     "swissborg": 5,
     "OpenSea": 17,
     "storyprotocol": 8,
     "ethereumfoundation": 7,
     "aave": 1,
-    "crypto": 10,
+    "crypto": 11,
     "coinmarketcap": 32,
     "trustwallet": 17,
+    "Swissquote": 14,
     "bitfinex": 9,
-    "binance": 555,
-    "Total Jobs": 924
+    "binance": 556,
+    "Total Jobs": 939
 }
