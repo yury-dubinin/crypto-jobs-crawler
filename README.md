@@ -98,3 +98,9 @@ wip:
 - https://www.kucoin.com/careers/job-opening
 - https://apply.workable.com/cryptofinance
 - https://ripple.com/careers/all-jobs
+- https://www.bitcoin.com/jobs/#joblist
+- https://careers.lido.fi/
+- https://www.rdx.works/careers#careers
+- https://horizenlabs.io/careers/#list-jobs
+- https://boards.greenhouse.io/OKX
+- https://nexusmutual.recruitee.com/
