@@ -49,6 +49,7 @@ greenhouse:
 - https://boards.greenhouse.io/bitmex
 - https://boards.greenhouse.io/blockdaemon
 - https://paxos.com/careers/role
+- https://boards.greenhouse.io/dfinity
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap

@@ -13,6 +13,7 @@
     "nethermind": 7,
     "magiceden": 7,
     "blockdaemon": 2,
+    "dfinity": 18,
     "Coinshift": 4,
     "chainlink": 33,
     "kraken": 14,
@@ -21,7 +22,7 @@
     "storyprotocol": 8,
     "ethereumfoundation": 7,
     "aave": 1,
-    "crypto": 11,
+    "crypto": 12,
     "Polygon": 12,
     "tokenmetrics": 94,
     "offchainlabs": 17,
@@ -32,5 +33,5 @@
     "bitfinex": 9,
     "paxos": 64,
     "binance": 560,
-    "Total Jobs": 1132
+    "Total Jobs": 1151
 }
