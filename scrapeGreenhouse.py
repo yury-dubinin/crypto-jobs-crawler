@@ -6,6 +6,10 @@ def cleanLocation(location):
 def getJobs(driver, web_page):
     print(f'Scrap page: {web_page}')
     driver.get(web_page)
+    iframe = driver.find_elements(By.TAG_NAME, 'iframe')
+    if len(iframe)>0:
+        print('iFrame detected..')
+        driver.switch_to.frame(iframe[0])
     groupElements = driver.find_elements(By.CSS_SELECTOR, 'div [class="opening"]')
     print(f'Found {len(groupElements)} jobs.')
     result = []

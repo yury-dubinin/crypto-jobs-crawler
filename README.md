@@ -48,6 +48,7 @@ greenhouse:
 - https://boards.greenhouse.io/magiceden
 - https://boards.greenhouse.io/bitmex
 - https://boards.greenhouse.io/blockdaemon
+- https://paxos.com/careers/role
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -72,7 +73,6 @@ wip:
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://bullish.wd3.myworkdayjobs.com/Bullish
 - https://verum.capital/careers
-- https://paxos.com/careers
 - https://careers.aplo.io
 - https://join.com/companies/sygnum
 - https://jobs.coinmarketcap.com

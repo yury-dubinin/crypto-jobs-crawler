@@ -69,13 +69,19 @@ def setColor(title):
     else:
         return ""
 
+def filterJobs(job_title:str, filters):
+    if any(ext in job_title.lower() for ext in filters):
+        return True
+    return False
+
 def dict_to_html_table_with_header(header, dictionary:tuple):
     html_table = '<table width="72%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
-    html_table += "<tr><th>" + header.upper() + "</th><th>"+ jobs_total + "</th></tr>"
+    html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = setColor(elem[0])
         wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
+        # if filterJobs(elem[0], ['qa', 'test', 'quality']):
         html_table += "<tr"+color_code+"><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
     html_table += "</table>"
     return html_table
@@ -118,8 +124,11 @@ for page in smartrecruiters_web_pages:
 
 for page in recruitee_web_pages:
     addJobsToIndex(page, scrapeRecruitee.getJobs(driver, page))
+
 # Custom jobs
+addJobsToIndex('paxos', scrapeGreenhouse.getJobs(driver, "https://paxos.com/careers/role"))
 addJobsToIndex('binance', scrapeBinance.getJobs(driver))
+
 driver.close()
 
 writeNumbers()
