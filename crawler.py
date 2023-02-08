@@ -1,5 +1,4 @@
 from selenium import webdriver
-from pathlib import Path
 import scrapeLever
 import scrapeGreenhouse
 import scrapeSmartrecruiters
@@ -9,8 +8,10 @@ from datetime import datetime
 import json
 
 # remove index.html to re-create from new data set
-index_file = Path("./index.html")
-index_file.unlink(missing_ok=True)
+with open('index.html', 'w') as f:
+        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a></p>')
+with open('test.html', 'w') as f:
+        f.write('<!DOCTYPE html>')
 # set up headless webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
@@ -62,7 +63,7 @@ recruitee_web_pages = [
 
 def setColor(title):
     testTags = ['qa', 'test', 'sdet', 'quality assurance']
-    devTags = ['software engineer', 'stack engineer', 'java engineer', 'backend developer']
+    devTags = ['software engineer', 'stack engineer', 'java engineer', 'backend developer', 'java developer']
     if any(ext in title.lower() for ext in testTags):
         return ' bgcolor="lightgreen" '
     elif any(ext in title.lower() for ext in devTags):
@@ -75,15 +76,35 @@ def filterJobs(job_title:str, filters):
         return True
     return False
 
-def dict_to_html_table_with_header(header, dictionary:tuple):
+def dict_to_html_table_with_header(header, dictionary):
     html_table = '<table width="72%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
     html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = setColor(elem[0])
         wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
-        # if filterJobs(elem[0], ['qa', 'test', 'quality']):
         html_table += "<tr"+color_code+"><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
+    html_table += "</table>"
+    return html_table
+
+def dict_to_html_table_with_header_and_filter(header, dictionary, filter=['qa', 'test', 'quality']):
+    filtered = []
+    for elem in dictionary:
+        if filterJobs(elem[0], filter):
+            filtered.append(elem)
+
+    jobs_total = f'No {filter} jobs'
+    if len(filtered) > 0:
+        jobs_total = f"Total {filter} Jobs: {len(filtered)}"
+    print(f'[CRAWLER] {jobs_total} at {header}')
+    # For now keep the table
+    html_table = '<table width="80%" align="center" border="1">'
+    html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
+
+    for elem in filtered:
+        wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
+        html_table += "<tr><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
+
     html_table += "</table>"
     return html_table
 
@@ -92,7 +113,7 @@ total_number_of_jobs:int = 0
 current_jobs = {}
 def printAndCollectNumbers(company:str, total:int):
     now = datetime.date(datetime.now())
-    print(f'Company {company} has {total} open positions on {now}')
+    print(f'[CRAWLER] Company {company} has {total} open positions on {now}')
     global total_number_of_jobs
     total_number_of_jobs = total_number_of_jobs + total
     global current_jobs
@@ -101,7 +122,7 @@ def printAndCollectNumbers(company:str, total:int):
 def writeNumbers():
     now = datetime.date(datetime.now())
     global total_number_of_jobs
-    print(f'In Total {total_number_of_jobs} of open positions on {now}')
+    print(f'[CRAWLER] In Total {total_number_of_jobs} of open positions on {now}')
     global current_jobs
     current_jobs["Total Jobs"]= total_number_of_jobs
     with open(f"current.json", "w") as file:
@@ -114,21 +135,39 @@ def addJobsToIndex(company_page, data):
     with open('index.html', 'a') as f:
         f.write(html)
 
+def addJobsToTest(company_page, data):
+    company_name = (company_page.split('/')[-1]).split('.')[0]
+    html = dict_to_html_table_with_header_and_filter(company_name, data)
+    with open('test.html', 'a') as f:
+        f.write(html)
+
 for page in greenhouse_web_pages:
-    addJobsToIndex(page, scrapeGreenhouse.getJobs(driver, page))
+    data = scrapeGreenhouse.getJobs(driver, page)
+    addJobsToIndex(page, data)
+    addJobsToTest(page, data)
 
 for page in lever_web_pages:
-    addJobsToIndex(page, scrapeLever.getJobs(driver, page))
+    data = scrapeLever.getJobs(driver, page)
+    addJobsToIndex(page, data)
+    addJobsToTest(page, data)
 
 for page in smartrecruiters_web_pages:
-    addJobsToIndex(page, scrapeSmartrecruiters.getJobs(driver, page))
+    data = scrapeSmartrecruiters.getJobs(driver, page)
+    addJobsToIndex(page, data)
+    addJobsToTest(page, data)
 
 for page in recruitee_web_pages:
-    addJobsToIndex(page, scrapeRecruitee.getJobs(driver, page))
+    data = scrapeRecruitee.getJobs(driver, page)
+    addJobsToIndex(page, data)
+    addJobsToTest(page, data)
 
 # Custom jobs
-addJobsToIndex('paxos', scrapeGreenhouse.getJobs(driver, "https://paxos.com/careers/role"))
-addJobsToIndex('binance', scrapeBinance.getJobs(driver))
+paxos_data = scrapeGreenhouse.getJobs(driver, "https://paxos.com/careers/role")
+addJobsToIndex('paxos', paxos_data)
+addJobsToTest('paxos', paxos_data)
+binance_data = scrapeBinance.getJobs(driver)
+addJobsToIndex('binance', binance_data)
+addJobsToTest('binance', binance_data)
 
 driver.close()
 
