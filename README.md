@@ -50,6 +50,7 @@ greenhouse:
 - https://boards.greenhouse.io/blockdaemon
 - https://paxos.com/careers/role
 - https://boards.greenhouse.io/dfinity
+- https://jobs.status.im
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -82,7 +83,6 @@ wip:
 - https://changenow.io/jobs
 - https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
-- https://jobs.status.im
 - https://www.gemini.com/careers
 - https://boards.greenhouse.io/optimism
 - https://boards.greenhouse.io/oplabs
@@ -97,3 +97,4 @@ wip:
 - https://apply.workable.com/bitstamp/#jobs
 - https://www.kucoin.com/careers/job-opening
 - https://apply.workable.com/cryptofinance
+- https://ripple.com/careers/all-jobs

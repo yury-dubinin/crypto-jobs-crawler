@@ -5,11 +5,11 @@
     "genesisglobaltradinginc": 8,
     "amun": 5,
     "exodus54": 2,
-    "bitpanda": 33,
+    "bitpanda": 35,
     "quiknodeinc": 7,
     "uniswaplabs": 9,
     "alchemy": 49,
-    "chainalysis": 29,
+    "chainalysis": 28,
     "nethermind": 7,
     "magiceden": 7,
     "blockdaemon": 2,
@@ -31,7 +31,8 @@
     "trustwallet": 17,
     "Swissquote": 16,
     "bitfinex": 9,
-    "paxos": 64,
-    "binance": 560,
-    "Total Jobs": 1151
+    "paxos": 63,
+    "status": 63,
+    "binance": 548,
+    "Total Jobs": 1202
 }
