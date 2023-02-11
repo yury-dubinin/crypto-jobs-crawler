@@ -1,7 +1,7 @@
 {
     "moonpay": 18,
     "bitmex": 15,
-    "bitgo": 18,
+    "bitgo": 20,
     "genesisglobaltradinginc": 8,
     "amun": 4,
     "exodus54": 2,
@@ -31,8 +31,8 @@
     "trustwallet": 17,
     "Swissquote": 14,
     "bitfinex": 9,
-    "paxos": 64,
-    "status": 64,
-    "binance": 540,
-    "Total Jobs": 1203
+    "paxos": 65,
+    "status": 65,
+    "binance": 535,
+    "Total Jobs": 1202
 }
