@@ -83,11 +83,26 @@ def setColor(title):
         'back-end engineer',
         'senior java',
         'staff engineer', 
-        'api engineer']
+        'api engineer',
+        'rust developer',
+        'full stack developer',
+        'c++ developer',
+        'full-stack dev'
+    ]
+    devOpsTags = [
+        'devops',
+        'sre',
+        'site reliability',
+        'platforms engineer',
+        'infrastructure engineer',
+        'network engineer'
+    ]
     if any(ext in title.lower() for ext in testTags):
         return ' bgcolor="lightgreen" '
     elif any(ext in title.lower() for ext in devTags):
         return ' bgcolor="lightblue" '
+    elif any(ext in title.lower() for ext in devOpsTags):
+        return ' bgcolor="lightyellow" '
     else:
         return ""
 
