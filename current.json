@@ -21,7 +21,7 @@
     "chainlink": 33,
     "kraken": 13,
     "swissborg": 5,
-    "OpenSea": 14,
+    "OpenSea": 15,
     "storyprotocol": 8,
     "ethereumfoundation": 8,
     "aave": 1,
@@ -37,5 +37,5 @@
     "paxos": 53,
     "status": 20,
     "binance": 534,
-    "Total Jobs": 1200
+    "Total Jobs": 1201
 }

@@ -9,8 +9,7 @@ import json
 
 # remove index.html to re-create from new data set
 with open('index.html', 'w') as f:
-        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a></p>')
-        f.write('<p><a href="dev.html" target="_blank">Just Dev jobs</a></p>')
+        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a></p>')
 with open('test.html', 'w') as f:
         f.write('<!DOCTYPE html>')
 with open('dev.html', 'w') as f:
