@@ -51,6 +51,8 @@ greenhouse:
 - https://paxos.com/careers/role
 - https://boards.greenhouse.io/dfinity
 - https://jobs.status.im
+- https://boards.greenhouse.io/figment
+- https://boards.greenhouse.io/parity
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -64,8 +66,6 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
-- https://boards.greenhouse.io/figment
-- https://boards.greenhouse.io/parity
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles

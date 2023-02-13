@@ -49,7 +49,8 @@ greenhouse_web_pages = [
     "https://boards.greenhouse.io/magiceden",
     "https://boards.greenhouse.io/blockdaemon",
     "https://boards.greenhouse.io/dfinity",
-    "https://boards.greenhouse.io/figment"
+    "https://boards.greenhouse.io/figment",
+    "https://boards.greenhouse.io/parity"
 ]
 
 smartrecruiters_web_pages = [
