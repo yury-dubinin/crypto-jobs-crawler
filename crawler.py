@@ -48,7 +48,8 @@ greenhouse_web_pages = [
     "https://boards.eu.greenhouse.io/nethermind",
     "https://boards.greenhouse.io/magiceden",
     "https://boards.greenhouse.io/blockdaemon",
-    "https://boards.greenhouse.io/dfinity"
+    "https://boards.greenhouse.io/dfinity",
+    "https://boards.greenhouse.io/figment"
 ]
 
 smartrecruiters_web_pages = [
