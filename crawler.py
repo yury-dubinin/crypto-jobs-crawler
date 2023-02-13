@@ -69,7 +69,21 @@ recruitee_web_pages = [
 
 def setColor(title):
     testTags = ['qa', 'test', 'sdet', 'quality assurance']
-    devTags = ['software engineer', 'stack engineer', 'java engineer', 'backend engineer', 'backend developer', 'java developer']
+    devTags = [
+        'software engineer', 
+        'stack engineer',
+        'systems engineer', 
+        'java engineer', 
+        'backend engineer', 
+        'backend developer', 
+        'java developer',
+        'rust engineer',
+        'golang engineer',
+        'principal engineer',
+        'back-end engineer',
+        'senior java',
+        'staff engineer', 
+        'api engineer']
     if any(ext in title.lower() for ext in testTags):
         return ' bgcolor="lightgreen" '
     elif any(ext in title.lower() for ext in devTags):
