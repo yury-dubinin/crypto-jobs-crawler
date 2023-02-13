@@ -64,6 +64,8 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://boards.greenhouse.io/figment
+- https://boards.greenhouse.io/parity
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
@@ -104,3 +106,6 @@ wip:
 - https://horizenlabs.io/careers/#list-jobs
 - https://boards.greenhouse.io/OKX
 - https://nexusmutual.recruitee.com/
+- https://cexio.bamboohr.com/jobs/
+- https://careers.substrate.io/jobs
+- https://web3.bamboohr.com/jobs/
