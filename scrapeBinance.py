@@ -9,12 +9,11 @@ def cleanLocation(location:str):
     return set(([x.strip() for x in location.split(',')]))
 
 def getJobs(driver, web_page="https://www.binance.com/en/careers/job-openings"):
-    print(f'Scrap page: {web_page}')
     driver.get(web_page)
     wait = WebDriverWait(driver, 120)
-    element = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[.="Apply"]')))
+    applyButtons = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[.="Apply"]')))
     groupElements = driver.find_elements(By.XPATH, '//div[contains(@class,"posting")]')
-    print(f'Found {len(groupElements)} jobs')
+    print(f'[BINANCE] Found {len(applyButtons)} jobs on {web_page}')
     result = []
     for elem in groupElements:
         linkElem = elem.find_element(By.CSS_SELECTOR, 'a')
@@ -22,5 +21,5 @@ def getJobs(driver, web_page="https://www.binance.com/en/careers/job-openings"):
         jobUrl = linkElem.get_attribute('href')
         location = cleanLocation(locationElem.text)
         result.append((f'{linkElem.text} From:{location}', jobUrl))
-    print(f'Scraped {len(result)} jobs from {web_page}')
+    print(f'[BINANCE] Scraped {len(result)} jobs from {web_page}')
     return result

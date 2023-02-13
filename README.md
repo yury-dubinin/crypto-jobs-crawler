@@ -53,6 +53,7 @@ greenhouse:
 - https://jobs.status.im
 - https://boards.greenhouse.io/figment
 - https://boards.greenhouse.io/parity
+- https://boards.greenhouse.io/optimism
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -86,7 +87,6 @@ wip:
 - https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
 - https://www.gemini.com/careers
-- https://boards.greenhouse.io/optimism
 - https://boards.greenhouse.io/oplabs
 - https://chainstack.bamboohr.com/jobs
 - https://nexo.breezy.hr
