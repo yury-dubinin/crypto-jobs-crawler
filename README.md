@@ -54,6 +54,7 @@ greenhouse:
 - https://boards.greenhouse.io/figment
 - https://boards.greenhouse.io/parity
 - https://boards.greenhouse.io/optimism
+- https://boards.greenhouse.io/flashbots
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap

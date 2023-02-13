@@ -17,6 +17,7 @@
     "figment": 4,
     "parity": 42,
     "optimism": 1,
+    "flashbots": 6,
     "Coinshift": 4,
     "chainlink": 33,
     "kraken": 13,
@@ -35,7 +36,7 @@
     "Swissquote": 14,
     "bitfinex": 9,
     "paxos": 53,
-    "status": 21,
+    "status": 23,
     "binance": 533,
-    "Total Jobs": 1201
+    "Total Jobs": 1209
 }

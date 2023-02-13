@@ -9,12 +9,13 @@ import json
 
 # remove index.html to re-create from new data set
 with open('index.html', 'w') as f:
-        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a></p>')
+        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a>  || <a href="devops.html" target="_blank">Just DevOps/SRE jobs</a></p>')
 with open('test.html', 'w') as f:
         f.write('<!DOCTYPE html>')
 with open('dev.html', 'w') as f:
         f.write('<!DOCTYPE html>')
-
+with open('devops.html', 'w') as f:
+        f.write('<!DOCTYPE html>')
 # set up headless webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
@@ -54,7 +55,8 @@ greenhouse_web_pages = [
     "https://boards.greenhouse.io/dfinity",
     "https://boards.greenhouse.io/figment",
     "https://boards.greenhouse.io/parity",
-    "https://boards.greenhouse.io/optimism"
+    "https://boards.greenhouse.io/optimism",
+    "https://boards.greenhouse.io/flashbots"
 ]
 
 smartrecruiters_web_pages = [
@@ -183,43 +185,66 @@ def addJobsToDev(company_page, data):
     with open('dev.html', 'a') as f:
         f.write(html)
 
+def addJobsToDevOps(company_page, data):
+    company_name = (company_page.split('/')[-1]).split('.')[0]
+    devOpsTags = [
+        'devops engineer',
+        'sre',
+        'sre engineer'
+        'site reliability',
+        'platforms engineer',
+        'infrastructure engineer',
+        'network engineer',
+        'observability engineer'
+    ]
+    html = dict_to_html_table_with_header_and_filter(company_name, data, filter=devOpsTags)
+    with open('devops.html', 'a') as f:
+        f.write(html)
+
 for page in greenhouse_web_pages:
     data = scrapeGreenhouse.getJobs(driver, page)
     addJobsToIndex(page, data)
     addJobsToTest(page, data)
     addJobsToDev(page, data)
+    addJobsToDevOps(page, data)
 
 for page in lever_web_pages:
     data = scrapeLever.getJobs(driver, page)
     addJobsToIndex(page, data)
     addJobsToTest(page, data)
     addJobsToDev(page, data)
+    addJobsToDevOps(page, data)
 
 for page in smartrecruiters_web_pages:
     data = scrapeSmartrecruiters.getJobs(driver, page)
     addJobsToIndex(page, data)
     addJobsToTest(page, data)
     addJobsToDev(page, data)
+    addJobsToDevOps(page, data)
 
 for page in recruitee_web_pages:
     data = scrapeRecruitee.getJobs(driver, page)
     addJobsToIndex(page, data)
     addJobsToTest(page, data)
     addJobsToDev(page, data)
+    addJobsToDevOps(page, data)
 
 # Custom jobs
 paxos_data = scrapeGreenhouse.getJobs(driver, "https://paxos.com/careers/role")
 addJobsToIndex('paxos', paxos_data)
 addJobsToTest('paxos', paxos_data)
 addJobsToDev('paxos', paxos_data)
+addJobsToDevOps('paxos', paxos_data)
 status_data = scrapeGreenhouse.getJobs(driver, "https://jobs.status.im")
 addJobsToIndex('status', status_data)
 addJobsToTest('status', status_data)
 addJobsToDev('status', status_data)
+addJobsToDevOps('status', status_data)
 binance_data = scrapeBinance.getJobs(driver)
 addJobsToIndex('binance', binance_data)
 addJobsToTest('binance', binance_data)
 addJobsToDev('binance', binance_data)
+addJobsToDevOps('binance', binance_data)
 
 driver.close()
 
