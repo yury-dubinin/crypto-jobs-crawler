@@ -55,6 +55,7 @@ greenhouse:
 - https://boards.greenhouse.io/parity
 - https://boards.greenhouse.io/optimism
 - https://boards.greenhouse.io/flashbots
+- https://boards.greenhouse.io/oplabs
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -88,7 +89,6 @@ wip:
 - https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
 - https://www.gemini.com/careers
-- https://boards.greenhouse.io/oplabs
 - https://chainstack.bamboohr.com/jobs
 - https://nexo.breezy.hr
 - https://boards.greenhouse.io/poaptheproofofattendanceprotocol
@@ -110,3 +110,4 @@ wip:
 - https://cexio.bamboohr.com/jobs/
 - https://careers.substrate.io/jobs
 - https://web3.bamboohr.com/jobs/
+- https://join.com/companies/taurusgroup

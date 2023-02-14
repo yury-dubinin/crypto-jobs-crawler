@@ -5,7 +5,7 @@ import scrapeGreenhouse
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
-jobs = scrapeGreenhouse.getJobs(driver, "https://boards.greenhouse.io/flashbots")
+jobs = scrapeGreenhouse.getJobs(driver, "https://boards.greenhouse.io/oplabs")
 for job in jobs:
     print(job)
 
