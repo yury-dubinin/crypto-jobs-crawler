@@ -9,6 +9,7 @@ def cleanLocation(location:str):
     return set(([x.strip() for x in location.split(',')]))
 
 def getJobs(driver, web_page="https://www.binance.com/en/careers/job-openings"):
+    print(f'[BINANCE] Scrap page: {web_page}')
     driver.get(web_page)
     wait = WebDriverWait(driver, 120)
     applyButtons = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//a[.="Apply"]')))

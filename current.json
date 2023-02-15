@@ -19,6 +19,7 @@
     "optimism": 1,
     "flashbots": 6,
     "oplabs": 3,
+    "circle": 277,
     "Coinshift": 4,
     "chainlink": 33,
     "kraken": 13,
@@ -39,5 +40,5 @@
     "paxos": 56,
     "status": 24,
     "binance": 532,
-    "Total Jobs": 1215
+    "Total Jobs": 1492
 }

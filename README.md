@@ -56,6 +56,7 @@ greenhouse:
 - https://boards.greenhouse.io/optimism
 - https://boards.greenhouse.io/flashbots
 - https://boards.greenhouse.io/oplabs
+- https://boards.greenhouse.io/circle
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -75,7 +76,6 @@ wip:
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
 - https://metrika.recruitee.com
-- https://www.circle.com/en/careers
 - https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://bullish.wd3.myworkdayjobs.com/Bullish
