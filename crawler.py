@@ -1,6 +1,7 @@
 from selenium import webdriver
 from datetime import datetime
 import json
+from companyItem import CompanyItem
 import companyList
 
 
@@ -13,7 +14,11 @@ with open('dev.html', 'w') as f:
         f.write('<!DOCTYPE html>')
 with open('devops.html', 'w') as f:
         f.write('<!DOCTYPE html>')
-# set up headless webdriver
+
+company_list = companyList.getCompanyList()
+print(f'[CRAWLER] Number of companies: {len(company_list)}')
+
+# setup headless webdriver
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
@@ -62,10 +67,11 @@ def filterJobs(job_title:str, filters):
         return True
     return False
 
-def dict_to_html_table_with_header(header, dictionary):
+def dict_to_html_table_with_header(company:CompanyItem, dictionary):
     html_table = '<table width="72%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
-    html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
+    wrappedHeaderLink = f"<a href='{company.company_url}' target='_blank' >{company.company_name.upper()}</a>"
+    html_table += "<tr><th>" + wrappedHeaderLink + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = setColor(elem[0])
         wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
@@ -114,24 +120,24 @@ def writeNumbers():
     with open(f"current.json", "w") as file:
         json.dump(current_jobs, file, indent=4)
 
-def addJobsToIndex(company_name, data):
-    printAndCollectNumbers(company_name, len(data))
-    html = dict_to_html_table_with_header(company_name, data)
+def addJobsToIndex(company:CompanyItem, data):
+    printAndCollectNumbers(company.company_name, len(data))
+    html = dict_to_html_table_with_header(company, data)
     with open('index.html', 'a') as f:
         f.write(html)
 
-def addJobsToTest(company_name, data):
-    html = dict_to_html_table_with_header_and_filter(company_name, data)
+def addJobsToTest(company:CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data)
     with open('test.html', 'a') as f:
         f.write(html)
 
-def addJobsToDev(company_name, data):
+def addJobsToDev(company:CompanyItem, data):
     filter_dev = ['software engineer', 'stack engineer', 'java engineer', 'backend engineer', 'backend developer', 'java developer']
-    html = dict_to_html_table_with_header_and_filter(company_name, data, filter=filter_dev)
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=filter_dev)
     with open('dev.html', 'a') as f:
         f.write(html)
 
-def addJobsToDevOps(company_name, data):
+def addJobsToDevOps(company:CompanyItem, data):
     devOpsTags = [
         'devops engineer',
         'sre',
@@ -142,18 +148,16 @@ def addJobsToDevOps(company_name, data):
         'network engineer',
         'observability engineer'
     ]
-    html = dict_to_html_table_with_header_and_filter(company_name, data, filter=devOpsTags)
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=devOpsTags)
     with open('devops.html', 'a') as f:
         f.write(html)
 
-cl = companyList.getCompanyList()
-print(f'[CRAWLER] Number of companies: ${len(cl)}')
-for company in cl:
+for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    addJobsToIndex(company.company_name, data)
-    addJobsToTest(company.company_name, data)
-    addJobsToDev(company.company_name, data)
-    addJobsToDevOps(company.company_name, data)
+    addJobsToIndex(company, data)
+    addJobsToTest(company, data)
+    addJobsToDev(company, data)
+    addJobsToDevOps(company, data)
 
 driver.close()
 

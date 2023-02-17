@@ -1,6 +1,6 @@
 {
     "paxos": 57,
-    "circle": 275,
+    "circle": 263,
     "status": 25,
     "OKX": 190,
     "bitmex": 15,
@@ -43,5 +43,5 @@
     "offchainlabs": 21,
     "subspacelabs": 6,
     "tron": 6,
-    "Total Jobs": 1681
+    "Total Jobs": 1669
 }
