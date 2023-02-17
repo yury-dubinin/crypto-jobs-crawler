@@ -58,7 +58,8 @@ greenhouse_web_pages = [
     "https://boards.greenhouse.io/optimism",
     "https://boards.greenhouse.io/flashbots",
     "https://boards.greenhouse.io/oplabs",
-    "https://boards.greenhouse.io/circle"
+    "https://boards.greenhouse.io/circle",
+    "https://boards.greenhouse.io/OKX"
 ]
 
 smartrecruiters_web_pages = [

@@ -57,6 +57,7 @@ greenhouse:
 - https://boards.greenhouse.io/flashbots
 - https://boards.greenhouse.io/oplabs
 - https://boards.greenhouse.io/circle
+- https://boards.greenhouse.io/OKX
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -70,12 +71,13 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://nexusmutual.recruitee.com
+- https://metrika.recruitee.com
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
-- https://metrika.recruitee.com
 - https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://bullish.wd3.myworkdayjobs.com/Bullish
@@ -105,8 +107,6 @@ wip:
 - https://careers.lido.fi/
 - https://www.rdx.works/careers#careers
 - https://horizenlabs.io/careers/#list-jobs
-- https://boards.greenhouse.io/OKX
-- https://nexusmutual.recruitee.com/
 - https://cexio.bamboohr.com/jobs/
 - https://careers.substrate.io/jobs
 - https://web3.bamboohr.com/jobs/
