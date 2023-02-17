@@ -146,7 +146,9 @@ def addJobsToDevOps(company_name, data):
     with open('devops.html', 'a') as f:
         f.write(html)
 
-for company in companyList.getCompanyList():
+cl = companyList.getCompanyList()
+print(f'[CRAWLER] Number of companies: ${len(cl)}')
+for company in cl:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
     addJobsToIndex(company.company_name, data)
     addJobsToTest(company.company_name, data)

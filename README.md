@@ -35,6 +35,7 @@ lever:
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
+- https://boards.greenhouse.io/moonwalk
 - https://boards.greenhouse.io/bitgo
 - https://boards.greenhouse.io/genesisglobaltradinginc
 - https://boards.greenhouse.io/amun
@@ -98,7 +99,6 @@ wip:
 - https://www.coinbase.com/careers/positions
 - https://consensys.net/open-roles
 - https://apply.workable.com/smart-token-labs
-- https://boards.greenhouse.io/moonwalk
 - https://apply.workable.com/bitstamp/#jobs
 - https://www.kucoin.com/careers/job-opening
 - https://apply.workable.com/cryptofinance

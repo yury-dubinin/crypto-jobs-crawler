@@ -8,6 +8,7 @@
     "bitpanda": 25,
     "uniswaplabs": 9,
     "moonpay": 18,
+    "moonwalk": 9,
     "blockdaemon": 1,
     "figment": 3,
     "quiknodeinc": 10,
@@ -42,5 +43,5 @@
     "offchainlabs": 21,
     "subspacelabs": 6,
     "tron": 6,
-    "Total Jobs": 1672
+    "Total Jobs": 1681
 }

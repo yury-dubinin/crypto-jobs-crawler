@@ -17,6 +17,7 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("bitpanda",  "https://boards.eu.greenhouse.io/bitpanda", ScrapeGreenhouse, "https://bitpanda.com","Exchange"))
     company_list.append(CompanyItem("uniswaplabs",  "https://boards.greenhouse.io/uniswaplabs", ScrapeGreenhouse, "https://uniswap.org","Exchange Protocol"))
     company_list.append(CompanyItem("moonpay",  "https://boards.greenhouse.io/moonpay", ScrapeGreenhouse, "https://www.moonpay.com","Payments"))
+    company_list.append(CompanyItem("moonwalk",  "https://boards.greenhouse.io/moonwalk", ScrapeGreenhouse, "https://www.moonwalk.com","Platform"))
     company_list.append(CompanyItem("blockdaemon",  "https://boards.greenhouse.io/blockdaemon", ScrapeGreenhouse, "https://www.blockdaemon.com","Staking & Infra"))
     company_list.append(CompanyItem("figment",  "https://boards.greenhouse.io/figment", ScrapeGreenhouse, "https://www.figment.io","Staking & Infra"))
     company_list.append(CompanyItem("quiknodeinc",  "https://boards.greenhouse.io/quiknodeinc", ScrapeGreenhouse, "https://www.quicknode.com","Staking & Infra"))
