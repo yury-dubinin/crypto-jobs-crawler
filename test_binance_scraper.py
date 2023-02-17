@@ -1,11 +1,11 @@
 from selenium import webdriver
-import scrapeBinance
+from scrapeBinance import ScrapeBinance
 
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
-jobs = scrapeBinance.getJobs(driver, "https://www.binance.com/en/careers/job-openings")
+jobs = ScrapeBinance().getJobs(driver, "https://www.binance.com/en/careers/job-openings")
 for job in jobs:
     print(job)
 

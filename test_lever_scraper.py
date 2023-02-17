@@ -1,11 +1,11 @@
 from selenium import webdriver
-import scrapeLever
+from scrapeLever import ScrapeLever
 
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
-jobs = scrapeLever.getJobs(driver, "https://jobs.lever.co/subspacelabs")
+jobs = ScrapeLever().getJobs(driver, "https://jobs.lever.co/subspacelabs")
 for job in jobs:
     print(job)
 
