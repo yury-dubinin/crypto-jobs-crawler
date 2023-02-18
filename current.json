@@ -25,7 +25,7 @@
     "flashbots": 6,
     "oplabs": 3,
     "bitfinex": 9,
-    "binance": 524,
+    "binance": 523,
     "coinmarketcap": 32,
     "trustwallet": 17,
     "Swissquote": 14,
@@ -38,10 +38,10 @@
     "ethereumfoundation": 7,
     "aave": 2,
     "crypto": 17,
-    "Polygon": 10,
-    "tokenmetrics": 124,
+    "Polygon": 12,
+    "tokenmetrics": 139,
     "offchainlabs": 21,
     "subspacelabs": 6,
     "tron": 6,
-    "Total Jobs": 1669
+    "Total Jobs": 1685
 }
