@@ -52,4 +52,6 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("offchainlabs",  "https://jobs.lever.co/offchainlabs", ScrapeLever, "https://offchainlabs.com","Protocol"))
     company_list.append(CompanyItem("subspacelabs",  "https://jobs.lever.co/subspacelabs", ScrapeLever, "https://subspace.network","Blockchain Infra"))
     company_list.append(CompanyItem("tron",  "https://boards.greenhouse.io/rainberry", ScrapeGreenhouse, "https://tron.network","Blockchain"))
+    company_list.append(CompanyItem("messari",  "https://boards.greenhouse.io/messari", ScrapeGreenhouse, "https://messari.io","Information"))
+    
     return company_list

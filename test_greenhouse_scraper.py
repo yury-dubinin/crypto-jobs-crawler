@@ -11,7 +11,7 @@ company_list = []
 company_list.append(CompanyItem("paxos",  "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com", "Stable Coin"))
 company_list.append(CompanyItem("status",  "https://jobs.status.im", ScrapeGreenhouse, "https://status.im","Messanger"))
 company_list.append(CompanyItem("moonwalk",  "https://boards.greenhouse.io/moonwalk", ScrapeGreenhouse, "https://www.moonwalk.com","Platform"))
-company_list.append(CompanyItem("tron",  "https://boards.greenhouse.io/rainberry", ScrapeGreenhouse, "https://tron.network","Blockchain"))
+company_list.append(CompanyItem("messari",  "https://boards.greenhouse.io/messari", ScrapeGreenhouse, "https://messari.io","Information"))
 
 for company in company_list:
     print(company.jobs_url)

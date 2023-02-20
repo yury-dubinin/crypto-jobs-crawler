@@ -59,6 +59,7 @@ greenhouse:
 - https://boards.greenhouse.io/oplabs
 - https://boards.greenhouse.io/circle
 - https://boards.greenhouse.io/OKX
+- https://boards.greenhouse.io/messari
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap

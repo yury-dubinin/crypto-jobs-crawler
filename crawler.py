@@ -141,7 +141,7 @@ def addJobsToDevOps(company:CompanyItem, data):
     devOpsTags = [
         'devops engineer',
         'sre',
-        'sre engineer'
+        'sre engineer',
         'site reliability',
         'platforms engineer',
         'infrastructure engineer',
