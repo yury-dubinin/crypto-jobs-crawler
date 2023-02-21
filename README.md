@@ -114,3 +114,6 @@ wip:
 - https://careers.substrate.io/jobs
 - https://web3.bamboohr.com/jobs/
 - https://join.com/companies/taurusgroup
+- https://apply.workable.com/cryptofinance
+- https://changenow.io/jobs
+-
