@@ -60,6 +60,8 @@ greenhouse:
 - https://boards.greenhouse.io/circle
 - https://boards.greenhouse.io/OKX
 - https://boards.greenhouse.io/messari
+- https://boards.eu.greenhouse.io/copperco
+- https://boards.greenhouse.io/digitalasset
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
