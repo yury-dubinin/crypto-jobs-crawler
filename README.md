@@ -116,4 +116,6 @@ wip:
 - https://join.com/companies/taurusgroup
 - https://apply.workable.com/cryptofinance
 - https://changenow.io/jobs
--
+- https://boards.greenhouse.io/chainsafesystems
+- https://chainsafe.github.io/protocol
+
