@@ -1,12 +1,19 @@
 from selenium import webdriver
+from companyItem import CompanyItem
 from scrapeLever import ScrapeLever
 
+
+company_list = []
+company_list.append(CompanyItem("ramp.network",  "https://jobs.lever.co/careers.ramp.network", ScrapeLever, "https://ramp.network", "Payments"))
+company_list.append(CompanyItem("ledger",  "https://jobs.lever.co/ledger", ScrapeLever, "https://www.ledger.com", "Wallet"))
 
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
-jobs = ScrapeLever().getJobs(driver, "https://jobs.lever.co/subspacelabs")
-for job in jobs:
-    print(job)
+
+for company in company_list:
+    print(company.jobs_url)
+    data = company.scraper_type().getJobs(driver, company.jobs_url)
+    print(data)
 
 driver.close()

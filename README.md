@@ -32,6 +32,8 @@ lever:
 - https://jobs.lever.co/tokenmetrics
 - https://jobs.lever.co/offchainlabs
 - https://jobs.lever.co/subspacelabs
+- https://jobs.lever.co/careers.ramp.network
+- https://jobs.lever.co/ledger
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
