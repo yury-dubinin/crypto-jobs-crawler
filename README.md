@@ -78,8 +78,10 @@ custom:
 
 wip:
 - https://boards.greenhouse.io/layerzerolabs
+- https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
+- https://safe-global.breezy.hr
 - https://community.dune.com/wizard-jobs
 - https://community.dune.com/careers
 - https://www.trmlabs.com/careers#open-roles
