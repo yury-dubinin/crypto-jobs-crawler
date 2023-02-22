@@ -77,6 +77,7 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://boards.greenhouse.io/layerzerolabs
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
 - https://community.dune.com/wizard-jobs
