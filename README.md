@@ -64,6 +64,7 @@ greenhouse:
 - https://boards.greenhouse.io/messari
 - https://boards.eu.greenhouse.io/copperco
 - https://boards.greenhouse.io/digitalasset
+- https://boards.greenhouse.io/layerzerolabs
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -77,7 +78,6 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
-- https://boards.greenhouse.io/layerzerolabs
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
