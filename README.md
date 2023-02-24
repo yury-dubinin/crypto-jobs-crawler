@@ -78,6 +78,8 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://jobs.lever.co/request
+- https://jobs.lever.co/immutable
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
