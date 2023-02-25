@@ -8,6 +8,7 @@ from scrapeBinance import ScrapeBinance
 
 def getCompanyList() -> list():
     company_list = []
+    company_list.append(CompanyItem("kraken",  "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com","Exchange"))
     company_list.append(CompanyItem("paxos",  "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com", "Stable Coin"))
     company_list.append(CompanyItem("circle",  "https://boards.greenhouse.io/circle", ScrapeGreenhouse, "https://circle.com", "Stable Coin"))
     company_list.append(CompanyItem("status",  "https://jobs.status.im", ScrapeGreenhouse, "https://status.im","Messanger"))
@@ -40,7 +41,6 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("Swissquote",  "https://careers.smartrecruiters.com/Swissquote", ScrapeSmartrecruiters, "https://en.swissquote.com","Exchange"))
     company_list.append(CompanyItem("Coinshift",  "https://jobs.lever.co/Coinshift", ScrapeLever, "https://coinshift.xyz","Custody software"))
     company_list.append(CompanyItem("chainlink",  "https://jobs.lever.co/chainlink", ScrapeLever, "https://chain.link","Blockchain"))
-    company_list.append(CompanyItem("kraken",  "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com","Exchange"))
     company_list.append(CompanyItem("swissborg",  "https://jobs.lever.co/swissborg", ScrapeLever, "https://swissborg.com","Exchange"))
     company_list.append(CompanyItem("OpenSea",  "https://jobs.lever.co/OpenSea", ScrapeLever, "https://opensea.io","NFT"))
     company_list.append(CompanyItem("storyprotocol",  "https://jobs.lever.co/storyprotocol", ScrapeLever, "https://www.storyprotocol.xyz","Protocol"))

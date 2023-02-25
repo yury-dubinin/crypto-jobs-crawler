@@ -5,18 +5,18 @@ from companyItem import CompanyItem
 import companyList
 
 
-# remove index.html to re-create from new data set
-with open('index.html', 'w') as f:
-        f.write('<p><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a>  || <a href="devops.html" target="_blank">Just DevOps/SRE jobs</a></p>')
-with open('test.html', 'w') as f:
-        f.write('<!DOCTYPE html>')
-with open('dev.html', 'w') as f:
-        f.write('<!DOCTYPE html>')
-with open('devops.html', 'w') as f:
-        f.write('<!DOCTYPE html>')
-
 company_list = companyList.getCompanyList()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')
+# remove index.html to re-create from new data set
+with open('index.html', 'w') as f:
+    f.write(f'<p align="center"> Number of companies: {len(company_list)} Last Updated at: {datetime.date(datetime.now())} </p>')
+    f.write('<p align="center"><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a>  || <a href="devops.html" target="_blank">Just DevOps/SRE jobs</a></p>')
+with open('test.html', 'w') as f:
+    f.write('<!DOCTYPE html>')
+with open('dev.html', 'w') as f:
+    f.write('<!DOCTYPE html>')
+with open('devops.html', 'w') as f:
+    f.write('<!DOCTYPE html>')
 
 # setup headless webdriver
 options = webdriver.ChromeOptions()
