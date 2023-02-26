@@ -36,6 +36,7 @@ lever:
 - https://jobs.lever.co/ledger
 - https://jobs.lever.co/request
 - https://jobs.lever.co/immutable
+- https://jobs.lever.co/TorusLabs
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
@@ -125,4 +126,3 @@ wip:
 - https://changenow.io/jobs
 - https://boards.greenhouse.io/chainsafesystems
 - https://chainsafe.github.io/protocol
-
