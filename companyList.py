@@ -61,5 +61,7 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("request",  "https://jobs.lever.co/request", ScrapeLever, "https://request.network", "Payments"))
     company_list.append(CompanyItem("immutable",  "https://jobs.lever.co/immutable", ScrapeLever, "https://www.immutable.com", "NFT"))
     company_list.append(CompanyItem("web3auth",  "https://jobs.lever.co/TorusLabs", ScrapeLever, "https://web3auth.io", "Auth"))
+    company_list.append(CompanyItem("jumpcrypto",  "https://boards.greenhouse.io/jumpcrypto", ScrapeGreenhouse, "https://jumpcrypto.com","Infra"))
+    company_list.append(CompanyItem("oasisnetwork",  "https://boards.greenhouse.io/oasisnetwork", ScrapeGreenhouse, "https://oasisprotocol.org","Protocol"))
 
     return company_list
