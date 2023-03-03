@@ -4,6 +4,7 @@ from scrapeGreenhouse import ScrapeGreenhouse
 from scrapeSmartrecruiters import ScrapeSmartrecruiters
 from scrapeRecruitee import ScrapeRecruitee
 from scrapeBinance import ScrapeBinance
+from scrape_consensys import ScrapeConsensys
 
 
 def getCompanyList() -> list():
@@ -63,5 +64,6 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("web3auth",  "https://jobs.lever.co/TorusLabs", ScrapeLever, "https://web3auth.io", "Auth"))
     company_list.append(CompanyItem("jumpcrypto",  "https://boards.greenhouse.io/jumpcrypto", ScrapeGreenhouse, "https://jumpcrypto.com","Infra"))
     company_list.append(CompanyItem("oasisnetwork",  "https://boards.greenhouse.io/oasisnetwork", ScrapeGreenhouse, "https://oasisprotocol.org","Protocol"))
+    company_list.append(CompanyItem("consensys",  "https://consensys.net/open-roles", ScrapeConsensys, "https://consensys.net","Infra"))
 
     return company_list
