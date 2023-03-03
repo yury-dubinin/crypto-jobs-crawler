@@ -83,6 +83,7 @@ custom:
 - https://www.binance.com/en/careers/job-openings
 
 wip:
+- https://boards.greenhouse.io/layrlabs
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
