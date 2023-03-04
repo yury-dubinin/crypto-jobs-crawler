@@ -70,6 +70,8 @@ greenhouse:
 - https://boards.greenhouse.io/layerzerolabs
 - https://boards.greenhouse.io/jumpcrypto
 - https://boards.greenhouse.io/oasisnetwork
+- https://boards.greenhouse.io/chainsafesystems
+- https://boards.greenhouse.io/poaptheproofofattendanceprotocol
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -81,6 +83,8 @@ recruitee:
 
 custom:
 - https://www.binance.com/en/careers/job-openings
+- https://ripple.com/careers/all-jobs
+- https://consensys.net/open-roles
 
 wip:
 - https://boards.greenhouse.io/layrlabs
@@ -108,15 +112,12 @@ wip:
 - https://www.gemini.com/careers
 - https://chainstack.bamboohr.com/jobs
 - https://nexo.breezy.hr
-- https://boards.greenhouse.io/poaptheproofofattendanceprotocol
 - https://careers.stacks.org
 - https://www.coinbase.com/careers/positions
-- https://consensys.net/open-roles
 - https://apply.workable.com/smart-token-labs
 - https://apply.workable.com/bitstamp/#jobs
 - https://www.kucoin.com/careers/job-opening
 - https://apply.workable.com/cryptofinance
-- https://ripple.com/careers/all-jobs
 - https://www.bitcoin.com/jobs/#joblist
 - https://careers.lido.fi/
 - https://www.rdx.works/careers#careers
@@ -127,6 +128,5 @@ wip:
 - https://join.com/companies/taurusgroup
 - https://apply.workable.com/cryptofinance
 - https://changenow.io/jobs
-- https://boards.greenhouse.io/chainsafesystems
 - https://chainsafe.github.io/protocol
 - https://jobs.ashbyhq.com/StationLabs
