@@ -2,7 +2,7 @@
     "kraken": 10,
     "paxos": 56,
     "circle": 254,
-    "status": 28,
+    "status": 27,
     "OKX": 197,
     "bitmex": 10,
     "bitgo": 7,
@@ -60,5 +60,5 @@
     "ripple": 70,
     "kadena": 10,
     "EigenLabs": 3,
-    "Total Jobs": 1856
+    "Total Jobs": 1855
 }

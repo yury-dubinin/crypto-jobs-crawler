@@ -89,6 +89,7 @@ custom:
 - https://consensys.net/open-roles
 
 wip:
+- https://chainstack.bamboohr.com/jobs
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
@@ -111,7 +112,6 @@ wip:
 - https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
 - https://www.gemini.com/careers
-- https://chainstack.bamboohr.com/jobs
 - https://nexo.breezy.hr
 - https://careers.stacks.org
 - https://www.coinbase.com/careers/positions

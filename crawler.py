@@ -62,7 +62,12 @@ def isDevJob(title):
         'Frontend Developer',
         'Software Development Engineer',
         'Software Architect',
-        'Frontend Engineer'
+        'Frontend Engineer',
+        'Front End Developer',
+        'Frontend Architect ',
+        'Front-end Developer',
+        'Web Developer',
+        'Front-End Engineer'
     ]
     result = filterJobs(title, devTags)
     filters = ['test', 'qa', 'manager', 'sdet', 'director']
@@ -83,12 +88,13 @@ def isDevOpsJob(title):
         'infrastructure engineer',
         'network engineer',
         'devsecops',
-        'Platform Engineer'
+        'Platform Engineer',
+        'Tooling Engineer'
     ]
     return filterJobs(title, devOpsTags)
 
 def isDataJob(title):
-    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer']
+    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer ']
     return filterJobs(title, tags)
 
 def setColor(title):
