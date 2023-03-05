@@ -83,13 +83,15 @@ smartrecruiters:
 recruitee:
 - https://bitfinex.recruitee.com
 
+bamboohr:
+- https://chainstack.bamboohr.com/jobs
+
 custom:
 - https://www.binance.com/en/careers/job-openings
 - https://ripple.com/careers/all-jobs
 - https://consensys.net/open-roles
 
 wip:
-- https://chainstack.bamboohr.com/jobs
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com

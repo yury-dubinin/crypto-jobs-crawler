@@ -1,5 +1,6 @@
 {
     "kraken": 10,
+    "chainstack": 9,
     "paxos": 56,
     "circle": 254,
     "status": 27,
@@ -60,5 +61,5 @@
     "ripple": 70,
     "kadena": 10,
     "EigenLabs": 3,
-    "Total Jobs": 1855
+    "Total Jobs": 1864
 }

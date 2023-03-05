@@ -4,6 +4,7 @@ from scrapeGreenhouse import ScrapeGreenhouse
 from scrapeSmartrecruiters import ScrapeSmartrecruiters
 from scrapeRecruitee import ScrapeRecruitee
 from scrapeBinance import ScrapeBinance
+from scrape_bamboohr import ScrapeBamboohr
 from scrape_consensys import ScrapeConsensys
 from scrape_ripple import ScrapeRipple
 
@@ -11,6 +12,7 @@ from scrape_ripple import ScrapeRipple
 def getCompanyList() -> list():
     company_list = []
     company_list.append(CompanyItem("kraken",  "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com","Exchange"))
+    company_list.append(CompanyItem("chainstack", "https://chainstack.bamboohr.com/jobs", ScrapeBamboohr, "https://chainstack.com", "Infra"))
     company_list.append(CompanyItem("paxos",  "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com", "Stable Coin"))
     company_list.append(CompanyItem("circle",  "https://boards.greenhouse.io/circle", ScrapeGreenhouse, "https://circle.com", "Stable Coin"))
     company_list.append(CompanyItem("status",  "https://jobs.status.im", ScrapeGreenhouse, "https://status.im","Messanger"))
@@ -73,3 +75,10 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("EigenLabs", "https://boards.greenhouse.io/layrlabs", ScrapeGreenhouse, "https://www.v1.eigenlayer.xyz", "Infra"))
 
     return company_list
+
+def getLogo(company_name):
+    company_logos = {
+        'kraken': '<img alt="Kraken" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/741f7d55-0312-4036-bd47-ce74d90a2485-1623433607520.png" width="200" height: auto >',
+        'chainstack':'<img src="https://images4.bamboohr.com/401182/logos/cropped.jpg?v=29" alt="Chainstack" style="max-height:60px;max-width:200px;height: auto;width:188px;">'
+    }
+    return company_logos.get(company_name, company_name.upper())

@@ -109,10 +109,10 @@ def setColor(title):
     else:
         return ""
 
-def dict_to_html_table_with_header(company:CompanyItem, dictionary):
+def dict_to_html_table_with_header(company:CompanyItem, dictionary, logo=''):
     html_table = '<table width="72%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
-    wrappedHeaderLink = f"<a href='{company.company_url}' target='_blank' >{company.company_name.upper()}</a>"
+    wrappedHeaderLink = f"<a href='{company.company_url}' target='_blank' > {logo} </a>"
     html_table += "<tr><th>" + wrappedHeaderLink + "</th><th width='20%' >"+ jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = setColor(elem[0])
@@ -127,9 +127,9 @@ def dict_to_html_table_with_header_and_filter(header, dictionary, filter):
         if filter(elem[0]):
             filtered.append(elem)
 
-    jobs_total = f'No {filter} jobs'
+    jobs_total = f'No {filter.__name__}'
     if len(filtered) > 0:
-        jobs_total = f"Total {filter} Jobs: {len(filtered)}"
+        jobs_total = f"Total {filter.__name__}(s): {len(filtered)}"
     print(f'[CRAWLER] {jobs_total} at {header}')
     # For now keep the table
     html_table = '<table width="80%" align="center" border="1">'
@@ -162,9 +162,9 @@ def writeNumbers():
     with open(f"current.json", "w") as file:
         json.dump(current_jobs, file, indent=4)
 
-def addJobsToIndex(company:CompanyItem, data):
+def addJobsToIndex(company:CompanyItem, data, logo):
     printAndCollectNumbers(company.company_name, len(data))
-    html = dict_to_html_table_with_header(company, data)
+    html = dict_to_html_table_with_header(company, data, logo)
     with open('index.html', 'a') as f:
         f.write(html)
 
@@ -190,7 +190,8 @@ def addJobsToData(company:CompanyItem, data):
 
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    addJobsToIndex(company, data)
+    company_logo = companyList.getLogo(company_name=company.company_name)
+    addJobsToIndex(company, data, company_logo)
     addJobsToTest(company, data)
     addJobsToDev(company, data)
     addJobsToDevOps(company, data)
