@@ -39,7 +39,7 @@
     "aave": 2,
     "crypto": 40,
     "Polygon": 11,
-    "tokenmetrics": 140,
+    "tokenmetrics": 137,
     "offchainlabs": 22,
     "subspacelabs": 7,
     "tron": 6,
@@ -58,5 +58,7 @@
     "poap": 1,
     "chainsafesystems": 5,
     "ripple": 70,
-    "Total Jobs": 1846
+    "kadena": 10,
+    "EigenLabs": 3,
+    "Total Jobs": 1856
 }

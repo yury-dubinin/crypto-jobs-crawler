@@ -43,7 +43,10 @@ def setColor(title):
         'rust developer',
         'full stack developer',
         'c++ developer',
-        'full-stack dev'
+        'full-stack dev',
+        'python developer',
+        'engineer – java',
+        'java development lead'
     ]
     devOpsTags = [
         'devops',
@@ -51,7 +54,9 @@ def setColor(title):
         'site reliability',
         'platforms engineer',
         'infrastructure engineer',
-        'network engineer'
+        'network engineer',
+        'devsecops',
+        'Platform Engineer'
     ]
     if any(ext in title.lower() for ext in testTags):
         return ' bgcolor="lightgreen" '
@@ -63,7 +68,7 @@ def setColor(title):
         return ""
 
 def filterJobs(job_title:str, filters):
-    if any(ext in job_title.lower() for ext in filters):
+    if any(ext.lower() in job_title.lower() for ext in filters):
         return True
     return False
 

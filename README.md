@@ -72,6 +72,8 @@ greenhouse:
 - https://boards.greenhouse.io/oasisnetwork
 - https://boards.greenhouse.io/chainsafesystems
 - https://boards.greenhouse.io/poaptheproofofattendanceprotocol
+- https://boards.greenhouse.io/kadenallc
+- https://boards.greenhouse.io/layrlabs
 
 smartrecruiters:
 - https://careers.smartrecruiters.com/B6/coinmarketcap
@@ -87,7 +89,6 @@ custom:
 - https://consensys.net/open-roles
 
 wip:
-- https://boards.greenhouse.io/layrlabs
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com

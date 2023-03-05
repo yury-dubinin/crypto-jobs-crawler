@@ -8,7 +8,14 @@ def cleanLocation(location:str):
     location = location.replace("/ Full-time", "")
     if 'global' in location.lower() or 'remote : remote' in location.lower():
         return {"REMOTE"}
-    return set(([x.strip() for x in location.split(',')]))
+    set_of_locations = set(([x.strip() for x in location.split(',')]))
+    result_locations = set()
+    for loc in set_of_locations:
+        if loc.endswith('/'):
+            result_locations.add(loc[0:-1].strip())
+            break
+        result_locations.add(loc)
+    return result_locations
 
 class ScrapeBinance(ScrapeIt):
     def getJobs(self, driver, web_page) -> list():

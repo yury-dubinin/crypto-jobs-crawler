@@ -68,6 +68,8 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("consensys",  "https://consensys.net/open-roles", ScrapeConsensys, "https://consensys.net","Infra"))
     company_list.append(CompanyItem("poap", "https://boards.greenhouse.io/poaptheproofofattendanceprotocol", ScrapeGreenhouse, "https://poap.xyz", "Protocol"))
     company_list.append(CompanyItem("chainsafesystems", "https://boards.greenhouse.io/chainsafesystems", ScrapeGreenhouse, "https://chainsafe.io", "Infra"))
-    company_list.append(CompanyItem("ripple", "https://ripple.com/careers/all-jobs", ScrapeRipple, "https://ripple.com", "Protocol"))
+    company_list.append(CompanyItem("ripple", "https://ripple.com/careers/all-jobs", ScrapeRipple, "https://ripple.com", "Blockchain"))
+    company_list.append(CompanyItem("kadena", "https://boards.greenhouse.io/kadenallc", ScrapeGreenhouse, "https://kadena.io", "Blockchain"))
+    company_list.append(CompanyItem("EigenLabs", "https://boards.greenhouse.io/layrlabs", ScrapeGreenhouse, "https://www.v1.eigenlayer.xyz", "Infra"))
 
     return company_list
