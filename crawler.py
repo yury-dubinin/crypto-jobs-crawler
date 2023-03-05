@@ -10,7 +10,11 @@ print(f'[CRAWLER] Number of companies: {len(company_list)}')
 # remove index.html to re-create from new data set
 with open('index.html', 'w') as f:
     f.write(f'<p align="center"> Number of companies: {len(company_list)} Last Updated at: {datetime.date(datetime.now())} </p>')
-    f.write('<p align="center"><a href="test.html" target="_blank">Just Test jobs</a> || <a href="dev.html" target="_blank">Just Dev jobs</a>  || <a href="devops.html" target="_blank">Just DevOps/SRE jobs</a></p>')
+    test_link = '<a href="test.html" target="_blank">Just Test jobs</a>'
+    dev_link = '<a href="dev.html" target="_blank">Just Dev jobs</a>'
+    devops_link = '<a href="devops.html" target="_blank">Just DevOps/SRE jobs</a>'
+    data_link = '<a href="data.html" target="_blank">Just Data jobs</a>'
+    f.write(f'<p align="center"> {test_link} || {dev_link} || {devops_link} || {data_link} </p>')
 with open('test.html', 'w') as f:
     f.write('<!DOCTYPE html>')
 with open('dev.html', 'w') as f:
@@ -23,12 +27,17 @@ options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
-def setColor(title):
-    testTags = ['qa', 'test', 'sdet', 'quality assurance']
+def filterJobs(job_title:str, filters):
+    if any(ext.lower() in job_title.lower() for ext in filters):
+        return True
+    return False
+
+def isDevJob(title):
     devTags = [
         'software engineer', 
         'stack engineer',
-        'systems engineer', 
+        'systems engineer',
+        'System Engineer', 
         'java engineer', 
         'backend engineer', 
         'backend developer', 
@@ -45,9 +54,27 @@ def setColor(title):
         'c++ developer',
         'full-stack dev',
         'python developer',
-        'engineer – java',
-        'java development lead'
+        'java development lead',
+        'python dev',
+        'Golang Developer',
+        'Engineer - Java',
+        'Java Development Engineer',
+        'Frontend Developer',
+        'Software Development Engineer',
+        'Software Architect',
+        'Frontend Engineer'
     ]
+    result = filterJobs(title, devTags)
+    filters = ['test', 'qa', 'manager', 'sdet', 'director']
+    if any(ext.lower() in title.lower() for ext in filters):
+        return False
+    return result
+
+def isTestJob(title):
+    testTags = ['qa', 'test', 'sdet', 'quality assurance']
+    return filterJobs(title, testTags)
+
+def isDevOpsJob(title):
     devOpsTags = [
         'devops',
         'sre',
@@ -58,19 +85,23 @@ def setColor(title):
         'devsecops',
         'Platform Engineer'
     ]
-    if any(ext in title.lower() for ext in testTags):
+    return filterJobs(title, devOpsTags)
+
+def isDataJob(title):
+    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer']
+    return filterJobs(title, tags)
+
+def setColor(title):
+    if isTestJob(title):
         return ' bgcolor="lightgreen" '
-    elif any(ext in title.lower() for ext in devTags):
+    elif isDevJob(title):
         return ' bgcolor="lightblue" '
-    elif any(ext in title.lower() for ext in devOpsTags):
+    elif isDevOpsJob(title):
         return ' bgcolor="lightyellow" '
+    elif isDataJob(title):
+        return ' bgcolor="cyan" '
     else:
         return ""
-
-def filterJobs(job_title:str, filters):
-    if any(ext.lower() in job_title.lower() for ext in filters):
-        return True
-    return False
 
 def dict_to_html_table_with_header(company:CompanyItem, dictionary):
     html_table = '<table width="72%" align="center" border="1">'
@@ -84,10 +115,10 @@ def dict_to_html_table_with_header(company:CompanyItem, dictionary):
     html_table += "</table>"
     return html_table
 
-def dict_to_html_table_with_header_and_filter(header, dictionary, filter=['qa', 'test', 'quality']):
+def dict_to_html_table_with_header_and_filter(header, dictionary, filter):
     filtered = []
     for elem in dictionary:
-        if filterJobs(elem[0], filter):
+        if filter(elem[0]):
             filtered.append(elem)
 
     jobs_total = f'No {filter} jobs'
@@ -132,29 +163,23 @@ def addJobsToIndex(company:CompanyItem, data):
         f.write(html)
 
 def addJobsToTest(company:CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data)
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isTestJob)
     with open('test.html', 'a') as f:
         f.write(html)
 
 def addJobsToDev(company:CompanyItem, data):
-    filter_dev = ['software engineer', 'stack engineer', 'java engineer', 'backend engineer', 'backend developer', 'java developer']
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=filter_dev)
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDevJob)
     with open('dev.html', 'a') as f:
         f.write(html)
 
 def addJobsToDevOps(company:CompanyItem, data):
-    devOpsTags = [
-        'devops engineer',
-        'sre',
-        'sre engineer',
-        'site reliability',
-        'platforms engineer',
-        'infrastructure engineer',
-        'network engineer',
-        'observability engineer'
-    ]
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=devOpsTags)
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDevOpsJob)
     with open('devops.html', 'a') as f:
+        f.write(html)
+
+def addJobsToData(company:CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDataJob)
+    with open('data.html', 'a') as f:
         f.write(html)
 
 for company in company_list:
@@ -163,6 +188,7 @@ for company in company_list:
     addJobsToTest(company, data)
     addJobsToDev(company, data)
     addJobsToDevOps(company, data)
+    addJobsToData(company, data)
 
 driver.close()
 
