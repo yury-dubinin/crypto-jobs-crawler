@@ -73,13 +73,14 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("ripple", "https://ripple.com/careers/all-jobs", ScrapeRipple, "https://ripple.com", "Blockchain"))
     company_list.append(CompanyItem("kadena", "https://boards.greenhouse.io/kadenallc", ScrapeGreenhouse, "https://kadena.io", "Blockchain"))
     company_list.append(CompanyItem("EigenLabs", "https://boards.greenhouse.io/layrlabs", ScrapeGreenhouse, "https://www.v1.eigenlayer.xyz", "Infra"))
+    company_list.append(CompanyItem("cere-network",  "https://jobs.lever.co/cere-network", ScrapeLever, "https://cere.network", "Infra"))
 
     return company_list
 
 def getLogo(company_name):
     company_logos = {
-        'kraken': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/741f7d55-0312-4036-bd47-ce74d90a2485-1623433607520.png" alt="Kraken" width="200" height: auto >',
-        'chainstack':'<img src="https://images4.bamboohr.com/401182/logos/cropped.jpg?v=29" alt="Chainstack" style="max-height:60px;max-width:200px;height: auto;width:188px;">',
+        'kraken': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/741f7d55-0312-4036-bd47-ce74d90a2485-1623433607520.png" alt="Kraken" loading="lazy" width="182" height: auto >',
+        'chainstack':'<img src="https://images4.bamboohr.com/401182/logos/cropped.jpg?v=29" alt="Chainstack" loading="lazy" width="182" height: auto >',
         'chainlink': '<img src="https://assets-global.website-files.com/5f6b7190899f41fb70882d08/5f760a499b56c47b8fa74fbb_chainlink-logo.svg" alt="Chainlink" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())

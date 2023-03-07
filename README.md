@@ -37,6 +37,7 @@ lever:
 - https://jobs.lever.co/request
 - https://jobs.lever.co/immutable
 - https://jobs.lever.co/TorusLabs
+- https://jobs.lever.co/cere-network
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
