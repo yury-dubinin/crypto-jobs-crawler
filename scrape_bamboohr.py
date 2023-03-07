@@ -3,19 +3,21 @@ from scrapeIt import ScrapeIt
 
 
 class ScrapeBamboohr(ScrapeIt):
+    name = 'bamboohr'
+
     def getJobs(self, driver, web_page) -> list():
-        print(f'[bamboohr] Scrap page: {web_page}')
+        print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
-        groupElements = driver.find_elements(By.CSS_SELECTOR, 'div[itemscope].row')
-        print(f'[bamboohr] Found {len(groupElements)} jobs on {web_page}')
+        group_elements = driver.find_elements(By.CSS_SELECTOR, 'div[itemscope].row')
+        print(f'[{self.name}] Found {len(group_elements)} jobs on {web_page}')
         result = []
-        for elem in groupElements:
-            linkElem = elem.find_element(By.CSS_SELECTOR, 'a')
+        for elem in group_elements:
+            link_elem = elem.find_element(By.CSS_SELECTOR, 'a')
             job_name_elem = elem.find_element(By.CSS_SELECTOR, 'a')
-            locationElem = elem.find_element(By.CSS_SELECTOR, 'div[itemprop="jobLocation"]')
-            jobUrl = linkElem.get_attribute('href')
+            location_elem = elem.find_element(By.CSS_SELECTOR, 'div[itemprop="jobLocation"]')
+            job_url = link_elem.get_attribute('href')
             job_name = job_name_elem.text
-            location = locationElem.text
-            result.append((f'{job_name} From:{location}', jobUrl))
-        print(f'[bamboohr] Scraped {len(result)} jobs from {web_page}')
+            location = location_elem.text
+            result.append((f'{job_name} From:{location}', job_url))
+        print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
         return result

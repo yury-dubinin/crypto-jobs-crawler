@@ -2,6 +2,8 @@
 resources/*.json
 __pycache__
 
+#IDEA
+.idea
 # Compiled class file
 *.class
 
