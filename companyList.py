@@ -16,6 +16,7 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("chainstack", "https://chainstack.bamboohr.com/jobs", ScrapeBamboohr, "https://chainstack.com", "Infra"))
     company_list.append(CompanyItem("tessera",  "https://jobs.lever.co/ftc", ScrapeLever, "https://tessera.co", "NFT"))
     company_list.append(CompanyItem("paxos",  "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com", "Stable Coin"))
+    company_list.append(CompanyItem("bitcoin", "https://www.bitcoin.com/jobs/#joblist", ScrapeGreenhouse, "https://www.bitcoin.com", 'Exchange'))
     company_list.append(CompanyItem("circle",  "https://boards.greenhouse.io/circle", ScrapeGreenhouse, "https://circle.com", "Stable Coin"))
     company_list.append(CompanyItem("status",  "https://jobs.status.im", ScrapeGreenhouse, "https://status.im","Messanger"))
     company_list.append(CompanyItem("OKX",  "https://boards.greenhouse.io/OKX", ScrapeGreenhouse, "https://okx.com","Exchange"))
@@ -83,6 +84,10 @@ def getLogo(company_name):
         'kraken': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/741f7d55-0312-4036-bd47-ce74d90a2485-1623433607520.png" alt="Kraken" loading="lazy" width="182" height: auto >',
         'chainstack':'<img src="https://images4.bamboohr.com/401182/logos/cropped.jpg?v=29" alt="Chainstack" loading="lazy" width="182" height: auto >',
         'chainlink': '<img src="https://assets-global.website-files.com/5f6b7190899f41fb70882d08/5f760a499b56c47b8fa74fbb_chainlink-logo.svg" alt="Chainlink" loading="lazy" width="182" height: auto >',
-        'tessera': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/f711539a-a00c-495a-9563-a5a91b7f7b55-1666821573698.png" alt="Tessera" loading="lazy" width="182" height: auto >'
+        'tessera': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/f711539a-a00c-495a-9563-a5a91b7f7b55-1666821573698.png" alt="Tessera" loading="lazy" width="182" height: auto >',
+        'paxos': '<img src="https://paxos.com/wp-content/uploads/2019/01/paxos-logo.svg" alt="paxos" loading="lazy" width="182" height: auto >',
+        'close': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7cee7f57-cca0-4e06-9fa2-82d0871a65f3-1674590276705.png" alt="Close" loading="lazy" width="182" height: auto >',
+        'bitcoin': '<img src="bitcoincom.jpg" alt="Bitcoin.com" loading="lazy" width="182" height: auto >',
+        'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
