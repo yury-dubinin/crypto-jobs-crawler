@@ -38,6 +38,7 @@ lever:
 - https://jobs.lever.co/immutable
 - https://jobs.lever.co/TorusLabs
 - https://jobs.lever.co/cere-network
+- https://jobs.lever.co/ftc
 
 greenhouse:
 - https://boards.greenhouse.io/moonpay
@@ -93,6 +94,7 @@ custom:
 - https://consensys.net/open-roles
 
 wip:
+- https://apply.workable.com/stably
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
