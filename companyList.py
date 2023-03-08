@@ -20,6 +20,8 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("circle",  "https://boards.greenhouse.io/circle", ScrapeGreenhouse, "https://circle.com", "Stable Coin"))
     company_list.append(CompanyItem("status",  "https://jobs.status.im", ScrapeGreenhouse, "https://status.im","Messanger"))
     company_list.append(CompanyItem("OKX",  "https://boards.greenhouse.io/OKX", ScrapeGreenhouse, "https://okx.com","Exchange"))
+    company_list.append(CompanyItem("bittrex", "https://boards.greenhouse.io/bittrex", ScrapeGreenhouse, "https://global.bittrex.com", 'Exchange'))
+    company_list.append(CompanyItem("kaiko",  "https://jobs.eu.lever.co/kaiko", ScrapeLever, "https://www.kaiko.com", "Data"))
     company_list.append(CompanyItem("bitmex",  "https://boards.greenhouse.io/bitmex", ScrapeGreenhouse, "https://bitmex.com","Exchange"))
     company_list.append(CompanyItem("bitgo",  "https://boards.greenhouse.io/bitgo", ScrapeGreenhouse, "https://bitgo.com","Exchange"))
     company_list.append(CompanyItem("bitpanda",  "https://boards.eu.greenhouse.io/bitpanda", ScrapeGreenhouse, "https://bitpanda.com","Exchange"))
@@ -88,6 +90,9 @@ def getLogo(company_name):
         'paxos': '<img src="https://paxos.com/wp-content/uploads/2019/01/paxos-logo.svg" alt="paxos" loading="lazy" width="182" height: auto >',
         'close': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7cee7f57-cca0-4e06-9fa2-82d0871a65f3-1674590276705.png" alt="Close" loading="lazy" width="182" height: auto >',
         'bitcoin': '<img src="bitcoincom.jpg" alt="Bitcoin.com" loading="lazy" width="182" height: auto >',
-        'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >'
+        'binance': '<img src="binance.png" alt="Binance" loading="lazy" width="182" height: auto >',
+        'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
+        'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
+        'kaiko': '<img alt="Kaiko" src="https://s3.eu-central-1.amazonaws.com/co.lever.eu.client-logos/55cd4a1a-9f43-486d-a46d-f835a8f4cbe3-1671611915232.png" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
