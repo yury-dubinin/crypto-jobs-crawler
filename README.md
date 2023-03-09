@@ -64,3 +64,4 @@ wip:
 - https://jobs.ashbyhq.com/StationLabs
 - https://www.sofi.com/careers
 - https://iofinnethr.bamboohr.com/jobs/?source=bamboohr
+- https://jobs.bybitglobal.com/social-recruitment/bybit/45685#/jobs?page=1&pageSize=50
