@@ -172,13 +172,13 @@ total_number_of_jobs: int = 0
 current_jobs = {}
 
 
-def printAndCollectNumbers(company: str, total: int):
+def printAndCollectNumbers(company_name: str, total: int):
     now = datetime.date(datetime.now())
-    print(f'[CRAWLER] Company {company} has {total} open positions on {now}')
+    print(f'[CRAWLER] Company {company_name} has {total} open positions on {now}')
     global total_number_of_jobs
     total_number_of_jobs = total_number_of_jobs + total
     global current_jobs
-    current_jobs[company] = total
+    current_jobs[company_name] = total
 
 
 def write_numbers():
@@ -230,7 +230,7 @@ def add_jobs_to_finance(company: CompanyItem, data):
 
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    company_logo = companyList.getLogo(company_name=company.company_name)
+    company_logo = companyList.get_logo(company_name=company.company_name)
     addJobsToIndex(company, data, company_logo)
     addJobsToTest(company, data)
     addJobsToDev(company, data)
