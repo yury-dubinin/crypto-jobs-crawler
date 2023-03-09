@@ -62,3 +62,5 @@ wip:
 - https://changenow.io/jobs
 - https://chainsafe.github.io/protocol
 - https://jobs.ashbyhq.com/StationLabs
+- https://www.sofi.com/careers
+- https://iofinnethr.bamboohr.com/jobs/?source=bamboohr
