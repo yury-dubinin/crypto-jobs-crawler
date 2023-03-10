@@ -22,6 +22,9 @@ Locally just run `python3 -m http.server 8000` and open `localhost:8000` in your
 
 wip:
 - https://apply.workable.com/stably
+- https://apply.workable.com/bitget
+- https://jobs.paradigm.xyz/companies/blur-io
+- https://jobs.ashbyhq.com/Paradigm
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
@@ -65,3 +68,7 @@ wip:
 - https://www.sofi.com/careers
 - https://iofinnethr.bamboohr.com/jobs/?source=bamboohr
 - https://jobs.bybitglobal.com/social-recruitment/bybit/45685#/jobs?page=1&pageSize=50
+
+not yet crypto:
+
+-https://boards.greenhouse.io/papaya
