@@ -11,14 +11,14 @@ class ScrapeGreenhouse(ScrapeIt):
         if len(iframe)>0:
             print(f'[{self.name}] iFrame detected..')
             driver.switch_to.frame(iframe[0])
-        groupElements = driver.find_elements(By.CSS_SELECTOR, 'div [class="opening"]')
-        print(f'[{self.name}] Found {len(groupElements)} jobs.')
+        group_elements = driver.find_elements(By.CSS_SELECTOR, 'div [class="opening"]')
+        print(f'[{self.name}] Found {len(group_elements)} jobs.')
         result = []
-        for elem in groupElements:
-            linkElem = elem.find_element(By.CSS_SELECTOR, 'a')
-            locationElem = elem.find_element(By.CSS_SELECTOR, 'span')
-            jobUrl = linkElem.get_attribute('href')
-            location = set(([x.strip() for x in (locationElem.text).split(',')]))
-            result.append((f'{linkElem.text} From:{location}', jobUrl))
+        for elem in group_elements:
+            link_elem = elem.find_element(By.CSS_SELECTOR, 'a')
+            location_elem = elem.find_element(By.CSS_SELECTOR, 'span')
+            job_url = link_elem.get_attribute('href')
+            location = set(([x.strip() for x in location_elem.text.split(',')]))
+            result.append((f'{link_elem.text} From:{location}', job_url))
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
         return result

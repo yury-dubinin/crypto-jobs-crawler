@@ -55,6 +55,9 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("ethereumfoundation",  "https://jobs.lever.co/ethereumfoundation", ScrapeLever, "https://ethereum.org","Blockchain"))
     company_list.append(CompanyItem("aave",  "https://jobs.eu.lever.co/aave", ScrapeLever, "https://aave.com","Protocol"))
     company_list.append(CompanyItem("crypto",  "https://jobs.lever.co/crypto", ScrapeLever, "https://crypto.com","Exchange"))
+    company_list.append(
+        CompanyItem("avalabs", "https://boards.greenhouse.io/avalabs", ScrapeGreenhouse, "https://www.avalabs.org",
+                    "Blockchain"))
     company_list.append(CompanyItem("Polygon",  "https://jobs.lever.co/Polygon", ScrapeLever, "https://polygon.technology","Blockchain"))
     company_list.append(CompanyItem("tokenmetrics",  "https://jobs.lever.co/tokenmetrics", ScrapeLever, "https://www.tokenmetrics.com","Information"))
     company_list.append(CompanyItem("offchainlabs",  "https://jobs.lever.co/offchainlabs", ScrapeLever, "https://offchainlabs.com","Protocol"))
@@ -100,6 +103,8 @@ def get_logo(company_name):
         'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
         'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
         'kaiko': '<img alt="Kaiko" src="https://s3.eu-central-1.amazonaws.com/co.lever.eu.client-logos/55cd4a1a-9f43-486d-a46d-f835a8f4cbe3-1671611915232.png" loading="lazy" width="182" height: auto >',
-        'hiro': '<img alt="Hiro" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7e352a0c-9e67-43aa-857f-18420307b456-1665900839285.png" loading="lazy" width="182" height: auto >'
+        'hiro': '<img alt="Hiro" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7e352a0c-9e67-43aa-857f-18420307b456-1665900839285.png" loading="lazy" width="182" height: auto >',
+        'avalabs': '<img alt="AvaLabs" src="https://s4-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/388/300/resized/Ava_Labs._Black.png?1627876089" loading="lazy" width="175" height: auto >',
+        'Polygon': '<img alt="Polygon" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7fb55e63-b76e-4d3c-b15c-ecb8fa5399db-1633069374539.png" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
