@@ -57,7 +57,6 @@ wip:
 - https://careers.lido.fi/
 - https://www.rdx.works/careers#careers
 - https://horizenlabs.io/careers/#list-jobs
-- https://cexio.bamboohr.com/jobs/
 - https://careers.substrate.io/jobs
 - https://web3.bamboohr.com/jobs/
 - https://join.com/companies/taurusgroup
