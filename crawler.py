@@ -72,7 +72,8 @@ def isDevJob(title):
         'Frontend Architect ',
         'Front-end Developer',
         'Web Developer',
-        'Front-End Engineer'
+        'Front-End Engineer',
+        'Lead Engineer'
     ]
     result = filterJobs(title, tags)
     anti_filters = ['test', 'qa', 'manager', 'sdet', 'director']
