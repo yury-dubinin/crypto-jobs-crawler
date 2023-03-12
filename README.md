@@ -42,7 +42,6 @@ wip:
 - https://join.com/companies/sygnum
 - https://jobs.coinmarketcap.com
 - https://www.abra.com/careers
-- https://dappradar.bamboohr.com/careers
 - https://changenow.io/jobs
 - https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
@@ -58,7 +57,6 @@ wip:
 - https://www.rdx.works/careers#careers
 - https://horizenlabs.io/careers/#list-jobs
 - https://careers.substrate.io/jobs
-- https://web3.bamboohr.com/jobs/
 - https://join.com/companies/taurusgroup
 - https://apply.workable.com/cryptofinance
 - https://changenow.io/jobs

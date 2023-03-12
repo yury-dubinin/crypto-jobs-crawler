@@ -87,7 +87,11 @@ def getCompanyList() -> list():
         CompanyItem("galaxydigitalservices", "https://boards.greenhouse.io/galaxydigitalservices", ScrapeGreenhouse,
                     "https://www.galaxy.com", 'Trading'))
     company_list.append(CompanyItem("hiro", "https://jobs.lever.co/hiro", ScrapeLever, "https://www.hiro.so", "Infra"))
-
+    company_list.append(
+        CompanyItem('web3', 'https://web3.bamboohr.com/jobs', ScrapeBamboohr, 'https://web3.foundation', 'web3'))
+    company_list.append(
+        CompanyItem('dappradar', 'https://dappradar.bamboohr.com/careers', ScrapeBamboohr, 'https://dappradar.com',
+                    'Exchange & NFT'))
     return company_list
 
 
@@ -109,6 +113,8 @@ def get_logo(company_name):
         'avalabs': '<img alt="AvaLabs" src="https://s4-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/388/300/resized/Ava_Labs._Black.png?1627876089" loading="lazy" width="175" height: auto >',
         'Polygon': '<img alt="Polygon" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7fb55e63-b76e-4d3c-b15c-ecb8fa5399db-1633069374539.png" loading="lazy" width="182" height: auto >',
         'status': '<img alt="Status" src="https://status.im/img/logo.svg" loading="lazy" width="182" height: auto >',
-        'cexio': '<img src="https://images4.bamboohr.com/279437/logos/cropped.jpg?v=35" alt="CEX.IO" loading="lazy" width="182" height: auto ">'
+        'cexio': '<img src="https://images4.bamboohr.com/279437/logos/cropped.jpg?v=35" alt="CEX.IO" loading="lazy" width="182" height: auto >',
+        'dappradar': '<img alt="DappRadar" src="https://images4.bamboohr.com/198519/logos/cropped.jpg?v=35 loading="lazy" width="182" height: auto >',
+        'web3': '<img src="https://images4.bamboohr.com/104723/logos/cropped.jpg?v=47" alt="Web3" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
