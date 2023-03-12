@@ -7,6 +7,7 @@ from scrapeBinance import ScrapeBinance
 from scrape_bamboohr import ScrapeBamboohr
 from scrape_consensys import ScrapeConsensys
 from scrape_ripple import ScrapeRipple
+from scrape_workable import ScrapeWorkable
 
 
 def getCompanyList() -> list():
@@ -92,6 +93,20 @@ def getCompanyList() -> list():
     company_list.append(
         CompanyItem('dappradar', 'https://dappradar.bamboohr.com/careers', ScrapeBamboohr, 'https://dappradar.com',
                     'Exchange & NFT'))
+    company_list.append(
+        CompanyItem('bitstamp', 'https://apply.workable.com/bitstamp/#jobs', ScrapeWorkable, 'https://www.bitstamp.net',
+                    'Exchange'))
+    company_list.append(CompanyItem('smart-token-labs', 'https://apply.workable.com/smart-token-labs', ScrapeWorkable,
+                                    'https://smarttokenlabs.com', 'Web3 bridge'))
+    company_list.append(
+        CompanyItem('avantgarde', 'https://apply.workable.com/avantgarde', ScrapeWorkable, 'https://avantgarde.finance',
+                    'Asset Management'))
+    company_list.append(
+        CompanyItem('stably', 'https://apply.workable.com/stably', ScrapeWorkable, 'https://stably.io', 'Stable Coin'))
+    company_list.append(
+        CompanyItem('bitget', 'https://apply.workable.com/bitget', ScrapeWorkable, 'https://www.bitget.com/en',
+                    'Exchange'))
+
     return company_list
 
 
@@ -105,6 +120,9 @@ def get_logo(company_name):
         'close': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7cee7f57-cca0-4e06-9fa2-82d0871a65f3-1674590276705.png" alt="Close" loading="lazy" width="182" height: auto >',
         'bitcoin': '<img src="bitcoincom.jpg" alt="Bitcoin.com" loading="lazy" width="182" height: auto >',
         'binance': '<img src="binance.png" alt="Binance" loading="lazy" width="182" height: auto >',
+        'bitget': '<img src="bitget.png" alt="Bitget" loading="lazy" width="182" height: auto >',
+        'stably': '<img src="stably.png" alt="Stably" loading="lazy" width="182" height: auto >',
+        'bitstamp': '<img src="bitstamp.png" alt="Bitstamp" loading="lazy" width="182" height: auto >',
         'consensys': '<img src="consensys.png" alt="Consensys" loading="lazy" width="182" height: auto >',
         'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
         'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
@@ -115,6 +133,8 @@ def get_logo(company_name):
         'status': '<img alt="Status" src="https://status.im/img/logo.svg" loading="lazy" width="182" height: auto >',
         'cexio': '<img src="https://images4.bamboohr.com/279437/logos/cropped.jpg?v=35" alt="CEX.IO" loading="lazy" width="182" height: auto >',
         'dappradar': '<img alt="DappRadar" src="https://images4.bamboohr.com/198519/logos/cropped.jpg?v=35 loading="lazy" width="182" height: auto >',
-        'web3': '<img src="https://images4.bamboohr.com/104723/logos/cropped.jpg?v=47" alt="Web3" loading="lazy" width="182" height: auto >'
+        'web3': '<img src="https://images4.bamboohr.com/104723/logos/cropped.jpg?v=47" alt="Web3" loading="lazy" width="182" height: auto >',
+        'smart-token-labs': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/533066/logo" alt="Smart Token Labs" loading="lazy" width="182" height: auto>',
+        'avantgarde': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/488245/logo" alt="Avantgarde" loading="lazy" width="182" height: auto>'
     }
     return company_logos.get(company_name, company_name.upper())

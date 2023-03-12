@@ -21,8 +21,6 @@ Locally just run `python3 -m http.server 8000` and open `localhost:8000` in your
 # What we will watch -> work in progress
 
 wip:
-- https://apply.workable.com/stably
-- https://apply.workable.com/bitget
 - https://jobs.paradigm.xyz/companies/blur-io
 - https://jobs.ashbyhq.com/Paradigm
 - https://gnosis.jobs.personio.com
@@ -34,7 +32,6 @@ wip:
 - https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
-- https://apply.workable.com/avantgarde/
 - https://zenith-caboc-8a4.notion.site/Join-Llama-ad66be1cb28541f5b5346aa37d192b79
 - https://bullish.wd3.myworkdayjobs.com/Bullish
 - https://verum.capital/careers
@@ -49,8 +46,6 @@ wip:
 - https://nexo.breezy.hr
 - https://careers.stacks.org
 - https://www.coinbase.com/careers/positions
-- https://apply.workable.com/smart-token-labs
-- https://apply.workable.com/bitstamp/#jobs
 - https://www.kucoin.com/careers/job-opening
 - https://apply.workable.com/cryptofinance
 - https://careers.lido.fi/
