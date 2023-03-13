@@ -103,6 +103,8 @@ def getCompanyList() -> list():
                     'Asset Management'))
     company_list.append(
         CompanyItem('stably', 'https://apply.workable.com/stably', ScrapeWorkable, 'https://stably.io', 'Stable Coin'))
+    company_list.append(CompanyItem('cryptofinance', 'https://apply.workable.com/cryptofinance', ScrapeWorkable,
+                                    'https://www.crypto-finance.com', 'Exchange'))
     company_list.append(
         CompanyItem('bitget', 'https://apply.workable.com/bitget', ScrapeWorkable, 'https://www.bitget.com/en',
                     'Exchange'))
@@ -135,7 +137,8 @@ def get_logo(company_name):
         'cexio': '<img src="https://images4.bamboohr.com/279437/logos/cropped.jpg?v=35" alt="CEX.IO" loading="lazy" width="182" height: auto >',
         'dappradar': '<img alt="DappRadar" src="https://images4.bamboohr.com/198519/logos/cropped.jpg?v=35 loading="lazy" width="182" height: auto >',
         'web3': '<img src="https://images4.bamboohr.com/104723/logos/cropped.jpg?v=47" alt="Web3" loading="lazy" width="182" height: auto >',
-        'smart-token-labs': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/533066/logo" alt="Smart Token Labs" loading="lazy" width="182" height: auto>',
-        'avantgarde': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/488245/logo" alt="Avantgarde" loading="lazy" width="182" height: auto>'
+        'smart-token-labs': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/533066/logo" alt="Smart Token Labs" loading="lazy" width="182" height: auto >',
+        'avantgarde': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/488245/logo" alt="Avantgarde" loading="lazy" width="182" height: auto >',
+        'cryptofinance': '<img src="https://workable-application-form.s3.amazonaws.com/advanced/production/60bf845679ed484c4e780ea0/8024882f-65cc-9c45-b169-229b1e93c0f5" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
