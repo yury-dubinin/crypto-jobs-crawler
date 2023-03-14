@@ -40,6 +40,9 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("alchemy",  "https://boards.greenhouse.io/alchemy", ScrapeGreenhouse, "https://www.alchemy.com","Dev & Infra"))
     company_list.append(CompanyItem("chainalysis",  "https://boards.greenhouse.io/chainalysis", ScrapeGreenhouse, "https://www.chainalysis.com","Crypto Research"))
     company_list.append(CompanyItem("magiceden",  "https://boards.greenhouse.io/magiceden", ScrapeGreenhouse, "https://www.magiceden.io","NFT"))
+    company_list.append(
+        CompanyItem("aztec", "https://boards.eu.greenhouse.io/aztec", ScrapeGreenhouse, "https://aztec.network",
+                    "Protocol"))
     company_list.append(CompanyItem("nethermind",  "https://boards.eu.greenhouse.io/nethermind", ScrapeGreenhouse, "https://nethermind.io","Crypto software"))
     company_list.append(CompanyItem("dfinity",  "https://boards.greenhouse.io/dfinity", ScrapeGreenhouse, "https://dfinity.org","Blockchain"))
     company_list.append(CompanyItem("parity",  "https://boards.greenhouse.io/parity", ScrapeGreenhouse, "https://www.parity.io","Infra"))
@@ -127,6 +130,7 @@ def get_logo(company_name):
         'bitstamp': '<img src="bitstamp.png" alt="Bitstamp" loading="lazy" width="182" height: auto >',
         'consensys': '<img src="consensys.png" alt="Consensys" loading="lazy" width="182" height: auto >',
         'ripple': '<img src="ripple.png" alt="Ripple" loading="lazy" width="182" height: auto >',
+        'aztec': '<img src="aztec.png" alt="Aztec" loading="lazy" width="182" height: auto >',
         'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
         'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
         'kaiko': '<img alt="Kaiko" src="https://s3.eu-central-1.amazonaws.com/co.lever.eu.client-logos/55cd4a1a-9f43-486d-a46d-f835a8f4cbe3-1671611915232.png" loading="lazy" width="182" height: auto >',
