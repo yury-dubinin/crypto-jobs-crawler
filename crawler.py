@@ -81,9 +81,12 @@ def is_dev_job(title):
         'Solutions Engineer',
         'TypeScript Toolkit Engineer',
         'Technical Lead',
-        'Backend',
+        'Backend / Fullstack',
         'Front End Architect',
-        'Solution Architect '
+        'Solution Architect ',
+        'Golang Team Lead',
+        'Senior Engineer, Frontend',
+        'C++ '
     ]
     result = filter_jobs(title, tags)
     anti_filters = ['test', 'qa', 'manager', 'sdet', 'director']
@@ -128,7 +131,7 @@ def is_dev_ops_job(title):
 
 
 def is_data_job(title):
-    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer ']
+    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer', 'Data Science']
     return filter_jobs(title, tags)
 
 
@@ -141,6 +144,8 @@ def set_color(title):
         return ' bgcolor="lightyellow" '
     elif is_data_job(title):
         return ' bgcolor="cyan" '
+    elif is_finance_job(title):
+        return ' bgcolor="magenta" '
     else:
         return ""
 
@@ -173,8 +178,8 @@ def dict_to_html_table_with_header_and_filter(header, dictionary, filter):
     html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >" + jobs_total + "</th></tr>"
 
     for elem in filtered:
-        wrappedLink = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
-        html_table += "<tr><td>" + elem[0] + "</td><td width='20%' >" + wrappedLink + "</td></tr>"
+        wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
+        html_table += "<tr><td>" + elem[0] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
 
     html_table += "</table>"
     return html_table

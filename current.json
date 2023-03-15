@@ -34,7 +34,7 @@
     "flashbots": 7,
     "oplabs": 5,
     "bitfinex": 9,
-    "binance": 465,
+    "binance": 464,
     "coinmarketcap": 20,
     "trustwallet": 16,
     "Swissquote": 17,
@@ -79,5 +79,5 @@
     "stably": 3,
     "cryptofinance": 5,
     "bitget": 46,
-    "Total Jobs": 2082
+    "Total Jobs": 2081
 }
