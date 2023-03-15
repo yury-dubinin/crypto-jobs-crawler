@@ -31,13 +31,13 @@ options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
 
-def filterJobs(job_title: str, filters):
+def filter_jobs(job_title: str, filters):
     if any(ext.lower() in job_title.lower() for ext in filters):
         return True
     return False
 
 
-def isDevJob(title):
+def is_dev_job(title):
     tags = [
         'software engineer',
         'stack engineer',
@@ -73,18 +73,28 @@ def isDevJob(title):
         'Front-end Developer',
         'Web Developer',
         'Front-End Engineer',
-        'Lead Engineer'
+        'Lead Engineer',
+        'Fullstack Developer',
+        'Solutions Engineer',
+        'Compiler Engineer',
+        '(Front-End) Engineer',
+        'Solutions Engineer',
+        'TypeScript Toolkit Engineer',
+        'Technical Lead',
+        'Backend',
+        'Front End Architect',
+        'Solution Architect '
     ]
-    result = filterJobs(title, tags)
+    result = filter_jobs(title, tags)
     anti_filters = ['test', 'qa', 'manager', 'sdet', 'director']
     if any(ext.lower() in title.lower() for ext in anti_filters):
         return False
     return result
 
 
-def isTestJob(title):
+def is_test_job(title):
     tags = ['qa', 'test', 'sdet', 'quality assurance']
-    result = filterJobs(title, tags)
+    result = filter_jobs(title, tags)
     anti_filters = ['manager', 'director', 'head']
     if any(ext.lower() in title.lower() for ext in anti_filters):
         return False
@@ -93,14 +103,14 @@ def isTestJob(title):
 
 def is_finance_job(title):
     tags = ['Accountant', 'Treasury', 'Finance', 'Accounting', 'Tax Specialist', 'Financial', 'FinCrime', 'Accounts Payable']
-    result = filterJobs(title, tags)
+    result = filter_jobs(title, tags)
     anti_filters = ['manager', 'director', 'head of', 'Scientist', 'Engineer']
     if any(ext.lower() in title.lower() for ext in anti_filters):
         return False
     return result
 
 
-def isDevOpsJob(title):
+def is_dev_ops_job(title):
     tags = [
         'devops',
         'sre',
@@ -110,24 +120,26 @@ def isDevOpsJob(title):
         'network engineer',
         'devsecops',
         'Platform Engineer',
-        'Tooling Engineer'
+        'Tooling Engineer',
+        'Infrastructure Development Engineer',
+        'Infrastructure & Tooling'
     ]
-    return filterJobs(title, tags)
+    return filter_jobs(title, tags)
 
 
-def isDataJob(title):
+def is_data_job(title):
     tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer ']
-    return filterJobs(title, tags)
+    return filter_jobs(title, tags)
 
 
-def setColor(title):
-    if isTestJob(title):
+def set_color(title):
+    if is_test_job(title):
         return ' bgcolor="lightgreen" '
-    elif isDevJob(title):
+    elif is_dev_job(title):
         return ' bgcolor="lightblue" '
-    elif isDevOpsJob(title):
+    elif is_dev_ops_job(title):
         return ' bgcolor="lightyellow" '
-    elif isDataJob(title):
+    elif is_data_job(title):
         return ' bgcolor="cyan" '
     else:
         return ""
@@ -139,7 +151,7 @@ def dict_to_html_table_with_header(company: CompanyItem, dictionary, logo=''):
     wrapped_header_link = f"<a href='{company.company_url}' target='_blank' > {logo} </a>"
     html_table += "<tr><th>" + wrapped_header_link + "</th><th width='20%' >" + jobs_total + "</th></tr>"
     for elem in dictionary:
-        color_code = setColor(elem[0])
+        color_code = set_color(elem[0])
         wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
         html_table += "<tr" + color_code + "><td>" + elem[0] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
     html_table += "</table>"
@@ -173,7 +185,7 @@ total_number_of_jobs: int = 0
 current_jobs = {}
 
 
-def printAndCollectNumbers(company_name: str, total: int):
+def print_and_collect_numbers(company_name: str, total: int):
     now = datetime.date(datetime.now())
     print(f'[CRAWLER] Company {company_name} has {total} open positions on {now}')
     global total_number_of_jobs
@@ -192,33 +204,33 @@ def write_numbers():
         json.dump(current_jobs, file, indent=4)
 
 
-def addJobsToIndex(company: CompanyItem, data, logo):
-    printAndCollectNumbers(company.company_name, len(data))
+def add_jobs_to_index(company: CompanyItem, data, logo):
+    print_and_collect_numbers(company.company_name, len(data))
     html = dict_to_html_table_with_header(company, data, logo)
     with open('index.html', 'a') as f:
         f.write(html)
 
 
-def addJobsToTest(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isTestJob)
+def add_jobs_to_test(company: CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_test_job)
     with open('test.html', 'a') as f:
         f.write(html)
 
 
-def addJobsToDev(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDevJob)
+def add_jobs_to_dev(company: CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_dev_job)
     with open('dev.html', 'a') as f:
         f.write(html)
 
 
-def addJobsToDevOps(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDevOpsJob)
+def add_jobs_to_dev_ops(company: CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_dev_ops_job)
     with open('devops.html', 'a') as f:
         f.write(html)
 
 
-def addJobsToData(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=isDataJob)
+def add_jobs_to_data(company: CompanyItem, data):
+    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_data_job)
     with open('data.html', 'a') as f:
         f.write(html)
 
@@ -232,11 +244,11 @@ def add_jobs_to_finance(company: CompanyItem, data):
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
     company_logo = companyList.get_logo(company_name=company.company_name)
-    addJobsToIndex(company, data, company_logo)
-    addJobsToTest(company, data)
-    addJobsToDev(company, data)
-    addJobsToDevOps(company, data)
-    addJobsToData(company, data)
+    add_jobs_to_index(company, data, company_logo)
+    add_jobs_to_test(company, data)
+    add_jobs_to_dev(company, data)
+    add_jobs_to_dev_ops(company, data)
+    add_jobs_to_data(company, data)
     add_jobs_to_finance(company, data)
 
 driver.close()
