@@ -22,6 +22,7 @@ class ScrapeBamboohr(ScrapeIt):
             job_url = link_elem.get_attribute('href')
             job_name = job_name_elem.text
             location = location_elem.text
-            result.append((f'{job_name} From:{location}', job_url))
+            clean_location = location.replace('\n', ', ')
+            result.append((f'{job_name} From:{clean_location}', job_url))
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
         return result

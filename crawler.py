@@ -163,19 +163,21 @@ def dict_to_html_table_with_header(company: CompanyItem, dictionary, logo=''):
     return html_table
 
 
-def dict_to_html_table_with_header_and_filter(header, dictionary, filter):
+def dict_to_html_table_with_header_and_filter(company_name, dictionary, filter):
     filtered = []
     for elem in dictionary:
         if filter(elem[0]):
             filtered.append(elem)
 
-    jobs_total = f'No {filter.__name__}'
     if len(filtered) > 0:
         jobs_total = f"Total {filter.__name__}(s): {len(filtered)}"
-    print(f'[CRAWLER] {jobs_total} at {header}')
-    # For now keep the table
+        print(f'[CRAWLER] {jobs_total} at {company_name}')
+    else:
+        print(f'[CRAWLER] no jobs filtered by {filter.__name__} at {company_name}')
+        return ''
+
     html_table = '<table width="80%" align="center" border="1">'
-    html_table += "<tr><th>" + header.upper() + "</th><th width='20%' >" + jobs_total + "</th></tr>"
+    html_table += "<tr><th>" + company_name.upper() + "</th><th width='20%' >" + jobs_total + "</th></tr>"
 
     for elem in filtered:
         wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
@@ -209,39 +211,39 @@ def write_numbers():
         json.dump(current_jobs, file, indent=4)
 
 
-def add_jobs_to_index(company: CompanyItem, data, logo):
-    print_and_collect_numbers(company.company_name, len(data))
-    html = dict_to_html_table_with_header(company, data, logo)
-    with open('index.html', 'a') as f:
-        f.write(html)
+def add_jobs_to_index(company_item: CompanyItem, jobs_data, logo):
+    print_and_collect_numbers(company_item.company_name, len(jobs_data))
+    html = dict_to_html_table_with_header(company_item, jobs_data, logo)
+    with open('index.html', 'a') as index_file:
+        index_file.write(html)
 
 
-def add_jobs_to_test(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_test_job)
-    with open('test.html', 'a') as f:
-        f.write(html)
+def add_jobs_to_test(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_test_job)
+    with open('test.html', 'a') as test_file:
+        test_file.write(html)
 
 
-def add_jobs_to_dev(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_dev_job)
-    with open('dev.html', 'a') as f:
-        f.write(html)
+def add_jobs_to_dev(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_dev_job)
+    with open('dev.html', 'a') as dev_file:
+        dev_file.write(html)
 
 
-def add_jobs_to_dev_ops(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_dev_ops_job)
-    with open('devops.html', 'a') as f:
-        f.write(html)
+def add_jobs_to_dev_ops(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_dev_ops_job)
+    with open('devops.html', 'a') as devops_file:
+        devops_file.write(html)
 
 
-def add_jobs_to_data(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_data_job)
-    with open('data.html', 'a') as f:
-        f.write(html)
+def add_jobs_to_data(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_data_job)
+    with open('data.html', 'a') as data_file:
+        data_file.write(html)
 
 
-def add_jobs_to_finance(company: CompanyItem, data):
-    html = dict_to_html_table_with_header_and_filter(company.company_name, data, filter=is_finance_job)
+def add_jobs_to_finance(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_finance_job)
     with open('finance.html', 'a') as f:
         f.write(html)
 

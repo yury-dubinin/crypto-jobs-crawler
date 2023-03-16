@@ -88,6 +88,11 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("EigenLabs", "https://boards.greenhouse.io/layrlabs", ScrapeGreenhouse, "https://www.v1.eigenlayer.xyz", "Infra"))
     company_list.append(CompanyItem("cere-network",  "https://jobs.lever.co/cere-network", ScrapeLever, "https://cere.network", "Infra"))
     company_list.append(
+        CompanyItem('sygnum', 'https://sygnum.bamboohr.com/careers', ScrapeBamboohr, 'https://www.sygnum.com',
+                    'Crypto bank'))
+    company_list.append(CompanyItem('iofinnet', 'https://iofinnethr.bamboohr.com/jobs/?source=bamboohr', ScrapeBamboohr,
+                                    'https://www.iofinnet.com', 'Custody'))
+    company_list.append(
         CompanyItem("galaxydigitalservices", "https://boards.greenhouse.io/galaxydigitalservices", ScrapeGreenhouse,
                     "https://www.galaxy.com", 'Trading'))
     company_list.append(CompanyItem("hiro", "https://jobs.lever.co/hiro", ScrapeLever, "https://www.hiro.so", "Infra"))
@@ -131,6 +136,7 @@ def get_logo(company_name):
         'consensys': '<img src="consensys.png" alt="Consensys" loading="lazy" width="182" height: auto >',
         'ripple': '<img src="ripple.png" alt="Ripple" loading="lazy" width="182" height: auto >',
         'aztec': '<img src="aztec.png" alt="Aztec" loading="lazy" width="182" height: auto >',
+        'sygnum': '<img src="sygnum.png" alt="Sygnum" loading="lazy" width="182" height: auto >',
         'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
         'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
         'kaiko': '<img alt="Kaiko" src="https://s3.eu-central-1.amazonaws.com/co.lever.eu.client-logos/55cd4a1a-9f43-486d-a46d-f835a8f4cbe3-1671611915232.png" loading="lazy" width="182" height: auto >',
