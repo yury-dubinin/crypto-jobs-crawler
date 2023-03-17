@@ -58,6 +58,18 @@ wip:
 - https://www.sofi.com/careers
 - https://iofinnethr.bamboohr.com/jobs/?source=bamboohr
 - https://jobs.bybitglobal.com/social-recruitment/bybit/45685#/jobs?page=1&pageSize=50
+- https://www.openzeppelin.com/jobs
+- https://tusd.io/careers/#workwithus
+- https://boards.greenhouse.io/edgeandnode
+- https://apply.workable.com/walletconnect/
+- https://careers.chorus.one/
+- https://boards.greenhouse.io/solanafoundation
+- https://boards.greenhouse.io/worldcoinorg
+- https://staking-facilities-gmbh.jobs.personio.com/
+- https://jobs.coinfund.io/jobs?page=2
+- https://jobs.lever.co/biconomy
+- https://join-incept.super.site/
+- https://rhino.fi/careers/
 
 not yet crypto:
 
