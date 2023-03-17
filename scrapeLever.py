@@ -2,21 +2,37 @@ from selenium.webdriver.common.by import By
 from scrapeIt import ScrapeIt
 
 
-def cleanLocation(location):
-    return set(([x.strip() for x in location.split(',')]))
+def clean_location(location):
+    locations = set(filter(None, ([x.strip() for x in location.split(',')])))
+    if len(locations) == 1:
+        return next(iter(locations))
+    joined = ' '.join(locations).lower()
+    if joined.count('remote') > 1:
+        return joined.replace('remote', '', 1)
+    return joined.strip().strip('-')
+
 
 class ScrapeLever(ScrapeIt):
     def getJobs(self, driver, web_page):
         print(f'[LEVER] Scrap page: {web_page}')
         driver.get(web_page)
-        groupElements = driver.find_elements(By.CSS_SELECTOR, 'a[class="posting-title"]')
-        print(f'[LEVER] Found {len(groupElements)} jobs.')
+        group_elements = driver.find_elements(By.CSS_SELECTOR, 'a[class="posting-title"]')
+        print(f'[LEVER] Found {len(group_elements)} jobs.')
         result = []
-        for elem in groupElements:
-            linkElem = elem.find_element(By.CSS_SELECTOR, '[data-qa="posting-name"]')
-            locationElem = elem.find_element(By.CSS_SELECTOR, 'span')
-            jobUrl = elem.get_attribute('href')
-            location = cleanLocation(locationElem.text)
-            result.append((f'{linkElem.text} From:{location}', jobUrl))
+        for elem in group_elements:
+            link_elem = elem.find_element(By.CSS_SELECTOR, '[data-qa="posting-name"]')
+            location_elem = elem.find_elements(By.CSS_SELECTOR, '[class*="location"]')
+            workplace_elem = elem.find_elements(By.CSS_SELECTOR, '[class*="workplaceTypes"]')
+            job_url = elem.get_attribute('href')
+            if len(location_elem) > 0:
+                location = location_elem[0].text
+            else:
+                location = ''
+            if len(workplace_elem) > 0:
+                workplace = workplace_elem[0].text
+                merge_location = f'{location},{workplace}'
+            else:
+                merge_location = location
+            result.append((f'{link_elem.text} From:{clean_location(merge_location)}', job_url))
         print(f'[LEVER]  Scraped {len(result)} jobs from {web_page}')
         return result

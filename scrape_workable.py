@@ -19,7 +19,7 @@ def show_more(driver, locator):
 
 
 def clean_location(location):
-    return set(([x.strip() for x in location.split(',')]))
+    return ' '.join(set(([x.strip() for x in location.split(',')])))
 
 
 class ScrapeWorkable(ScrapeIt):

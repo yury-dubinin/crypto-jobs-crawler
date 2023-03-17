@@ -2,6 +2,16 @@ from selenium.webdriver.common.by import By
 from scrapeIt import ScrapeIt
 
 
+def clean_location(location):
+    locations = set(filter(None, ([x.strip() for x in location.split(',')])))
+    if len(locations) == 1:
+        return next(iter(locations))
+    joined = ' '.join(locations).lower()
+    if joined.count('remote') > 1:
+        return joined.replace('remote', '', 1)
+    return joined.strip().strip('-')
+
+
 class ScrapeBamboohr(ScrapeIt):
     name = 'bamboohr'
 
@@ -22,7 +32,7 @@ class ScrapeBamboohr(ScrapeIt):
             job_url = link_elem.get_attribute('href')
             job_name = job_name_elem.text
             location = location_elem.text
-            clean_location = location.replace('\n', ', ')
-            result.append((f'{job_name} From:{clean_location}', job_url))
+            cleaned_location = location.replace('\n', ', ')
+            result.append((f'{job_name} From:{clean_location(cleaned_location)}', job_url))
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
         return result

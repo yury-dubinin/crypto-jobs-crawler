@@ -150,15 +150,17 @@ def set_color(title):
         return ""
 
 
-def dict_to_html_table_with_header(company: CompanyItem, dictionary, logo=''):
-    html_table = '<table width="72%" align="center" border="1">'
+def dict_to_html_table_with_header(company_item: CompanyItem, dictionary, logo=''):
+    html_table = '<table width="78%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
-    wrapped_header_link = f"<a href='{company.company_url}' target='_blank' > {logo} </a>"
-    html_table += "<tr><th>" + wrapped_header_link + "</th><th width='20%' >" + jobs_total + "</th></tr>"
+    wrapped_header_link = f"<a href='{company_item.company_url}' target='_blank'> {company_item.company_name.upper()} </a>"
+    html_table += f"<tr><th width='28%'> {logo} </th><th>" + wrapped_header_link + "</th><th width='12%' >" + jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = set_color(elem[0])
         wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
-        html_table += "<tr" + color_code + "><td>" + elem[0] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
+        location = elem[0].split('From:')[1].lower()
+        job_title = elem[0].split('From:')[0]
+        html_table += f"<tr {color_code}><td>{location.title()}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
     html_table += "</table>"
     return html_table
 

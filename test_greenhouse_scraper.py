@@ -28,7 +28,8 @@ company_list.append(CompanyItem("oasisnetwork",  "https://boards.greenhouse.io/o
 
 for company in company_list:
     print(company.jobs_url)
-    data = company.scraper_type().getJobs(driver, company.jobs_url)
-    print(data)
+    jobs_data = company.scraper_type().getJobs(driver, company.jobs_url)
+    for entry in jobs_data:
+        print(entry)
 
 driver.close()

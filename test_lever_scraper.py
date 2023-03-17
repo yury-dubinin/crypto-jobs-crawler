@@ -4,6 +4,10 @@ from scrapeLever import ScrapeLever
 
 
 company_list = []
+company_list.append(
+    CompanyItem("kraken", "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com", "Exchange"))
+company_list.append(
+    CompanyItem("chainlink", "https://jobs.lever.co/chainlink", ScrapeLever, "https://chain.link", "Blockchain"))
 company_list.append(CompanyItem("hiro",  "https://jobs.lever.co/hiro", ScrapeLever, "https://www.hiro.so", "Infra"))
 company_list.append(CompanyItem("kaiko",  "https://jobs.eu.lever.co/kaiko", ScrapeLever, "https://www.kaiko.com", "Data"))
 company_list.append(CompanyItem("tessera",  "https://jobs.lever.co/ftc", ScrapeLever, "https://tessera.co", "NFT"))
