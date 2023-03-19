@@ -7,9 +7,15 @@ import companyList
 company_list = companyList.getCompanyList()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')
 # remove index.html to re-create from new data set
+just_date = datetime.date(datetime.now())
+with open('current.json') as json_file:
+    current_data = json.load(json_file)
+total_jobs = current_data['Total Jobs']
+first_line = f'Number of companies: {len(company_list)} -> Number of jobs: {total_jobs} Last Updated at: {just_date}'
+
 with open('index.html', 'w') as f:
     f.write(
-        f'<p align="center"> Number of companies: {len(company_list)} Last Updated at: {datetime.date(datetime.now())} </p>')
+        f'<p align="center"> {first_line} </p>')
     eth_wallet_link = '<a href="https://etherscan.io/address/0x589a0d87d600a6c6faa34c491c9e779f434bc51d" ' \
                       'target="_blank">0x589a0D87d600a6C6fAa34c491C9e779f434bC51d</a>'
     f.write(f'<p align="center"> If you find this page useful please donate ETH/ERC-20 to {eth_wallet_link} </p>')
