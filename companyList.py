@@ -62,6 +62,13 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("aave",  "https://jobs.eu.lever.co/aave", ScrapeLever, "https://aave.com","Protocol"))
     company_list.append(CompanyItem("crypto",  "https://jobs.lever.co/crypto", ScrapeLever, "https://crypto.com","Exchange"))
     company_list.append(
+        CompanyItem("Luxor", "https://jobs.lever.co/LuxorTechnology", ScrapeLever, "https://www.luxor.tech", "Mining"))
+    company_list.append(
+        CompanyItem("anchorage", "https://jobs.lever.co/anchorage", ScrapeLever, "https://www.anchorage.com",
+                    "Trading"))
+    company_list.append(
+        CompanyItem("biconomy", "https://jobs.lever.co/biconomy", ScrapeLever, "https://www.biconomy.io", "Infra"))
+    company_list.append(
         CompanyItem("avalabs", "https://boards.greenhouse.io/avalabs", ScrapeGreenhouse, "https://www.avalabs.org",
                     "Blockchain"))
     company_list.append(CompanyItem("Polygon",  "https://jobs.lever.co/Polygon", ScrapeLever, "https://polygon.technology","Blockchain"))
@@ -149,6 +156,9 @@ def get_logo(company_name):
         'web3': '<img src="https://images4.bamboohr.com/104723/logos/cropped.jpg?v=47" alt="Web3" loading="lazy" width="182" height: auto >',
         'smart-token-labs': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/533066/logo" alt="Smart Token Labs" loading="lazy" width="182" height: auto >',
         'avantgarde': '<img src="https://workablehr.s3.amazonaws.com/uploads/account/logo/488245/logo" alt="Avantgarde" loading="lazy" width="182" height: auto >',
-        'cryptofinance': '<img src="https://workable-application-form.s3.amazonaws.com/advanced/production/60bf845679ed484c4e780ea0/8024882f-65cc-9c45-b169-229b1e93c0f5" loading="lazy" width="182" height: auto >'
+        'cryptofinance': '<img src="https://workable-application-form.s3.amazonaws.com/advanced/production/60bf845679ed484c4e780ea0/8024882f-65cc-9c45-b169-229b1e93c0f5" loading="lazy" width="182" height: auto >',
+        'Luxor': '<img alt="Luxor" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/1d9e9b01-d69d-4a75-95ff-a48d3687d478-1623209594362.png" loading="lazy" width="182" height: auto >',
+        'anchorage': '<img alt="Anchorage" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/a0746087-e4a6-446d-9122-c353f372d3e7-1669735538820.png" loading="lazy" width="182" height: auto >',
+        'biconomy': '<img alt="Biconomy" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/73c89f44-01e6-4d0a-9354-9661e253e4bf-1663252279527.png" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())

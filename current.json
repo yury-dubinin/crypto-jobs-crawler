@@ -45,6 +45,9 @@
     "ethereumfoundation": 5,
     "aave": 4,
     "crypto": 52,
+    "Luxor": 3,
+    "anchorage": 18,
+    "biconomy": 5,
     "avalabs": 34,
     "Polygon": 14,
     "tokenmetrics": 149,
@@ -81,5 +84,5 @@
     "stably": 3,
     "cryptofinance": 4,
     "bitget": 45,
-    "Total Jobs": 2088
+    "Total Jobs": 2114
 }

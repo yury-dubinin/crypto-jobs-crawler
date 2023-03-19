@@ -5,6 +5,12 @@ from scrapeLever import ScrapeLever
 
 company_list = []
 company_list.append(
+    CompanyItem("Luxor", "https://jobs.lever.co/LuxorTechnology", ScrapeLever, "https://www.luxor.tech", "Mining"))
+company_list.append(
+    CompanyItem("anchorage", "https://jobs.lever.co/anchorage", ScrapeLever, "https://www.anchorage.com", "Trading"))
+company_list.append(
+    CompanyItem("biconomy", "https://jobs.lever.co/biconomy", ScrapeLever, "https://www.biconomy.io", "Infra"))
+company_list.append(
     CompanyItem("kraken", "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com", "Exchange"))
 company_list.append(
     CompanyItem("chainlink", "https://jobs.lever.co/chainlink", ScrapeLever, "https://chain.link", "Blockchain"))
@@ -25,6 +31,7 @@ driver = webdriver.Chrome(options=options)
 for company in company_list:
     print(company.jobs_url)
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    print(data)
+    for entry in data:
+        print(entry)
 
 driver.close()
