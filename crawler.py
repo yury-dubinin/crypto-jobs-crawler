@@ -10,6 +10,9 @@ print(f'[CRAWLER] Number of companies: {len(company_list)}')
 with open('index.html', 'w') as f:
     f.write(
         f'<p align="center"> Number of companies: {len(company_list)} Last Updated at: {datetime.date(datetime.now())} </p>')
+    eth_wallet_link = '<a href="https://etherscan.io/address/0x589a0d87d600a6c6faa34c491c9e779f434bc51d" ' \
+                      'target="_blank">0x589a0D87d600a6C6fAa34c491C9e779f434bC51d</a>'
+    f.write(f'<p align="center"> If you find this page useful please donate ETH/ERC-20 to {eth_wallet_link} </p>')
     test_link = '<a href="test.html" target="_blank">Test jobs</a>'
     dev_link = '<a href="dev.html" target="_blank">Dev jobs</a>'
     devops_link = '<a href="devops.html" target="_blank">DevOps/SRE jobs</a>'
