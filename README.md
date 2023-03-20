@@ -29,9 +29,7 @@ wip:
 - https://gnosis.jobs.personio.com
 - https://nexusmutual.recruitee.com
 - https://metrika.recruitee.com
-- https://safe-global.breezy.hr
-- https://community.dune.com/wizard-jobs
-- https://community.dune.com/careers
+- https://jobs.ashbyhq.com/dune
 - https://www.trmlabs.com/careers#open-roles
 - https://kiln.crew.work/jobs
 - https://ratedlabs.notion.site/Open-Roles-at-Rated
