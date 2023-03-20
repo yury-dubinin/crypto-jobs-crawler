@@ -71,6 +71,11 @@ wip:
 - https://jobs.coinfund.io/jobs?page=2
 - https://join-incept.super.site/
 - https://rhino.fi/careers/
+- https://boards.greenhouse.io/clearmatics
+- https://safe-global.breezy.hr/
+- https://nascent-xyz.breezy.hr/
+- https://angel.co/company/chainflip/jobs
+- https://coin98.bamboohr.com/careers/
 
 not yet crypto:
 
