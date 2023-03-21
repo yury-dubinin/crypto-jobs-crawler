@@ -8,6 +8,10 @@ options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
 company_list = []
+company_list.append(CompanyItem("solanafoundation",  "https://boards.greenhouse.io/solanafoundation", ScrapeGreenhouse, "https://solana.org", "Blockchain"))
+company_list.append(CompanyItem("worldcoinorg",  "https://boards.greenhouse.io/worldcoinorg", ScrapeGreenhouse, "https://worldcoin.org", "Blockchain"))
+company_list.append(CompanyItem("edgeandnode",  "https://boards.greenhouse.io/edgeandnode", ScrapeGreenhouse, "https://edgeandnode.com", "Infra"))
+company_list.append(CompanyItem("clearmatics",  "https://boards.greenhouse.io/clearmatics", ScrapeGreenhouse, "https://www.clearmatics.com", "Protocol"))
 company_list.append(CompanyItem("aztec",  "https://boards.eu.greenhouse.io/aztec", ScrapeGreenhouse, "https://aztec.network", "Protocol"))
 company_list.append(CompanyItem("avalabs",  "https://boards.greenhouse.io/avalabs", ScrapeGreenhouse, "https://www.avalabs.org", "Blockchain"))
 company_list.append(CompanyItem("galaxydigitalservices", "https://boards.greenhouse.io/galaxydigitalservices", ScrapeGreenhouse, "https://www.galaxy.com", 'Trading'))

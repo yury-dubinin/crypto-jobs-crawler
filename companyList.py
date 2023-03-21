@@ -109,6 +109,15 @@ def getCompanyList() -> list():
         CompanyItem('dappradar', 'https://dappradar.bamboohr.com/careers', ScrapeBamboohr, 'https://dappradar.com',
                     'Exchange & NFT'))
     company_list.append(
+        CompanyItem("solanafoundation", "https://boards.greenhouse.io/solanafoundation", ScrapeGreenhouse,
+                    "https://solana.org", "Blockchain"))
+    company_list.append(CompanyItem("worldcoinorg", "https://boards.greenhouse.io/worldcoinorg", ScrapeGreenhouse,
+                                    "https://worldcoin.org", "Blockchain"))
+    company_list.append(CompanyItem("edgeandnode", "https://boards.greenhouse.io/edgeandnode", ScrapeGreenhouse,
+                                    "https://edgeandnode.com", "Infra"))
+    company_list.append(CompanyItem("clearmatics", "https://boards.greenhouse.io/clearmatics", ScrapeGreenhouse,
+                                    "https://www.clearmatics.com", "Protocol"))
+    company_list.append(
         CompanyItem('bitstamp', 'https://apply.workable.com/bitstamp/#jobs', ScrapeWorkable, 'https://www.bitstamp.net',
                     'Exchange'))
     company_list.append(CompanyItem('smart-token-labs', 'https://apply.workable.com/smart-token-labs', ScrapeWorkable,
@@ -144,6 +153,9 @@ def get_logo(company_name):
         'ripple': '<img src="resources/ripple.png" alt="Ripple" loading="lazy" width="182" height: auto >',
         'aztec': '<img src="resources/aztec.png" alt="Aztec" loading="lazy" width="182" height: auto >',
         'sygnum': '<img src="resources/sygnum.png" alt="Sygnum" loading="lazy" width="182" height: auto >',
+        'clearmatics': '<img src="resources/clearmatics.png" alt="Clearmatics" loading="lazy" width="182" height: auto >',
+        'worldcoin': '<img src="resources/worldcoin.png" alt="Worldcoin" loading="lazy" width="182" height: auto >',
+        'edgeandnode': '<img src="resources/edgeandnode.png" alt="EdgeAndNode" loading="lazy" width="182" height: auto >',
         'circle': '<img src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/298/100/resized/circle-logo_(1).png?1675270133" alt="Circle" loading="lazy" width="182" height: auto >',
         'bittrex': '<img alt="Bittrex" src="https://s2-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/396/100/resized/Symbol-Color-BUS.png?1597265780" loading="lazy" width="75" height: auto >',
         'kaiko': '<img alt="Kaiko" src="https://s3.eu-central-1.amazonaws.com/co.lever.eu.client-logos/55cd4a1a-9f43-486d-a46d-f835a8f4cbe3-1671611915232.png" loading="lazy" width="182" height: auto >',
@@ -159,6 +171,7 @@ def get_logo(company_name):
         'cryptofinance': '<img src="https://workable-application-form.s3.amazonaws.com/advanced/production/60bf845679ed484c4e780ea0/8024882f-65cc-9c45-b169-229b1e93c0f5" loading="lazy" width="182" height: auto >',
         'Luxor': '<img alt="Luxor" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/1d9e9b01-d69d-4a75-95ff-a48d3687d478-1623209594362.png" loading="lazy" width="182" height: auto >',
         'anchorage': '<img alt="Anchorage" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/a0746087-e4a6-446d-9122-c353f372d3e7-1669735538820.png" loading="lazy" width="182" height: auto >',
-        'biconomy': '<img alt="Biconomy" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/73c89f44-01e6-4d0a-9354-9661e253e4bf-1663252279527.png" loading="lazy" width="182" height: auto >'
+        'biconomy': '<img alt="Biconomy" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/73c89f44-01e6-4d0a-9354-9661e253e4bf-1663252279527.png" loading="lazy" width="182" height: auto >',
+        'solanafoundation': '<img alt="Solana" src="https://s4-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/510/100/resized/Foundation_Linkedin.jpg?1656548101" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())
