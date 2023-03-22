@@ -76,6 +76,8 @@ wip:
 - https://bitflyer.com/en-jp/recruit#positions
 - https://dydx.exchange/careers#roles
 - https://careers.lmax.com/
+- https://jobs.lever.co/Bebop
+- https://jobs.lever.co/harmony
 
 not yet crypto:
 
