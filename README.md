@@ -70,7 +70,6 @@ wip:
 - https://nascent-xyz.breezy.hr/
 - https://angel.co/company/chainflip/jobs
 - https://coin98.bamboohr.com/careers/
-- https://jobs.lever.co/fuellabs
 - https://jobs.lever.co/risklabs
 - https://enjin.io/opportunities#positions
 - https://jobs.lever.co/wintermute-trading

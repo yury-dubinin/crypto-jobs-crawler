@@ -17,6 +17,9 @@ def getCompanyList() -> list():
     company_list.append(CompanyItem("chainstack", "https://chainstack.bamboohr.com/jobs", ScrapeBamboohr, "https://chainstack.com", "Infra"))
     company_list.append(CompanyItem("tessera",  "https://jobs.lever.co/ftc", ScrapeLever, "https://tessera.co", "NFT"))
     company_list.append(CompanyItem("paxos",  "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com", "Stable Coin"))
+    company_list.append(
+        CompanyItem('fuellabs', 'https://jobs.lever.co/fuellabs', ScrapeLever, 'https://www.fuel.network/',
+                    'Blockchain'))
     company_list.append(CompanyItem("bitcoin", "https://www.bitcoin.com/jobs/#joblist", ScrapeGreenhouse, "https://www.bitcoin.com", 'Exchange'))
     company_list.append(
         CompanyItem("cexio", "https://cexio.bamboohr.com/jobs", ScrapeBamboohr, "https://cex.io", "Exchange"))
@@ -172,6 +175,7 @@ def get_logo(company_name):
         'Luxor': '<img alt="Luxor" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/1d9e9b01-d69d-4a75-95ff-a48d3687d478-1623209594362.png" loading="lazy" width="182" height: auto >',
         'anchorage': '<img alt="Anchorage" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/a0746087-e4a6-446d-9122-c353f372d3e7-1669735538820.png" loading="lazy" width="182" height: auto >',
         'biconomy': '<img alt="Biconomy" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/73c89f44-01e6-4d0a-9354-9661e253e4bf-1663252279527.png" loading="lazy" width="182" height: auto >',
-        'solanafoundation': '<img alt="Solana" src="https://s4-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/510/100/resized/Foundation_Linkedin.jpg?1656548101" loading="lazy" width="182" height: auto >'
+        'solanafoundation': '<img alt="Solana" src="https://s4-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/510/100/resized/Foundation_Linkedin.jpg?1656548101" loading="lazy" width="182" height: auto >',
+        'fuellabs': '<img alt="FuelLabs" src="https://lever-client-logos.s3.us-west-2.amazonaws.com/1c78fcea-637a-4e49-8e01-52a7daa4431e-1648557736900.png" loading="lazy" width="182" height: auto >'
     }
     return company_logos.get(company_name, company_name.upper())

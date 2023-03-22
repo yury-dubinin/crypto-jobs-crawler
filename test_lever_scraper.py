@@ -4,6 +4,7 @@ from scrapeLever import ScrapeLever
 
 
 company_list = []
+company_list.append(CompanyItem('fuellabs', 'https://jobs.lever.co/fuellabs', ScrapeLever, 'https://www.fuel.network/', 'Blockchain'))
 company_list.append(
     CompanyItem("Luxor", "https://jobs.lever.co/LuxorTechnology", ScrapeLever, "https://www.luxor.tech", "Mining"))
 company_list.append(
