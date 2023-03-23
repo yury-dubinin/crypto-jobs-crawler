@@ -4,7 +4,7 @@ import json
 from companyItem import CompanyItem
 import companyList
 
-company_list = companyList.getCompanyList()
+company_list = companyList.get_company_list()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')
 # remove index.html to re-create from new data set
 just_date = datetime.date(datetime.now())
