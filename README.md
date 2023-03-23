@@ -79,6 +79,15 @@ wip:
 - https://jobs.lever.co/Bebop
 - https://jobs.lever.co/harmony
 - https://apply.workable.com/prepo/
+- https://livepeer.org/jobs
+- https://jobs.lever.co/bitwiseinvestments
+- https://jobs.lever.co/axiomzen
+- https://boards.greenhouse.io/stellar
+- https://boards.greenhouse.io/orderlynetwork
+
+not only crypto:
+
+- https://boards.greenhouse.io/brave
 
 not yet crypto:
 
