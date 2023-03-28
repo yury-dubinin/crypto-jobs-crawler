@@ -84,7 +84,6 @@ wip:
 - https://jobs.lever.co/axiomzen
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
-- https://jobs.eu.lever.co/matterlabs
 
 not only crypto:
 
