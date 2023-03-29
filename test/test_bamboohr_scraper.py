@@ -1,5 +1,5 @@
 from selenium import webdriver
-from companyItem import CompanyItem
+from company_item import CompanyItem
 from scrape_bamboohr import ScrapeBamboohr
 
 

@@ -1,5 +1,5 @@
 from selenium import webdriver
-from scrapeSmartrecruiters import ScrapeSmartrecruiters
+from scrape_smartrecruiters import ScrapeSmartrecruiters
 
 
 options = webdriver.ChromeOptions()

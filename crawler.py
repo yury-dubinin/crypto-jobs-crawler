@@ -1,8 +1,8 @@
 from selenium import webdriver
 from datetime import datetime
 import json
-from companyItem import CompanyItem
-import companyList
+from company_item import CompanyItem
+import company_list
 
 company_list = companyList.get_company_list()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')

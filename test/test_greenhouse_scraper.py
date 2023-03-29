@@ -1,6 +1,6 @@
 from selenium import webdriver
-from companyItem import CompanyItem
-from scrapeGreenhouse import ScrapeGreenhouse
+from company_item import CompanyItem
+from scrape_greenhouse import ScrapeGreenhouse
 
 
 options = webdriver.ChromeOptions()
