@@ -1,13 +1,13 @@
-from company_item import CompanyItem
-from scrape_lever import ScrapeLever
-from scrape_greenhouse import ScrapeGreenhouse
-from scrape_smartrecruiters import ScrapeSmartrecruiters
-from scrape_recruitee import ScrapeRecruitee
-from scrape_binance import ScrapeBinance
-from scrape_bamboohr import ScrapeBamboohr
-from scrape_consensys import ScrapeConsensys
-from scrape_ripple import ScrapeRipple
-from scrape_workable import ScrapeWorkable
+from src.company_item import CompanyItem
+from src.scrape_lever import ScrapeLever
+from src.scrape_greenhouse import ScrapeGreenhouse
+from src.scrape_smartrecruiters import ScrapeSmartrecruiters
+from src.scrape_recruitee import ScrapeRecruitee
+from src.scrape_binance import ScrapeBinance
+from src.scrape_bamboohr import ScrapeBamboohr
+from src.scrape_consensys import ScrapeConsensys
+from src.scrape_ripple import ScrapeRipple
+from src.scrape_workable import ScrapeWorkable
 
 
 def get_company_list() -> list():

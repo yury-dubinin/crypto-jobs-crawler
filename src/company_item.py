@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from scrapeIt import ScrapeIt
+from src.scrape_it import ScrapeIt
 
 
 @dataclass(init=True)

@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from scrapeIt import ScrapeIt
+from src.scrape_it import ScrapeIt
 
 
 def clean_location(location):

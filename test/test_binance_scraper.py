@@ -1,5 +1,5 @@
 from selenium import webdriver
-from scrape_binance import ScrapeBinance
+from src.scrape_binance import ScrapeBinance
 
 
 options = webdriver.ChromeOptions()

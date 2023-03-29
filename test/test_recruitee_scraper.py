@@ -1,6 +1,6 @@
 from selenium import webdriver
-from company_item import CompanyItem
-from scrape_recruitee import ScrapeRecruitee
+from src.company_item import CompanyItem
+from src.scrape_recruitee import ScrapeRecruitee
 
 
 company_list = []

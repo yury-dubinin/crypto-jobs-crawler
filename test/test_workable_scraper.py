@@ -1,6 +1,6 @@
 from selenium import webdriver
-from company_item import CompanyItem
-from scrape_workable import ScrapeWorkable
+from src.company_item import CompanyItem
+from src.scrape_workable import ScrapeWorkable
 
 
 options = webdriver.ChromeOptions()

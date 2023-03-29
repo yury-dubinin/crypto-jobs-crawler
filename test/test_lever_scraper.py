@@ -1,6 +1,6 @@
 from selenium import webdriver
-from company_item import CompanyItem
-from scrape_lever import ScrapeLever
+from src.company_item import CompanyItem
+from src.scrape_lever import ScrapeLever
 
 
 company_list = [

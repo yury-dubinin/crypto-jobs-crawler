@@ -1,5 +1,5 @@
 from selenium import webdriver
-from scrape_ripple import ScrapeRipple
+from src.scrape_ripple import ScrapeRipple
 
 
 options = webdriver.ChromeOptions()

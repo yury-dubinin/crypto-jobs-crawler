@@ -1,10 +1,10 @@
 from selenium import webdriver
 from datetime import datetime
 import json
-from company_item import CompanyItem
-import company_list
+from src.company_item import CompanyItem
+from src.company_list import get_company_list
 
-company_list = companyList.get_company_list()
+company_list = get_company_list()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')
 # remove index.html to re-create from new data set
 just_date = datetime.date(datetime.now())
@@ -261,7 +261,7 @@ def add_jobs_to_finance(company_item: CompanyItem, jobs_data):
 
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    company_logo = companyList.get_logo(company_name=company.company_name)
+    company_logo = company_list.get_logo(company_name=company.company_name)
     add_jobs_to_index(company, data, company_logo)
     add_jobs_to_test(company, data)
     add_jobs_to_dev(company, data)

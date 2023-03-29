@@ -1,5 +1,5 @@
 from selenium import webdriver
-from scrape_consensys import ScrapeConsensys
+from src.scrape_consensys import ScrapeConsensys
 
 
 options = webdriver.ChromeOptions()
