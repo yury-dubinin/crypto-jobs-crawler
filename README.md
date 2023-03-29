@@ -37,7 +37,6 @@ wip:
 - https://bullish.wd3.myworkdayjobs.com/Bullish
 - https://verum.capital/careers
 - https://careers.aplo.io
-- https://join.com/companies/sygnum
 - https://jobs.coinmarketcap.com
 - https://www.abra.com/careers
 - https://changenow.io/jobs
@@ -49,6 +48,7 @@ wip:
 - https://www.coinbase.com/careers/positions
 - https://www.kucoin.com/careers/job-opening
 - https://careers.lido.fi/
+- https://www.seba.swiss/careers
 - https://www.rdx.works/careers#careers
 - https://horizenlabs.io/careers/#list-jobs
 - https://careers.substrate.io/jobs
@@ -84,7 +84,6 @@ wip:
 - https://jobs.lever.co/axiomzen
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
-- https://jobs.lever.co/ETHGlobal
 
 not only crypto:
 
