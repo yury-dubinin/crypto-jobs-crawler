@@ -5,7 +5,7 @@ resource "azurerm_resource_group" "rg" {
 
 resource "azurerm_storage_account" "example" {
   name                     = "mywebstorageaccount01"
-  resource_group_name      = "web-page-rg"
+  resource_group_name      = azurerm_resource_group.rg.name
   location                 = "northeurope"
   account_tier             = "Standard"
   account_replication_type = "LRS"
