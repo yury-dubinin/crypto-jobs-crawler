@@ -13,19 +13,14 @@ resource "azurerm_storage_account" "example" {
 
   static_website {
     index_document = "index.html"
+    error_404_document = "404.html"
   }
-}
-
-resource "azurerm_storage_container" "example" {
-  name                  = "mywebcontainer01"
-  storage_account_name  = azurerm_storage_account.example.name
-  container_access_type = "blob"
 }
 
 resource "azurerm_storage_blob" "index-file" {
   name                   = "index.html"
   storage_account_name   = azurerm_storage_account.example.name
-  storage_container_name = azurerm_storage_container.example.name
+  storage_container_name = "$web"
   type                   = "Block"
   source                 = "index.html"
 }
@@ -33,7 +28,7 @@ resource "azurerm_storage_blob" "index-file" {
 resource "azurerm_storage_blob" "error-file" {
   name                   = "404.html"
   storage_account_name   = azurerm_storage_account.example.name
-  storage_container_name = azurerm_storage_container.example.name
+  storage_container_name = "$web"
   type                   = "Block"
   source                 = "404.html"
 }
