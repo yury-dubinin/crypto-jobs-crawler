@@ -1,7 +1,13 @@
 # scraped json files or cache
 resources/*.json
 __pycache__
+# Local .terraform directories
+**/.terraform/*
+.terraform.lock*
 
+# .tfstate files
+*.tfstate
+*.tfstate.*
 #IDEA
 .idea
 .DS_store
