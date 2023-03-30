@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 from src.company_item import CompanyItem
 from src.company_list import get_company_list
+from src.company_list import get_logo
 
 company_list = get_company_list()
 print(f'[CRAWLER] Number of companies: {len(company_list)}')
@@ -114,7 +115,8 @@ def is_test_job(title):
 
 
 def is_finance_job(title):
-    tags = ['Accountant', 'Treasury', 'Finance', 'Accounting', 'Tax Specialist', 'Financial', 'FinCrime', 'Accounts Payable']
+    tags = ['Accountant', 'Treasury', 'Finance', 'Accounting', 'Tax Specialist', 'Financial', 'FinCrime',
+            'Accounts Payable']
     result = filter_jobs(title, tags)
     anti_filters = ['manager', 'director', 'head of', 'Scientist', 'Engineer']
     if any(ext.lower() in title.lower() for ext in anti_filters):
@@ -140,7 +142,8 @@ def is_dev_ops_job(title):
 
 
 def is_data_job(title):
-    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer', 'Data Science']
+    tags = ['Data Engineer', 'Data Analyst', 'Data Scientist', 'Data Engineer', 'Data Analytics Engineer',
+            'Data Science']
     return filter_jobs(title, tags)
 
 
@@ -261,7 +264,7 @@ def add_jobs_to_finance(company_item: CompanyItem, jobs_data):
 
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    company_logo = company_list.get_logo(company_name=company.company_name)
+    company_logo = get_logo(company_name=company.company_name)
     add_jobs_to_index(company, data, company_logo)
     add_jobs_to_test(company, data)
     add_jobs_to_dev(company, data)
