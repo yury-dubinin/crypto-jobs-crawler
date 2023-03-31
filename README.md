@@ -79,6 +79,8 @@ wip:
 - https://livepeer.org/jobs
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
+- https://apply.workable.com/stakefish
+-
 
 not only crypto:
 
@@ -86,4 +88,5 @@ not only crypto:
 
 not yet crypto:
 
--https://boards.greenhouse.io/papaya
+- https://boards.greenhouse.io/papaya
+- https://boards.greenhouse.io/ramp
