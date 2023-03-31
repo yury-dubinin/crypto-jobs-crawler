@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 from src.scrape_it import ScrapeIt
+import time
 
 
 def clean_location(location):
@@ -8,15 +9,23 @@ def clean_location(location):
     return set(([x.strip() for x in location.split(',')]))
 
 
+def show_more(driver, locator):
+    print(f'[SmartRecruiters] Show more jobs..')
+    show_more_button = driver.find_elements(By.XPATH, locator)
+    if len(show_more_button) > 0:
+        driver.execute_script("arguments[0].scrollIntoView(true);", show_more_button[0])
+        time.sleep(5)
+        driver.execute_script("arguments[0].click();", show_more_button[0])
+        time.sleep(5)
+        show_more(driver, locator)
+
+
 class ScrapeSmartrecruiters(ScrapeIt):
     def getJobs(self, driver, web_page) -> list():
-        print(f'Scrap page: {web_page}')
+        print(f'[SmartRecruiters] Scrap page: {web_page}')
         driver.get(web_page)
-        more_links = driver.find_elements(By.XPATH, '//a[.="Show more jobs"]')
-        print(f'Found more jobs: {len(more_links)}')
-        # TODO: need to click that link
-        # for link in more_links:
-        #    link.click() -> Error: element click intercepted
+        more_links = '//a[.="Show more jobs"]'
+        show_more(driver, more_links)
         group_elements = driver.find_elements(By.XPATH,
                                               '//li[contains(@class,"opening-job") and not(contains(@class,"js-more-container"))]')
         print(f'Found jobs: {len(group_elements)}')

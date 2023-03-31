@@ -25,7 +25,8 @@ with open('index.html', 'w') as f:
     devops_link = '<a href="devops.html" target="_blank">DevOps/SRE jobs</a>'
     data_link = '<a href="data.html" target="_blank">Data jobs</a>'
     finance_link = '<a href="finance.html" target="_blank">Finance jobs</a>'
-    f.write(f'<p align="center"> {test_link} || {dev_link} || {devops_link} || {data_link} || {finance_link} </p>')
+    web3_link = '<a href="web3.html" target="_blank">Web3 jobs</a>'
+    f.write(f'<p align="center"> {web3_link} || {test_link} || {dev_link} || {devops_link} || {data_link} || {finance_link} </p>')
 with open('test.html', 'w') as f:
     f.write('<!DOCTYPE html>')
 with open('dev.html', 'w') as f:
@@ -33,6 +34,8 @@ with open('dev.html', 'w') as f:
 with open('devops.html', 'w') as f:
     f.write('<!DOCTYPE html>')
 with open('finance.html', 'w') as f:
+    f.write('<!DOCTYPE html>')
+with open('web3.html', 'w') as f:
     f.write('<!DOCTYPE html>')
 
 # setup headless webdriver
@@ -96,7 +99,14 @@ def is_dev_job(title):
         'Solution Architect ',
         'Golang Team Lead',
         'Senior Engineer, Frontend',
-        'C++ ', 'UI/UX Developer'
+        'C++ ', 'UI/UX Developer',
+        'Indexer Engineer', 'Python/C++',
+        'Mobile Engineer',
+        'Senior Engineer – Java',
+        'React Native Engineer',
+        'iOS Developer', 'Android Developer',
+        'iOS Engineer', 'Android Engineer',
+        'Scala Engineer'
     ]
     result = filter_jobs(title, tags)
     anti_filters = ['test', 'qa', 'manager', 'sdet', 'director']
@@ -114,9 +124,21 @@ def is_test_job(title):
     return result
 
 
+def is_web3_job(title):
+    tags = ['Blockchain Developer', 'Cryptography Engineer', 'Protocol Engineer', 'Protocol Research',
+            'Zero Knowledge Research Engineer', 'Smart Contract Engineer', 'Blockchain Engineer',
+            'Blockchain Client Engineer', 'Cryptographer', 'Blockchain Integration Specialist',
+            'Solidity Developer', 'Web3 developer']
+    result = filter_jobs(title, tags)
+    anti_filters = ['manager', 'director', 'head']
+    if any(ext.lower() in title.lower() for ext in anti_filters):
+        return False
+    return result
+
+
 def is_finance_job(title):
     tags = ['Accountant', 'Treasury', 'Finance', 'Accounting', 'Tax Specialist', 'Financial', 'FinCrime',
-            'Accounts Payable', 'Treasurer']
+            'Accounts Payable', 'Treasurer', 'Payroll Specialist', 'Corporate Controller']
     result = filter_jobs(title, tags)
     anti_filters = ['manager', 'director', 'head of', 'Scientist', 'Engineer']
     if any(ext.lower() in title.lower() for ext in anti_filters):
@@ -167,7 +189,7 @@ def dict_to_html_table_with_header(company_item: CompanyItem, dictionary, logo='
     html_table = '<table width="78%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(dictionary)}"
     wrapped_header_link = f"<a href='{company_item.company_url}' target='_blank'> {company_item.company_name.upper()} </a>"
-    html_table += f"<tr><th width='28%'> {logo} </th><th>" + wrapped_header_link + "</th><th width='12%' >" + jobs_total + "</th></tr>"
+    html_table += f"<tr><th width='22%'> {logo} </th><th>" + wrapped_header_link + "</th><th width='12%' >" + jobs_total + "</th></tr>"
     for elem in dictionary:
         color_code = set_color(elem[0])
         wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
@@ -259,19 +281,26 @@ def add_jobs_to_data(company_item: CompanyItem, jobs_data):
 
 def add_jobs_to_finance(company_item: CompanyItem, jobs_data):
     html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_finance_job)
-    with open('finance.html', 'a') as f:
-        f.write(html)
+    with open('finance.html', 'a') as finance_file:
+        finance_file.write(html)
+
+
+def add_jobs_to_web3(company_item: CompanyItem, jobs_data):
+    html = dict_to_html_table_with_header_and_filter(company_item.company_name, jobs_data, filter=is_web3_job)
+    with open('web3.html', 'a') as web3_file:
+        web3_file.write(html)
 
 
 for company in company_list:
     data = company.scraper_type().getJobs(driver, company.jobs_url)
-    company_logo = get_logo(company_name=company.company_name)
+    company_logo = get_logo(company.company_name)
     add_jobs_to_index(company, data, company_logo)
     add_jobs_to_test(company, data)
     add_jobs_to_dev(company, data)
     add_jobs_to_dev_ops(company, data)
     add_jobs_to_data(company, data)
     add_jobs_to_finance(company, data)
+    add_jobs_to_web3(company, data)
 
 driver.close()
 

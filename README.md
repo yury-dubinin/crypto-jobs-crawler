@@ -75,11 +75,8 @@ wip:
 - https://bitflyer.com/en-jp/recruit#positions
 - https://dydx.exchange/careers#roles
 - https://careers.lmax.com/
-- https://jobs.lever.co/harmony
 - https://apply.workable.com/prepo/
 - https://livepeer.org/jobs
-- https://jobs.lever.co/bitwiseinvestments
-- https://jobs.lever.co/axiomzen
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
 
