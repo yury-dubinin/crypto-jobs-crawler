@@ -35,6 +35,7 @@
     "stellar": 29,
     "parity": 30,
     "optimism": 0,
+    "bebop": 3,
     "flashbots": 7,
     "oplabs": 6,
     "bitfinex": 12,
@@ -48,7 +49,7 @@
     "storyprotocol": 5,
     "ethereumfoundation": 6,
     "aave": 4,
-    "crypto": 58,
+    "crypto": 57,
     "Luxor": 1,
     "anchorage": 19,
     "biconomy": 5,
@@ -75,7 +76,7 @@
     "chainsafesystems": 3,
     "ripple": 77,
     "kadena": 9,
-    "EigenLabs": 0,
+    "eigenlabs": 5,
     "cere-network": 10,
     "sygnum": 20,
     "matterlabs": 18,
@@ -94,5 +95,5 @@
     "stably": 0,
     "cryptofinance": 6,
     "bitget": 39,
-    "Total Jobs": 2161
+    "Total Jobs": 2168
 }

@@ -79,6 +79,7 @@ def get_company_list() -> list():
                         "Infra"),
             CompanyItem("optimism", "https://boards.greenhouse.io/optimism", ScrapeGreenhouse,
                         "https://www.optimism.io", "L2 protocol"),
+            CompanyItem('bebop', 'https://jobs.lever.co/Bebop', ScrapeLever, 'https://bebop.xyz', 'DeFi Exchange'),
             CompanyItem("flashbots", "https://boards.greenhouse.io/flashbots", ScrapeGreenhouse,
                         "https://www.flashbots.net", "ETH MEV"),
             CompanyItem("oplabs", "https://boards.greenhouse.io/oplabs", ScrapeGreenhouse, "https://www.oplabs.co",
@@ -154,8 +155,8 @@ def get_company_list() -> list():
                         "Blockchain"),
             CompanyItem("kadena", "https://boards.greenhouse.io/kadenallc", ScrapeGreenhouse, "https://kadena.io",
                         "Blockchain"),
-            CompanyItem("EigenLabs", "https://boards.greenhouse.io/layrlabs", ScrapeGreenhouse,
-                        "https://www.v1.eigenlayer.xyz", "Infra"),
+            CompanyItem("eigenlabs", "https://boards.greenhouse.io/eigenlabs", ScrapeGreenhouse,
+                        "https://www.eigenlayer.xyz", "Infra"),
             CompanyItem("cere-network", "https://jobs.lever.co/cere-network", ScrapeLever, "https://cere.network",
                         "Infra"),
             CompanyItem('sygnum', 'https://sygnum.bamboohr.com/careers', ScrapeBamboohr, 'https://www.sygnum.com',
@@ -198,17 +199,20 @@ def get_company_list() -> list():
 
 
 def build_img_tag(name):
-    return f'<img src="resources/{name}.png" alt="{name.title()}" loading="lazy" width="182" height: auto >'
+    return f'<img src="resources/{name}.png" alt="{name.title()}" loading="lazy" width="188" height: auto >'
 
 
 def get_logo(company_name):
+    # 1. update all logs 2. refactor to just one method.
     company_logos = {
         'kraken': build_img_tag(company_name),
         'ethglobal': build_img_tag(company_name),
+        'bebop': build_img_tag(company_name),
         'chainstack': build_img_tag(company_name),
         'chainlink': build_img_tag(company_name),
-        'tessera': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/f711539a-a00c-495a-9563-a5a91b7f7b55-1666821573698.png" alt="Tessera" loading="lazy" width="182" height: auto >',
+        'tessera': build_img_tag(company_name),
         'paxos': build_img_tag(company_name),
+        'eigenlabs': build_img_tag(company_name),
         'close': '<img src="https://lever-client-logos.s3.us-west-2.amazonaws.com/7cee7f57-cca0-4e06-9fa2-82d0871a65f3-1674590276705.png" alt="Close" loading="lazy" width="182" height: auto >',
         'bitcoin': build_img_tag(company_name),
         'binance': build_img_tag(company_name),
