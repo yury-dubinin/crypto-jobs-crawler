@@ -18,6 +18,7 @@ class ScrapeBamboohr(ScrapeIt):
     def getJobs(self, driver, web_page) -> list():
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
+        driver.implicitly_wait(5)
         group_elements = driver.find_elements(By.CSS_SELECTOR, 'div[itemscope].row')
         job_location_locator = 'div[itemprop="jobLocation"]'
         if len(group_elements) == 0:

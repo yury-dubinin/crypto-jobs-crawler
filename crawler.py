@@ -180,7 +180,9 @@ def set_color(title):
     elif is_data_job(title):
         return ' bgcolor="cyan" '
     elif is_finance_job(title):
-        return ' bgcolor="magenta" '
+        return ' bgcolor="MediumOrchid" '
+    elif is_web3_job(title):
+        return ' bgcolor="DeepSkyBlue" '
     else:
         return ""
 

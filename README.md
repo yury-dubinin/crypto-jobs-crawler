@@ -92,5 +92,3 @@ not yet crypto:
 - https://boards.greenhouse.io/ramp
 
 to be fixed:
-
-- https://dappradar.bamboohr.com/careers
