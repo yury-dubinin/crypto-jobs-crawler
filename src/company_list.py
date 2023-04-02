@@ -8,6 +8,7 @@ from src.scrape_bamboohr import ScrapeBamboohr
 from src.scrape_consensys import ScrapeConsensys
 from src.scrape_ripple import ScrapeRipple
 from src.scrape_workable import ScrapeWorkable
+from src.scrape_ashbyhq import ScrapeAshbyhq
 
 
 def get_company_list() -> list():
@@ -176,7 +177,7 @@ def get_company_list() -> list():
             CompanyItem('dappradar', 'https://dappradar.bamboohr.com/careers', ScrapeBamboohr,
                         'https://dappradar.com',
                         'Exchange & NFT'),
-            CompanyItem("solanafoundation", "https://boards.greenhouse.io/solanafoundation", ScrapeGreenhouse,
+            CompanyItem("solanafoundation", "https://jobs.ashbyhq.com/Solana%20Foundation", ScrapeAshbyhq,
                         "https://solana.org", "Blockchain"),
             CompanyItem("solana", "https://boards.greenhouse.io/solana", ScrapeGreenhouse,
                         "https://solana.com", "Blockchain"),

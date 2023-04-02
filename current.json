@@ -76,7 +76,7 @@
     "consensys": 26,
     "poap": 0,
     "chainsafesystems": 3,
-    "ripple": 76,
+    "ripple": 75,
     "kadena": 9,
     "eigenlabs": 5,
     "cere-network": 10,
@@ -86,8 +86,8 @@
     "galaxydigitalservices": 8,
     "hiro": 4,
     "web3": 2,
-    "dappradar": 2,
-    "solanafoundation": 0,
+    "dappradar": 0,
+    "solanafoundation": 12,
     "solana": 1,
     "worldcoin": 25,
     "edgeandnode": 8,
@@ -97,7 +97,7 @@
     "avantgarde": 1,
     "stably": 0,
     "bitwise": 4,
-    "cryptofinance": 6,
+    "cryptofinance": 8,
     "bitget": 39,
-    "Total Jobs": 2206
+    "Total Jobs": 2217
 }
