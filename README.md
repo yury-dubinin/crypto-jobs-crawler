@@ -80,7 +80,8 @@ wip:
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
 - https://apply.workable.com/stakefish
--
+- https://jobs.lever.co/kava
+- 
 
 not only crypto:
 
