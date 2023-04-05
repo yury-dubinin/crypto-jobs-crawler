@@ -1,24 +1,29 @@
 {
     "data": [
-         {
-              "name": "Michael Bruce",
-              "company": "OKX",
-              "designation": "<a href='https://boards.greenhouse.io/okx/jobs/5509866003' target='_blank' >Apply</a>"
-         },
-         {
-              "name": "Jennifer Winters",
-              "company": "Kraken",
-              "designation": "Senior Programmer"
-         },
-         {
-              "name": "Donna Fox",
-              "company": "BitGo",
-              "designation": "Office Manager"
-         },
-         {
-              "name": "Darlene P. Allen",
-              "company": "Blat",
-              "designation": "Industrial production manager"
-         }
+        {
+            "title": "Assistant Finance Manager",
+            "location": "hq hybrid",
+            "link": "https://jobs.lever.co/TorusLabs/559e676e-3bbc-4d4d-b955-6188194e8eaf"
+        },
+        {
+            "title": "Developer Relations",
+            "location": "remote hq",
+            "link": "https://jobs.lever.co/TorusLabs/21b7dae3-99d8-4caa-8ff2-6d6c5834a053"
+        },
+        {
+            "title": "Senior DevOps Engineer",
+            "location": "remote hq",
+            "link": "https://jobs.lever.co/TorusLabs/c679a6b1-a836-43f9-bf3c-dad2f7a6d831"
+        },
+        {
+            "title": "Senior Software Engineer (Full Stack)",
+            "location": "remote hq",
+            "link": "https://jobs.lever.co/TorusLabs/111cf5cd-c8a7-4f9e-86d8-77f203f16dae"
+        },
+        {
+            "title": "Software Engineer (Testing)",
+            "location": "remote hq",
+            "link": "https://jobs.lever.co/TorusLabs/727ea00c-84c8-4bf1-bc2b-b577cee6a03b"
+        }
     ]
 }
