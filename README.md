@@ -81,7 +81,11 @@ wip:
 - https://jobs.lever.co/sprucesystems
 - https://apply.workable.com/stakefish
 - https://jobs.lever.co/kava
-- 
+- https://www.blockchains.com/careers/#board
+- https://phantom.app/jobs
+- https://fantom.foundation/careers
+- https://apply.workable.com/oasisapp
+- https://careers.smartrecruiters.com/Bitoasis
 
 not only crypto:
 
