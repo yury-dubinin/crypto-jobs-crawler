@@ -5,6 +5,7 @@ from src.scrape_lever import ScrapeLever
 company_list = [
     CompanyItem('wintermute', 'https://jobs.lever.co/wintermute-trading', ScrapeLever, 'https://www.wintermute.com',
                 'Trading'),
+    CompanyItem('multiversx', 'https://jobs.lever.co/multiversx', ScrapeLever, 'https://multiversx.com', 'Blockchain'),
     CompanyItem('matterlabs', 'https://jobs.eu.lever.co/matterlabs', ScrapeLever, 'https://matter-labs.io', 'Protocol'),
     CompanyItem('fuellabs', 'https://jobs.lever.co/fuellabs', ScrapeLever, 'https://www.fuel.network', 'Blockchain'),
     CompanyItem("Luxor", "https://jobs.lever.co/LuxorTechnology", ScrapeLever, "https://www.luxor.tech", "Mining"),

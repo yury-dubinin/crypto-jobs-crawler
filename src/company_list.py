@@ -19,6 +19,7 @@ def get_company_list() -> list():
                         'Community'),
             CompanyItem("chainstack", "https://chainstack.bamboohr.com/jobs", ScrapeBamboohr,
                         "https://chainstack.com", "Infra"),
+            CompanyItem('multiversx', 'https://jobs.lever.co/multiversx', ScrapeLever, 'https://multiversx.com', 'Blockchain'),
             CompanyItem("tessera", "https://jobs.lever.co/ftc", ScrapeLever, "https://tessera.co", "NFT"),
             CompanyItem('axiomzen', 'https://jobs.lever.co/axiomzen', ScrapeLever, 'https://www.axiomzen.com', 'Web3'),
             CompanyItem("paxos", "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com",
