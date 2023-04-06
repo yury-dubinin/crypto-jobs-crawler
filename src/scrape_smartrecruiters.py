@@ -1,12 +1,14 @@
 from selenium.webdriver.common.by import By
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 import time
 
 
 def clean_location(location):
     if 'remote' in location.lower() or 'global' in location.lower():
-        return {"REMOTE"}
-    return set(([x.strip() for x in location.split(',')]))
+        return "REMOTE"
+    locations = set(([x.strip() for x in location.split(',')]))
+    joined = ' '.join(locations)
+    return joined
 
 
 def show_more(driver, locator):
@@ -36,6 +38,13 @@ class ScrapeSmartrecruiters(ScrapeIt):
             location_elem = elem.find_element(By.CSS_SELECTOR, 'span')
             job_url = link_elem.get_attribute('href')
             location = clean_location(location_elem.text)
-            result.append((f'{job_title} From:{location}', job_url))
+            job = {
+                "title": job_title,
+                "location": location,
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'Scraped {len(result)} jobs from {web_page}')
+        print(result)
+        write_jobs(result)
         return result

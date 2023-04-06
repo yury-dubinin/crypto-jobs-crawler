@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 
 
 def show_more(driver, locator):
@@ -55,6 +55,11 @@ class ScrapeWorkable(ScrapeIt):
             location = location_elem.text
             if len(remote_elem) > 0:
                 location = location + ' REMOTE'
-            result.append((f'{job_name} From:{clean_location(location)}', job_url))
+            job = {
+                "title": job_name,
+                "location": clean_location(location),
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
         return result

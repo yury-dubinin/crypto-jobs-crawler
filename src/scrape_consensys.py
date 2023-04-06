@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 
 
 class ScrapeConsensys(ScrapeIt):
@@ -18,6 +18,12 @@ class ScrapeConsensys(ScrapeIt):
             job_url = link_elem.get_attribute('href')
             job_name = job_name_elem.text
             location = location_elem.text
-            result.append((f'{job_name} From:{location}', job_url))
+            job = {
+                "title": job_name,
+                "location": location,
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
+        write_jobs(result)
         return result

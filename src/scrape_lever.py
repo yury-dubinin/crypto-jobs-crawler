@@ -1,15 +1,15 @@
 from selenium.webdriver.common.by import By
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 
 
 def clean_location(location):
     locations = set(filter(None, ([x.strip() for x in location.split(',')])))
     if len(locations) == 1:
-        return next(iter(locations))
+        return next(iter(locations)).strip().lstrip('-').title()
     joined = ' '.join(locations).lower()
     if joined.count('remote') > 1:
-        return joined.replace('remote', '', 1)
-    return joined.strip().strip('-')
+        return joined.replace('remote', '', 1).strip().lstrip('-').title()
+    return joined.strip().lstrip('-').title()
 
 
 class ScrapeLever(ScrapeIt):
@@ -33,6 +33,12 @@ class ScrapeLever(ScrapeIt):
                 merge_location = f'{location},{workplace}'
             else:
                 merge_location = location
-            result.append((f'{link_elem.text} From:{clean_location(merge_location)}', job_url))
+            job = {
+                "title": link_elem.text,
+                "location": clean_location(merge_location),
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'[LEVER]  Scraped {len(result)} jobs from {web_page}')
+        write_jobs(result)
         return result

@@ -1,15 +1,15 @@
 from selenium.webdriver.common.by import By
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 
 
 def clean_location(location):
     locations = set(filter(None, ([x.strip() for x in location.split(',')])))
     if len(locations) == 1:
         return next(iter(locations))
-    joined = ' '.join(locations).lower()
+    joined = ' '.join(locations)
     if joined.count('remote') > 1:
-        return joined.replace('remote', '', 1)
-    return joined.strip().strip('-')
+        return joined.replace('remote', '', 1).strip().strip('-').title()
+    return joined.strip().strip('-').title()
 
 
 class ScrapeBamboohr(ScrapeIt):
@@ -34,6 +34,12 @@ class ScrapeBamboohr(ScrapeIt):
             job_name = job_name_elem.text
             location = location_elem.text
             cleaned_location = location.replace('\n', ', ')
-            result.append((f'{job_name} From:{clean_location(cleaned_location)}', job_url))
+            job = {
+                "title": job_name,
+                "location": clean_location(cleaned_location),
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
+        write_jobs(result)
         return result

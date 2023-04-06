@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from src.scrape_it import ScrapeIt
+from src.scrape_it import ScrapeIt, write_jobs
 
 
 def clean_location(location: str):
@@ -32,6 +32,13 @@ class ScrapeBinance(ScrapeIt):
             location_elem = elem.find_element(By.CSS_SELECTOR, 'div[data-bn-type="text"]')
             job_url = link_elem.get_attribute('href')
             location = clean_location(location_elem.text)
-            result.append((f'{link_elem.text} From:{location}', job_url))
+            job_name = link_elem.text
+            job = {
+                "title": job_name,
+                "location": location,
+                "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
+            }
+            result.append(job)
         print(f'[BINANCE] Scraped {len(result)} jobs from {web_page}')
+        write_jobs(result)
         return result

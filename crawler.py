@@ -39,6 +39,8 @@ with open('finance.html', 'w') as f:
     f.write('<!DOCTYPE html>')
 with open('web3.html', 'w') as f:
     f.write('<!DOCTYPE html>')
+with open('jobs.json', 'w') as f:
+    f.write('{}')
 
 # setup headless webdriver
 chrome_options = webdriver.ChromeOptions()
@@ -191,25 +193,25 @@ def set_color(title):
         return ""
 
 
-def dict_to_html_table_with_header(company_item: CompanyItem, dictionary, logo=''):
+def dict_to_html_table_with_header(company_item: CompanyItem, job_list, logo=''):
     html_table = '<table width="78%" align="center" border="1">'
-    jobs_total = f"Total Jobs: {len(dictionary)}"
+    jobs_total = f"Total Jobs: {len(job_list)}"
     wrapped_header_link = f"<a href='{company_item.company_url}' target='_blank'> {company_item.company_name.upper()} </a>"
     html_table += f"<tr><th width='22%'> {logo} </th><th>" + wrapped_header_link + "</th><th width='12%' >" + jobs_total + "</th></tr>"
-    for elem in dictionary:
-        color_code = set_color(elem[0])
-        wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
-        location = elem[0].split('From:')[1].lower()
-        job_title = elem[0].split('From:')[0]
-        html_table += f"<tr {color_code}><td>{location.title()}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
+    for elem in job_list:
+        color_code = set_color(elem['title'])
+        wrapped_link = elem['link']
+        location = elem['location']
+        job_title = elem['title']
+        html_table += f"<tr {color_code}><td>{location}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
     html_table += "</table>"
     return html_table
 
 
-def dict_to_html_table_with_header_and_filter(company_name, dictionary, filter):
+def dict_to_html_table_with_header_and_filter(company_name, job_list, filter):
     filtered = []
-    for elem in dictionary:
-        if filter(elem[0]):
+    for elem in job_list:
+        if filter(elem['title']):
             filtered.append(elem)
 
     if len(filtered) > 0:
@@ -223,8 +225,8 @@ def dict_to_html_table_with_header_and_filter(company_name, dictionary, filter):
     html_table += "<tr><th>" + company_name.upper() + "</th><th width='20%' >" + jobs_total + "</th></tr>"
 
     for elem in filtered:
-        wrapped_link = f"<a href='{elem[1]}' target='_blank' >Apply</a>"
-        html_table += "<tr><td>" + elem[0] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
+        wrapped_link = elem['link']
+        html_table += "<tr><td>" + elem['title'] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
 
     html_table += "</table>"
     return html_table
