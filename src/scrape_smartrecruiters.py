@@ -23,7 +23,7 @@ def show_more(driver, locator):
 
 
 class ScrapeSmartrecruiters(ScrapeIt):
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company) -> []:
         print(f'[SmartRecruiters] Scrap page: {web_page}')
         driver.get(web_page)
         more_links = '//a[.="Show more jobs"]'
@@ -39,12 +39,12 @@ class ScrapeSmartrecruiters(ScrapeIt):
             job_url = link_elem.get_attribute('href')
             location = clean_location(location_elem.text)
             job = {
+                "company": company,
                 "title": job_title,
                 "location": location,
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
             }
             result.append(job)
         print(f'Scraped {len(result)} jobs from {web_page}')
-        print(result)
         write_jobs(result)
         return result

@@ -300,7 +300,7 @@ def add_jobs_to_web3(company_item: CompanyItem, jobs_data):
 
 
 for company in company_list:
-    data = company.scraper_type().getJobs(driver, company.jobs_url)
+    data = company.scraper_type().getJobs(driver, company.jobs_url, company.company_name)
     company_logo = get_logo(company.company_name)
     add_jobs_to_index(company, data, company_logo)
     add_jobs_to_test(company, data)

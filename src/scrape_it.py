@@ -13,5 +13,5 @@ def write_jobs(jobs):
 
 
 class ScrapeIt:
-    def getJobs(self, driver, web_page):
+    def getJobs(self, driver, web_page, company):
         pass

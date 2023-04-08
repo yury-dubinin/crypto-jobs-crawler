@@ -16,7 +16,7 @@ def clean_location(location):
 class ScrapeGreenhouse(ScrapeIt):
     name = 'GREENHOUSE'
 
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company) -> []:
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
         iframe = driver.find_elements(By.TAG_NAME, 'iframe')
@@ -35,6 +35,7 @@ class ScrapeGreenhouse(ScrapeIt):
             location = location_elem.text
             job_name = link_elem.text
             job = {
+                "company": company,
                 "title": job_name,
                 "location": clean_location(location),
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"

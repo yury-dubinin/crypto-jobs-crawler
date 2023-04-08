@@ -11,7 +11,7 @@ def clean_location(location):
 class ScrapeAshbyhq(ScrapeIt):
     name = 'ashbyhq'
 
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company) -> []:
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
         group_elements = driver.find_elements(By.CSS_SELECTOR, 'a[class*="container_"]')
@@ -27,6 +27,7 @@ class ScrapeAshbyhq(ScrapeIt):
             location = location_elem.text
             cleaned_location = location.replace('\n', ', ')
             job = {
+                "company": company,
                 "title": job_name,
                 "location": clean_location(cleaned_location),
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"

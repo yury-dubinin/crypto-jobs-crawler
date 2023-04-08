@@ -25,7 +25,7 @@ def clean_location(location):
 class ScrapeWorkable(ScrapeIt):
     name = 'workable'.upper()
 
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company) -> []:
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
         driver.implicitly_wait(20)
@@ -56,10 +56,12 @@ class ScrapeWorkable(ScrapeIt):
             if len(remote_elem) > 0:
                 location = location + ' REMOTE'
             job = {
+                "company": company,
                 "title": job_name,
                 "location": clean_location(location),
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"
             }
             result.append(job)
         print(f'[{self.name}] Scraped {len(result)} jobs from {web_page}')
+        write_jobs(result)
         return result

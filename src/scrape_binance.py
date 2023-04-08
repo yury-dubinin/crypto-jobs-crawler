@@ -19,7 +19,7 @@ def clean_location(location: str):
 
 
 class ScrapeBinance(ScrapeIt):
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company='binance') -> []:
         print(f'[BINANCE] Scrap page: {web_page}')
         driver.get(web_page)
         wait = WebDriverWait(driver, 120)
@@ -34,6 +34,7 @@ class ScrapeBinance(ScrapeIt):
             location = clean_location(location_elem.text)
             job_name = link_elem.text
             job = {
+                "company": company,
                 "title": job_name,
                 "location": location,
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"

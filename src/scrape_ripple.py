@@ -5,7 +5,7 @@ from src.scrape_it import ScrapeIt, write_jobs
 class ScrapeRipple(ScrapeIt):
     name = 'RIPPLE'
 
-    def getJobs(self, driver, web_page) -> list():
+    def getJobs(self, driver, web_page, company='ripple') -> []:
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
         group_elements = driver.find_elements(By.XPATH, '//p[contains(@class, "mb-6")]')
@@ -19,6 +19,7 @@ class ScrapeRipple(ScrapeIt):
             job_name = job_name_elem.text
             location = location_elem.text
             job = {
+                "company": company,
                 "title": job_name,
                 "location": location,
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"

@@ -13,7 +13,7 @@ def clean_location(location):
 
 
 class ScrapeLever(ScrapeIt):
-    def getJobs(self, driver, web_page):
+    def getJobs(self, driver, web_page, company) -> []:
         print(f'[LEVER] Scrap page: {web_page}')
         driver.get(web_page)
         group_elements = driver.find_elements(By.CSS_SELECTOR, 'a[class="posting-title"]')
@@ -34,6 +34,7 @@ class ScrapeLever(ScrapeIt):
             else:
                 merge_location = location
             job = {
+                "company": company,
                 "title": link_elem.text,
                 "location": clean_location(merge_location),
                 "link": f"<a href='{job_url}' target='_blank' >Apply</a>"

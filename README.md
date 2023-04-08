@@ -86,6 +86,7 @@ wip:
 - https://fantom.foundation/careers
 - https://apply.workable.com/oasisapp
 - https://careers.smartrecruiters.com/Bitoasis
+- https://www.coincover.com/careers
 
 not only crypto:
 
