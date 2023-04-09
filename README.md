@@ -69,13 +69,12 @@ wip:
 - https://safe-global.breezy.hr/
 - https://nascent-xyz.breezy.hr/
 - https://angel.co/company/chainflip/jobs
-- https://coin98.bamboohr.com/careers/
-- https://jobs.lever.co/risklabs
+- https://coin98.bamboohr.com/careers
 - https://enjin.io/opportunities#positions
 - https://bitflyer.com/en-jp/recruit#positions
 - https://dydx.exchange/careers#roles
-- https://careers.lmax.com/
-- https://apply.workable.com/prepo/
+- https://careers.lmax.com
+- https://apply.workable.com/prepo
 - https://livepeer.org/jobs
 - https://boards.greenhouse.io/orderlynetwork
 - https://jobs.lever.co/sprucesystems
@@ -87,6 +86,7 @@ wip:
 - https://apply.workable.com/oasisapp
 - https://careers.smartrecruiters.com/Bitoasis
 - https://www.coincover.com/careers
+- https://jobs.ashbyhq.com/Blockworks
 
 not only crypto:
 
