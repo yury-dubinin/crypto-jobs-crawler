@@ -87,6 +87,8 @@ wip:
 - https://careers.smartrecruiters.com/Bitoasis
 - https://www.coincover.com/careers
 - https://jobs.ashbyhq.com/Blockworks
+- https://boards.greenhouse.io/bitfury
+- https://careers.koinly.io/jobs
 
 not only crypto:
 
