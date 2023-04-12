@@ -8,13 +8,14 @@ class ScrapeRipple(ScrapeIt):
     def getJobs(self, driver, web_page, company='ripple') -> []:
         print(f'[{self.name}] Scrap page: {web_page}')
         driver.get(web_page)
-        group_elements = driver.find_elements(By.XPATH, '//p[contains(@class, "mb-6")]')
+        # use reverse strategy from a link to a title
+        group_elements = driver.find_elements(By.XPATH, '//div/a[contains(@class, "body3")]')
         print(f'[{self.name}] Found {len(group_elements)} jobs on {web_page}')
         result = []
         for elem in group_elements:
-            link_elem = elem.find_element(By.CSS_SELECTOR, 'a')
-            job_name_elem = elem.find_element(By.CSS_SELECTOR, 'a span')
-            location_elem = elem.find_element(By.CSS_SELECTOR, 'a span span')
+            link_elem = elem
+            job_name_elem = elem.find_element(By.XPATH, './../../../div[contains(@class, "heading3")]')
+            location_elem = elem
             job_url = link_elem.get_attribute('href')
             job_name = job_name_elem.text
             location = location_elem.text
