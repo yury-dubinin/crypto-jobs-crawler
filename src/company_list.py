@@ -24,6 +24,7 @@ def get_company_list() -> list():
             CompanyItem('axiomzen', 'https://jobs.lever.co/axiomzen', ScrapeLever, 'https://www.axiomzen.com', 'Web3'),
             CompanyItem("paxos", "https://paxos.com/careers/role", ScrapeGreenhouse, "https://paxos.com",
                         "Stable Coin"),
+                        CompanyItem("zora", "https://boards.greenhouse.io/zora", ScrapeGreenhouse, "https://zora.co", "NFT"),
             CompanyItem('fuellabs', 'https://jobs.lever.co/fuellabs', ScrapeLever, 'https://www.fuel.network',
                         'Blockchain'),
             CompanyItem('harmony', 'https://jobs.lever.co/harmony', ScrapeLever, 'https://www.harmony.one', 'Blockchain'),
