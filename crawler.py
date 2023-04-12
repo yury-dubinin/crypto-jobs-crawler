@@ -203,7 +203,7 @@ def dict_to_html_table_with_header(company_item: CompanyItem, job_list, logo='')
         wrapped_link = elem['link']
         location = elem['location']
         job_title = elem['title']
-        html_table += f"<tr {color_code}><td>{location}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
+        html_table += f"<tr {color_code}><td width='22%'>{location}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
     html_table += "</table>"
     return html_table
 
@@ -221,12 +221,14 @@ def dict_to_html_table_with_header_and_filter(company_name, job_list, filter):
         print(f'[CRAWLER] no jobs filtered by {filter.__name__} at {company_name}')
         return ''
 
-    html_table = '<table width="80%" align="center" border="1">'
-    html_table += "<tr><th>" + company_name.upper() + "</th><th width='20%' >" + jobs_total + "</th></tr>"
+    html_table = '<table width="78%" align="center" border="1">'
+    html_table += f"<tr><th width='22%'> Location </th><th>" + company_name.upper() + "</th><th width='12%' >" + jobs_total + "</th></tr>"
 
     for elem in filtered:
         wrapped_link = elem['link']
-        html_table += "<tr><td>" + elem['title'] + "</td><td width='20%' >" + wrapped_link + "</td></tr>"
+        location = elem['location']
+        job_title = elem['title']
+        html_table += f"<tr><td width='22%'>{location}</td><td>{job_title}</td><td width='12%' align='center'>{wrapped_link}</td></tr>"
 
     html_table += "</table>"
     return html_table

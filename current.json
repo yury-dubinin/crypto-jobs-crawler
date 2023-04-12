@@ -20,7 +20,7 @@
     "kaiko": 1,
     "bitmex": 18,
     "bitgo": 13,
-    "bitpanda": 33,
+    "bitpanda": 34,
     "uniswaplabs": 10,
     "moonpay": 23,
     "moonwalk": 1,
@@ -104,5 +104,5 @@
     "bitwise": 4,
     "cryptofinance": 6,
     "bitget": 47,
-    "Total Jobs": 2288
+    "Total Jobs": 2289
 }
