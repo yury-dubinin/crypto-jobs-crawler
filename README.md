@@ -92,6 +92,7 @@ wip:
 - https://careers.koinly.io/jobs
 - https://jobs.lever.co/AQX
 - https://voltz.notion.site/Voltz-Labs-is-Hiring-f1a8857cb7b24d43968cfd735f52292a
+- https://hop.exchange/careers
 
 not only crypto:
 
