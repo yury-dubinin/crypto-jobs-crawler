@@ -197,6 +197,8 @@ def get_company_list() -> list():
             CompanyItem('bitstamp', 'https://apply.workable.com/bitstamp/#jobs', ScrapeWorkable,
                         'https://www.bitstamp.net',
                         'Exchange'),
+            CompanyItem('AQX', 'https://jobs.lever.co/AQX', ScrapeLever, 'https://aqx.com', 'Exchange and Web3'),
+
             CompanyItem('smart-token-labs', 'https://apply.workable.com/smart-token-labs', ScrapeWorkable,
                         'https://smarttokenlabs.com', 'Web3 bridge'),
             CompanyItem('avantgarde', 'https://apply.workable.com/avantgarde', ScrapeWorkable,
@@ -218,6 +220,7 @@ def build_img_tag(name):
 def get_logo(company_name):
     # 1. update all logs 2. refactor to just one method.
     company_logos = {
+        'AQX': build_img_tag(company_name),
         'kraken': build_img_tag(company_name),
         'ethglobal': build_img_tag(company_name),
         'harmony': build_img_tag(company_name),
