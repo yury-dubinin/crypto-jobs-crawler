@@ -50,7 +50,7 @@
     "ellipsislabs": 3,
     "Swissquote": 21,
     "Coinshift": 4,
-    "swissborg": 10,
+    "swissborg": 11,
     "OpenSea": 15,
     "storyprotocol": 4,
     "ethereumfoundation": 5,
@@ -94,6 +94,8 @@
     "dappradar": 3,
     "solanafoundation": 16,
     "solana": 5,
+    "mobilecoin": 6,
+    "chia": 4,
     "worldcoin": 25,
     "edgeandnode": 8,
     "clearmatics": 7,
@@ -105,5 +107,5 @@
     "bitwise": 4,
     "cryptofinance": 7,
     "bitget": 41,
-    "Total Jobs": 2372
+    "Total Jobs": 2383
 }

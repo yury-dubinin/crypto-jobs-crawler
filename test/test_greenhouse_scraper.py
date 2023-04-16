@@ -2,13 +2,16 @@ from selenium import webdriver
 from src.company_item import CompanyItem
 from src.scrape_greenhouse import ScrapeGreenhouse
 
-
 options = webdriver.ChromeOptions()
 options.add_argument('--headless')
 driver = webdriver.Chrome(options=options)
 
 company_list = [CompanyItem('stellar', 'https://boards.greenhouse.io/stellar', ScrapeGreenhouse, 'https://stellar.org',
                             'Blockchain'),
+                CompanyItem('mobilecoin', 'https://boards.greenhouse.io/mobilecoin', ScrapeGreenhouse,
+                            'https://mobilecoin.com', 'Blockchain'),
+                CompanyItem('chia', 'https://www.chia.net/careers', ScrapeGreenhouse,
+                            'https://www.chia.net', 'Blockchain'),
                 CompanyItem('okcoin', 'https://boards.greenhouse.io/okcoin', ScrapeGreenhouse, 'https://www.okcoin.com',
                             'Exchange'),
                 CompanyItem("solanafoundation", "https://boards.greenhouse.io/solanafoundation", ScrapeGreenhouse,
@@ -55,7 +58,7 @@ company_list = [CompanyItem('stellar', 'https://boards.greenhouse.io/stellar', S
 
 for company in company_list:
     print(company.jobs_url)
-    jobs_data = company.scraper_type().getJobs(driver, company.jobs_url)
+    jobs_data = company.scraper_type().getJobs(driver, company.jobs_url, company.company_name)
     for entry in jobs_data:
         print(entry)
 
