@@ -11,7 +11,7 @@ from src.scrape_workable import ScrapeWorkable
 from src.scrape_ashbyhq import ScrapeAshbyhq
 
 
-def get_company_list() -> list():
+def get_company_list() -> []:
     return [CompanyItem("kraken", "https://jobs.lever.co/kraken", ScrapeLever, "https://kraken.com", "Exchange"),
             CompanyItem("chainlink", "https://jobs.lever.co/chainlink", ScrapeLever, "https://chain.link",
                         "Blockchain"),
@@ -222,6 +222,7 @@ def build_img_tag(name):
 def get_logo(company_name):
     # 1. update all logs 2. refactor to just one method.
     company_logos = {
+        'wintermute': build_img_tag(company_name),
         'mobilecoin': build_img_tag(company_name),
         'chia': build_img_tag(company_name),
         'AQX': build_img_tag(company_name),
