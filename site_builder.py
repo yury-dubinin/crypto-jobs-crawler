@@ -189,8 +189,9 @@ def set_color(title):
 def dict_to_html_table_with_header(company_item: CompanyItem, job_list, logo=''):
     html_table = '<table width="78%" align="center" border="1">'
     jobs_total = f"Total Jobs: {len(job_list)}"
-    wrapped_header_link = f"<a href='{company_item.company_url}' target='_blank'> {company_item.company_name.upper()} </a>"
-    html_table += f"<tr><th width='22%'> {logo} </th><th>" + wrapped_header_link + "</th><th width='12%' >" + jobs_total + "</th></tr>"
+    header_link = f"<a href='{company_item.company_url}' target='_blank'>{company_item.company_name.upper()}</a>"
+    jobs_total_link = f"<a href='{company_item.jobs_url}' target='_blank'> {jobs_total} </a>"
+    html_table += f"<tr><th width='22%'> {logo} </th><th> {header_link} </th><th width='12%' > {jobs_total_link} </th></tr>"
     for elem in job_list:
         color_code = set_color(elem['title'])
         wrapped_link = elem['link']
