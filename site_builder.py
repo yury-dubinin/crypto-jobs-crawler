@@ -136,7 +136,8 @@ def is_web3_job(title):
 
 def is_finance_job(title):
     tags = ['Accountant', 'Treasury', 'Finance', 'Accounting', 'Tax Specialist', 'Financial', 'FinCrime',
-            'Accounts Payable', 'Treasurer', 'Payroll Specialist', 'Corporate Controller']
+            'Accounts Payable', 'Treasurer', 'Payroll Specialist', 'Corporate Controller', 'Tax Analyst',
+            'Accounts Receivable']
     result = filter_jobs(title, tags)
     anti_filters = ['manager', 'director', 'head of', 'Scientist', 'Engineer']
     if any(ext.lower() in title.lower() for ext in anti_filters):
