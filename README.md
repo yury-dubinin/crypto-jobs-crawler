@@ -15,7 +15,12 @@ If you find this project useful please donate ETH/ERC-20 to [0x589a0d87d600a6c6f
 Given that you have Python 3.5+ and pip instaleed just run pip install -r requirements.txt
 Crawler uses just 1 none standard libs:
 - selenium 
+- `pip install -r requirements.txt`
 Next just run `crawler.py`
+
+## Docker
+- `docker build --tag scrap:latest .`
+- `docker run --rm -it -v ${PWD}:/data docker.io/library/scrap:latest`
 
 # UI staff
 Let's try GitHub pages here: https://yury-dubinin.github.io/crypto-jobs-crawler/
