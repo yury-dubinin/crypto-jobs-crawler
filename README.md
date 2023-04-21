@@ -108,6 +108,7 @@ wip:
 - https://boards.greenhouse.io/dydx
 - https://coinlist.co/jobs
 - https://boards.greenhouse.io/0x
+- https://jobs.ashbyhq.com/halborn
 
 not only crypto:
 
