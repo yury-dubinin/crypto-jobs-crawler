@@ -109,6 +109,7 @@ wip:
 - https://coinlist.co/jobs
 - https://boards.greenhouse.io/0x
 - https://jobs.ashbyhq.com/halborn
+- https://jobs.lever.co/maple-finance
 
 not only crypto:
 
