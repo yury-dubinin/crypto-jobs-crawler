@@ -46,7 +46,6 @@ wip:
 - https://jobs.coinmarketcap.com
 - https://www.abra.com/careers
 - https://changenow.io/jobs
-- https://jobs.bitvavo.com/en/jobs
 - https://web3labs.jobs.personio.com
 - https://www.gemini.com/careers
 - https://nexo.breezy.hr
@@ -95,9 +94,20 @@ wip:
 - https://jobs.ashbyhq.com/Blockworks
 - https://boards.greenhouse.io/bitfury
 - https://careers.koinly.io/jobs
-- https://jobs.lever.co/AQX
 - https://voltz.notion.site/Voltz-Labs-is-Hiring-f1a8857cb7b24d43968cfd735f52292a
 - https://hop.exchange/careers
+- https://apply.workable.com/securrency/?lng=en
+- https://apply.workable.com/clearbank/
+- https://polymath.applytojobs.ca/
+- https://tokeny.com/jobs/
+- https://bitwave.breezy.hr/
+- https://jobs.bitvavo.com/en/jobs/
+- https://jobs.lever.co/archblock
+- https://jobs.lever.co/trusttoken
+- https://jobs.ashbyhq.com/cointracker
+- https://boards.greenhouse.io/dydx
+- https://coinlist.co/jobs
+- https://boards.greenhouse.io/0x
 
 not only crypto:
 
