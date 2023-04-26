@@ -110,10 +110,13 @@ wip:
 - https://boards.greenhouse.io/0x
 - https://jobs.ashbyhq.com/halborn
 - https://jobs.lever.co/maple-finance
+- https://phantom.app/jobs
 
 not only crypto:
 
 - https://boards.greenhouse.io/brave
+- https://jobs.lever.co/wisdomtree
+- https://boards.greenhouse.io/ibkr
 
 not yet crypto:
 
