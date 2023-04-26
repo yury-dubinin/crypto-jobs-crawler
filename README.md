@@ -111,6 +111,7 @@ wip:
 - https://jobs.ashbyhq.com/halborn
 - https://jobs.lever.co/maple-finance
 - https://phantom.app/jobs
+- https://boards.greenhouse.io/paradigm62
 
 not only crypto:
 
