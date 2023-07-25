@@ -123,5 +123,16 @@ not yet crypto:
 
 - https://boards.greenhouse.io/papaya
 - https://boards.greenhouse.io/ramp
+- https://www.openfin.co/careers#open-positions
+- https://boards.eu.greenhouse.io/proton https://proton.me/
 
 to be fixed:
+
+Not crypto:
+- https://jobs.lever.co/orum/ https://www.orum.com/
+- https://jobs.ashbyhq.com/Deel/
+- https://boards.greenhouse.io/point72
+- https://boards.greenhouse.io/groove https://www.groove.co/
+- https://jobs.lever.co/thebrowser-company
+- https://boards.greenhouse.io/oyster
+- https://boards.eu.greenhouse.io/bitly46 https://bitly.com/
