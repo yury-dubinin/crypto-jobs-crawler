@@ -1,0 +1,24 @@
+name: Preview frontend E2E tests
+
+on:
+  push:
+
+jobs:
+  wait-for-deployment:
+    runs-on: ubuntu-latest
+    outputs:
+      vercel_url: ${{steps.vercel.outputs.environment_url}}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - id: vercel
+        env:
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
+        run: |
+          echo "$BRANCH_NAME"
+          python -m pip install requests
+          python main.py
+      - name: Echo GITHUB_OUTPUT
+        run: echo "$GITHUB_OUTPUT"
+      - name: Echo GITHUB_ENV
+        run: echo "$GITHUB_ENV"
