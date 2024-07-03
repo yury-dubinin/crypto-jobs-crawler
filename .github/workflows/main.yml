@@ -24,3 +24,11 @@ jobs:
         run: echo "$SELECTED_COLOR"
       - name: Echo GITHUB_ENV
         run: echo "$GITHUB_ENV"
+  use-output:
+    runs-on: ubuntu-latest
+    needs: wait-for-deployment
+    steps:
+      - name: Echo GITHUB_OUTPUT
+        env:
+         SELECTED_COLOR: ${{ needs.wait-for-deployment.outputs.SELECTED_COLOR }}
+        run: echo "$SELECTED_COLOR"
