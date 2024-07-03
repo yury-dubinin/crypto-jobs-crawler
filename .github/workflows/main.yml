@@ -19,6 +19,8 @@ jobs:
           python -m pip install requests
           python main.py
       - name: Echo GITHUB_OUTPUT
-        run: echo "$GITHUB_OUTPUT"
+        env:
+         SELECTED_COLOR: ${{ steps.vercel.outputs.SELECTED_COLOR }}
+        run: echo "$SELECTED_COLOR"
       - name: Echo GITHUB_ENV
         run: echo "$GITHUB_ENV"
